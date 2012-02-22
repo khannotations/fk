@@ -1,0 +1,132 @@
+#work.square
+  .nav_bar
+    .nav_button.index(target='about') ^ Home
+    .nav_button.play(target='fun') < Life
+    .nav_button.work.selected(target='work') Projects
+    
+  #work_c.contain
+    #work_intro.fade(style='display:block') I program, design and build—not always successfully, but always adventurously. While studying Computer Science and Cognitive Science at Yale University, I'm creating a foundation for work in artificial intelligence, serious gaming or web app development. You can reach me at faiaz.khan [at] yale.edu <br/>Here are my favorite projects and musings:
+    
+    #project_container.block
+      #row_1.project_row(target='desc_1')
+        .big_project
+          .big_p.slide(target='ontapp_desc')
+            img(src='/images/ontapp.gif', alt='onTapp'').p_img.p_special
+            .caption onTapp
+            .caption_kicker Node | Express | Jade | MongoDB
+        .big_project
+          .big_p.slide(target='processing_desc')
+            img(src='/images/process.gif', alt='Schedulizer').p_img
+            .caption Schedulizer
+            .caption_kicker Java | Processing
+        .big_project
+          .big_p.slide(target='galaxy_desc')
+            img(src='/images/galaxy.png', alt='Galaxy').p_img
+            .caption Galaxy Tools
+            .caption_kicker Python | R
+        .big_project.last_project
+          .big_p.slide(target='psych_desc')
+            img(src='/images/psych.png', alt='Department of Psychology, University of Chicago').p_img
+            .caption Seeing Colors
+            .caption_kicker Guided Research | Java
+      
+      #row_2.project_row(target='desc_1')
+        .big_project
+          .big_p.slide(target='notes_desc')
+            img(src='/images/notes.png', alt='Gimme an Ear').p_img
+            .caption Gimme an Ear
+            .caption_kicker Node.js | jQuery
+        .big_project
+          .big_p.slide(target='prom_desc')
+            img(src='/images/prom.png', alt='Promatch').p_img
+            .caption Promatch
+            .caption_kicker PHP | MySQL | Apache
+        //-
+          .big_project
+            .big_p.slide(target='galaxy_desc')
+              img(src='/images/galaxy.png', alt='Galaxy').p_img
+              .caption Galaxy Tools
+
+      #desc_1.project_display
+        .hide_disp ^ Hide
+        #ontapp_desc.proj_desc.block 
+          .desc_left
+            .desc_title.block onTapp
+            .desc_role.block Co-founder | 
+              span(style="font-size: 15px;") September 2011 - present
+            .desc_desc.block &nbsp;&nbsp;onTapp is a web application designed to facilitate ordering from restaurants online. Leveraging customized deals, networks and a scoring system, onTapp makes food-ordering more social and, well, more fun! The site’s back-end was originally written in Apache, PHP and MySQL, but switched early on to Node.js with Express, Jade and MongoDB. Server-side code is written in jQuery.
+              br/ 
+              a(href='http://www.yaleontapp.com', target='_blank')
+                span.crimson &nbsp;&nbsp;yaleontapp.com
+              | — slated to debut Spring 2012.
+              br/
+              <div class="fb-like" data-href="http://www.yaleontapp.com" data-send="true" data-width="400" data-show-faces="false" data-colorscheme="light" style='margin-top: 20px;'></div>
+          .desc_right
+            a(href='http://www.yaleontapp.com', target='_blank')
+              img(src='/images/ontapp_ss.png')
+        #processing_desc.proj_desc.block
+          .desc_left
+            .desc_title.block The 'Schedulizer'
+            .desc_role.block For May Project 2011, University High School
+            .desc_desc.block &nbsp;&nbsp;Designed to investigate how to satisfy the most high school course requests for the 2011-2012 school year, taking into account the constraints on the number of class periods, classrooms and teachers, by creating a visualization of the problem. The app also runs a graph-traversal algorithm to try to minimize the number of class periods needed to satisfy all the requests. It turns out that if everyone got every class they wanted, about 130 periods would be needed!
+              br/
+              | &nbsp;&nbsp;Also just a fun app to play with—unfortunately not online yet. Made on the visualization engine 
+              a(href='http://www.processing.org')
+                span.crimson Processing
+              |, written completely in Java.
+          .desc_right
+            img(src='/images/process_ss.png')
+        #galaxy_desc.proj_desc.block 
+          .desc_left
+            .desc_title.block Galaxy Tools
+            .desc_role.block Computational Institute, University of Chicago
+              br/ 
+              span(style="font-size: 15px;") May - August 2011
+            .desc_desc.block &nbsp;&nbsp;Designed and implemented tools for Galaxy (an open, web-based platform for data intensive biomedical research) and GEDI (a gene database). Written in Python and R, the tools identified statistically significant differences in massive sets of microarray data to pinpoint which genes may contain mutations. The next step would be to cross check those genes against related ones in GEDI, identifying precisely which pathways a particular mutation influenced.
+              br/
+              | &nbsp;&nbsp;Group Leader:
+              a(href='http://www.mcs.anl.gov/~madduri/')
+                span.crimson Ravi Madduri 
+              |. Also check out
+              a(href='http://main.g2.bx.psu.edu/')
+                span.crimson Galaxy 
+              | and 
+              a(href='http://www.childrenshospital.org/research/ingber/GEDI/gedihome.htm')
+                span.crimson GEDI
+              |.
+          .desc_right
+            img(src='/images/galaxy_ss.png')
+        #psych_desc.proj_desc.block 
+          .desc_left
+            .desc_title.blocks Seeing Colors
+            .desc_role.block Department of Psychology, University of Chicago
+              br/ 
+              span(style="font-size: 15px;") June - August 2010
+            .desc_desc.block &nbsp;&nbsp;&nbsp;&nbsp;Explored whether humans have inherent cognitive biases in color-naming despite differences in native language. Hypothesizing that they do tend to name colors similarly, I envisioned and programmed an interactive computer animation, recruited test subjects 3 and 4 years of age and conducted the self-designed experiment. The results showed a difference in the ability to distinguish colors within certain groups, which supported the hypothesis.
+              br/
+              | &nbsp;&nbsp;Group Leader:
+              a(href='http://psychology.uchicago.edu/people/faculty/slevine.shtml')
+                span.crimson Dr. Susan Levine
+              |. With the 
+              a(href='http://www.ucls.uchicago.edu/schools/high-school/summerlink/index.aspx')
+                span.crimson SummerLink 
+              | program at the University of Chicago Laboratory High School (U-High!)
+          .desc_right
+            img(src='/images/color.jpg')
+        #notes_desc.proj_desc.block 
+          .desc_left
+            .desc_title.blocks Gimme an Ear
+            .desc_role.block Independent project | 
+              span(style="font-size: 15px;") October 2011
+            .desc_desc.block &nbsp;&nbsp;Completely discouraged by my utter lack of pitching ability, I resolved to create a somewhat fun app to help me distinguish pitches and harmonies better. The product was 'Gimme an Ear', which, in all honesty, turned out to be only somewhat helpful. GAE simply plays two notes together or distinctly, and the user's task is to identify the interval. The next step would be to introduce 3-note chords, or (when browsers can implement this natively), record the user humming and play it back. Then it would be possible to track progress over time, or introduce a level system, in which the challenges get harder and harder!<br/>&nbsp;&nbsp;Written with Express and Jade in Node. Check it out 
+              a(href='/notes').crimson here.
+          .desc_right
+            img(src='/images/notes_ss.png')
+        #prom_desc.proj_desc.block 
+          .desc_left
+            .desc_title.blocks Promatch
+            .desc_role.block Independent project | 
+              span(style="font-size: 15px;") April 2011
+            .desc_desc.block &nbsp;&nbsp;Prom-proposing season is a dismal time for many. To liven up the general attitude and to foster a healthy sense of competition in my graduating class, I designed Promatch, an online bracket where Class of 2011'ers could vote on with whom they thought their classmates would go to prom (after signing in, of course, so they would be accountable for their choices).<br/>&nbsp;&nbsp;My first foray into web design, HTML, CSS, PHP and MySQL, the site was no feat in design or implementation. But it was my first experience designing something for the sheer joy of it, and giving it away for free; a feeling on which I'm still hooked. The project was recently taken offline—the winner received a grand prize of supreme satisfaction.
+          .desc_right
+            img(src='/images/prom_ss.png')

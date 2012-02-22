@@ -1,0 +1,83 @@
+/*==================================NOTES====================================*/
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  //font: 14px 'Droid Sans Mono', sans-serif;
+  //font: 18px 'Iceland', sans-serif;  
+  margin: auto;
+  width: 1000px;
+  min-width: 750px;
+  height: 100%;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+div { display: inline-block; }
+
+#notes_container {
+  width: 700px;
+  padding: 20px 50px;
+  height: 100%;
+  margin: 0px 150px;
+  background-color: #FAAE4B;
+}
+#notes {
+  padding: 10px;
+}
+#note1_container{
+  margin: 5px;
+}
+#note2_container{
+  margin: 5px;
+}
+
+.button {
+  width: 70px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  
+}
+.button:hover{
+  opacity: 0.6;
+}
+
+#response {
+  width: 100%;
+  display: none;
+}
+
+#options {
+  width: 98%;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #FCC174;
+  box-shadow: 0px 0px 70px 20px #FCC174;
+  -moz-box-shadow: 0px 0px 70px 20px #FCC174;
+  -webkit-box-shadow: 0px 0px 70px 20px #FCC174;
+}
+#interval_container {
+  width: 300px;
+  height: 30px;
+  display: block;
+  margin: auto;
+  padding-top: 20px;
+  //border: 1pt solid;
+}
+.tone_choice {
+  padding: 18px;
+  cursor: pointer;
+}
+.tt {
+  padding: 14px;
+}
+.tone_choice:hover {
+  color: #EEEEEE;
+}
+.tone_desc {
+  display: none;
+}

@@ -1,0 +1,72 @@
+script(type='text/javascript', src='/javascripts/notes.js')
+link(rel='stylesheet', src='/stylesheets/notes.css')
+#notes_container.container
+  #head(style='display:block; height: 50px;')
+    h1(style='display:inline-block; ') Welcome to 'Gimme an Ear'
+    a(href='/', style='float: right; display:inline-block;margin-top: 20px;') or go back home.
+  p where you can do some basic note matching.
+  br/
+  #start.button Start!
+  br/
+  #notes
+  #response
+    #replay Replay: 
+      #together.button together
+      span  | 
+      #distinct.button distinctly
+    #options
+      #interval_container The interval is: 
+        span#interval_name (choose one)
+      #rowOne
+        #1.tone_choice m2
+          span.tone_desc minor 2nd
+        #2.tone_choice M2
+          span.tone_desc major 2nd
+        #3.tone_choice m3
+          span.tone_desc minor 3rd
+        #4.tone_choice M3
+          span.tone_desc major 3rd
+        #5.tone_choice P4
+          span.tone_desc perfect 4th
+        #6.tone_choice A4
+          span.tone_desc augmented 4th
+        #7.tone_choice P5
+          span.tone_desc perfect 5th
+        #8.tone_choice m6
+          span.tone_desc minor 6th
+        #9.tone_choice M6
+          span.tone_desc major 6th
+        #10.tone_choice m7
+          span.tone_desc minor 7th
+        #11.tone_choice M7
+          span.tone_desc major 7th
+        #12.tone_choice P8
+          span.tone_desc octave
+      #rowTwo
+        #13.tone_choice m9
+          span.tone_desc minor 9th
+        #14.tone_choice M9
+          span.tone_desc major 9th
+        #15.tt.tone_choice m10
+          span.tone_desc minor 10th
+        #16.tt.tone_choice M10
+          span.tone_desc major 10th
+        #17.tt.tone_choice P11
+          span.tone_desc perfect 11th
+        #18.tt.tone_choice A11
+          span.tone_desc augmented 11th
+        #19.tt.tone_choice P12
+          span.tone_desc perfect 12th
+        #20.tt.tone_choice m13
+          span.tone_desc minor 13th
+        #21.tt.tone_choice M13
+          span.tone_desc major 13th
+        #22.tt.tone_choice m14
+          span.tone_desc minor 14th
+        #23.tt.tone_choice M14
+          span.tone_desc major 14th
+        #24.tt.tone_choice 2P8
+          span.tone_desc 2 octave
+    
+
+
