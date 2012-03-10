@@ -76,10 +76,11 @@ footer {
   bottom: 0px;
   color: white;
   font-size: 10px;
-  height: 10px;
+  line-height: 16px;
+  height: 20px;
   width: 810px;
   text-align: center;
-  padding: 5px 0px;
+  padding: 20px 0px;
 }
 
 
@@ -94,10 +95,9 @@ footer {
   height: 130px;
   width: 48px;
   */
-  left: 860px;
+  left: 827px;
   top: 0px;
   height: 30px;
-  width: 200px;
   padding-top: 13px;
   //border: 1pt solid silver;
   border-top: none;
@@ -168,6 +168,12 @@ footer {
 #mail_icon:hover {
   background-image: url('/images/mail_on.png');
 }
+#git_icon {
+  background-image: url('/images/git_off.png');
+}
+#git_icon:hover {
+  background-image: url('/images/git_on.png');
+}
 
 /*=====================CONTAINERS and SQUARES=================================*/
 
@@ -202,6 +208,16 @@ footer {
 #work {
   //background-image: url('/images/back2.jpg');
   background-color: rgb(70,70,70);
+  background: rgb(70,70,70); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(135,135,135,1) 0%, rgba(70,70,70,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(135,135,135,1)), color-stop(100%,rgba(70,70,70,1))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(135,135,135,1) 0%,rgba(70,70,70,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgba(135,135,135,1) 0%,rgba(70,70,70,1) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgba(135,135,135,1) 0%,rgba(70,70,70,1) 100%); /* IE10+ */
+background: radial-gradient(center, ellipse cover,  rgba(135,135,135,1) 0%,rgba(70,70,70,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#878787', endColorstr='#464646',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
   display: none;
 }
 #work_c {
@@ -209,6 +225,7 @@ footer {
   left: 180px;
   border: 1pt solid grey;
   background-color: #FAFAFA;
+
   padding: 20px 25px;
 }
 

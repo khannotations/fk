@@ -26,12 +26,12 @@ $(document).ready(function() {
   });
   /* Handles 'work' view, slide down on project click */
   var curr_proj_id = "";                        // Store current project
-  var new_height = 920;                         // New height of 'work' square
+  var new_height = 960;                         // New height of 'work' square
   var work_height = $("#work").height();        // Store old height
   $(".big_p").live('click', function(){
     // Change height, fix footer to bottom and scroll body down
     $("#work").animate({height: new_height }, 500);
-    $("footer").animate({top: new_height-$("footer").height() }, 100);
+    $("footer").animate({top: new_height-$("footer").outerHeight() }, 100);
     $("body").animate({
       scrollTop: $("#row_1").offset().top-12
     }, 500);
@@ -58,7 +58,7 @@ $(document).ready(function() {
     $("body").animate({ scrollTop: 0 }, 300);
     t.parent().slideUp(350);
     $("#work").animate({ height: work_height }, 300, function(){
-      $("footer").animate({top: work_height-20}, 300);
+      $("footer").animate({top: work_height-$("footer").outerHeight()}, 300);
     });
     $(curr_proj_id).hide();
     curr_proj_id = "";
