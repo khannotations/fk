@@ -6,7 +6,7 @@
     
   #work_c.contain
     #work_intro.fade
-      p I program and design, sometimes separately, but usually in sync. I like AI, games, open source things, really witty puns, and that bubbly feeling that comes from writing or seeing beautiful code.
+      p I program and design, usually in sync. I like A.I., games, open source things, really witty puns, and that bubbly feeling that comes from writing or seeing beautiful code.
       p Check some of my work out!
 
     #projects
@@ -36,7 +36,11 @@
             img(src='/images/ontapp.png', alt='onTapp'')
             p onTapp : 
               span.small Node | Express | Jade | MongoDB
-        
+        .big_project
+          .big_p.slide(target='screw')
+            img(src='/images/screw.png', alt='Screw Me Yale'')
+            p Screw Me Yale : 
+              span.small Rails | Bootstrap | CAS 
         .big_project
           .big_p.slide(target='processing')
             img(src='/images/processing.png', alt='Schedulizer')
@@ -46,24 +50,21 @@
     #descs
       .hide_disp ^ Hide
       .desc(name="ontapp")
-
-      #desc_1.project_display
-        .hide_disp ^ Hide
-        #ontapp_desc.proj_desc.block 
-          .desc_left
-            .desc_title onTapp
-            .desc_role Co-founder | 
-              span(style="font-size: 15px;") September 2011 - present
-            p &nbsp;&nbsp;onTapp is a web application designed to facilitate ordering from restaurants online. Leveraging customized deals, networks and a scoring system, onTapp makes food-ordering more social and, well, more fun! The site’s back-end was originally written in Apache, PHP and MySQL, but switched early on to Node.js with Express, Jade and MongoDB. Server-side code is written in jQuery.
-            p
-              a(href='http://www.yaleontapp.com', target='_blank')
-                span.crimson &nbsp;&nbsp;yaleontapp.com
-              | — slated to debut Spring 2012.
-            p
-              <div class="fb-like" data-href="http://www.yaleontapp.com" data-send="true" data-width="400" data-show-faces="false" data-colorscheme="light" style='margin-top: 20px;'></div>
-          .desc_right
+        .left
+          .desc_title onTapp
+          .desc_role Co-founder | 
+            span(style="font-size: 15px;") September 2011 - present
+          p &nbsp;&nbsp;onTapp is a web application designed to facilitate ordering from restaurants online. Leveraging customized deals, networks and a scoring system, onTapp makes food-ordering more social and, well, more fun! The site’s back-end was originally written in Apache, PHP and MySQL, but switched early on to Node.js with Express, Jade and MongoDB. Server-side code is written in jQuery.
+          p
             a(href='http://www.yaleontapp.com', target='_blank')
-              img(src='/images/ontapp_ss.png')
+              span.crimson &nbsp;&nbsp;yaleontapp.com
+            | — slated to debut Spring 2012.
+          p
+            <div class="fb-like" data-href="http://www.yaleontapp.com" data-send="true" data-width="400" data-show-faces="false" data-colorscheme="light" style='margin-top: 20px;'></div>
+        .right
+          a(href='http://www.yaleontapp.com', target='_blank')
+            img(src='/images/ontapp_ss.png')
+      //-
         #processing_desc.proj_desc.block
           .desc_left
             .desc_title.block The 'Schedulizer'

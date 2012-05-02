@@ -36,7 +36,7 @@ li {
 .crimson { color: crimson; }
 .crimson:hover{ color: OrangeRed; }
 .hidden { display: none; }
-.big { font-size: 20px; line-height: 24px;}
+.big { font-size: 20px; line-height: 30px;}
 .blue { color: deepskyblue; }
 
 .nav_bar {
@@ -88,7 +88,7 @@ li {
   font-size: 10px;
   line-height: 16px;
   height: 20px;
-  width: 810px;
+  width: @min-width;
   text-align: center;
   padding: 20px 0px;
 }
@@ -217,7 +217,7 @@ li {
 
 #work {
   //background-image: url('/images/back2.jpg');
-  .rad-gradient(rgb(70, 70, 70), rgb(135, 135, 135));
+  .rad-gradient(#DDD, lighten(#6c86c5, 0%));
   display: none;
 }
 
@@ -240,6 +240,10 @@ li {
   margin-bottom: 20px;
 }
 
+#projects {
+  margin-bottom: 10px;
+}
+
 @proj_width: (@min-width - 120)/3 - 2; /* -2 for borders */
 .proj_section {
   border-left: 1pt solid grey;
@@ -247,6 +251,7 @@ li {
   width: @proj_width; 
   padding: 0px 20px;
   vertical-align: top;
+  line-height: 24px;
   &:first-child {
     border-left: 1pt solid transparent;
   }
@@ -276,44 +281,44 @@ li {
     }
   }
   p {
-    margin-top: 2px;
     color: black;
-    font-size: 80%;
+    font-size: 85%;
   }
-
   .small {
-    font-size: 70%;
+    font-size: 75%;
+  }
+}
+.desc {
+  display: none;
+  color: black;
+  padding-top: 20px;
+  border-top: 1pt solid #777;
+  div {
+    //border: 1pt solid red;
+  }
+  .left {
+    float: left;
+    display: inline-block;
+    width: 44%;
+    text-align: justify;
+
+    
   }
 
-}
+  .right {
+    float: right;
+    display: inline-block;
+    width: 54%;
 
-.big_p {
-  cursor: pointer;
-  line-height: 20px;
-}
+    img {
+      width: 100%;
+    }
+  }
 
-.p_img:hover {
-}
-/* onTapp box */
-.p_special {
-  height: 75px;
-  width: 128px;
-  padding: 10px;
-  background-color:rgba(0,0,0, 0.85);
-}
-
-.caption {
-  font-size: 14px;
-  line-height: 14px;
-  height: 10px;
-  color: black;
-  display:block;
-  margin: 2px 0px;
-}
-
-.caption_kicker {
-  color: black;
-  font-size: 9px;
+  p{ 
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 /* Hidden div that slides down on project click */
@@ -334,12 +339,7 @@ li {
   font-size: 10px;
   cursor:pointer;
 }
-.proj_desc {
-  margin-top: 10px;
-}
-.desc_left {
-  width: 420px;
-}
+
 .desc_title {
   margin-top: -7px;
   font-size: 42px;
@@ -359,15 +359,6 @@ li {
   text-align: justify;
   line-height: 20px;
   margin-top: 5px;
-}
-.desc_right { 
-  float: right;
-  margin-top: 10px;
-  img {
-    border: 1pt solid rgba(0,0,0,0.3);
-    height: 300px;
-    width: 310px;
-  }
 }
 
 

@@ -11,7 +11,7 @@ $(document).ready(function() {
   $("#work").css({"top":"0px", "left":w+"px"});
   $("#play").css({"top":"0px", "left":"-"+w+"px"});
   $(".proj_desc").hide();
-  $("#sidebar").hide();
+  $("#sidebar").hide()
   setTimeout(function(){$("body").animate({scrollTop:0}, 100);}, 500);
   fadeContent();
   
@@ -31,7 +31,7 @@ $(document).ready(function() {
   $(".big_p").live('click', function(){
     // Change height, fix footer to bottom and scroll body down
     $("#work").animate({height: new_height }, 500);
-    $("footer").animate({top: new_height-$("footer").outerHeight() }, 100);
+    $("#footer").animate({top: new_height-$("footer").outerHeight() }, 100);
     $("body").animate({
       scrollTop: $("#row_1").offset().top-12
     }, 500);
@@ -58,7 +58,7 @@ $(document).ready(function() {
     $("body").animate({ scrollTop: 0 }, 300);
     t.parent().slideUp(350);
     $("#work").animate({ height: work_height }, 300, function(){
-      $("footer").animate({top: work_height-$("footer").outerHeight()}, 300);
+      $("#footer").animate({top: work_height-$("footer").outerHeight()}, 300);
     });
     $(curr_proj_id).hide();
     curr_proj_id = "";
@@ -141,7 +141,7 @@ function moveOut(wind, time, flag, callback) {
       $("#play").hide();
       callback();
     });
-    $("footer").css({"backgroundColor": "transparent"});
+    $("#footer").css({"backgroundColor": "transparent"});
   }
 }
 /* Fades in certain text -- just for effects */

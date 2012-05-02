@@ -32,7 +32,7 @@ li {
 }
 .big {
   font-size: 20px;
-  line-height: 24px;
+  line-height: 30px;
 }
 .blue {
   color: deepskyblue;
@@ -86,7 +86,7 @@ li {
   font-size: 10px;
   line-height: 16px;
   height: 20px;
-  width: 810px;
+  width: 920px;
   text-align: center;
   padding: 20px 0px;
 }
@@ -195,25 +195,25 @@ li {
   left: 80px;
 }
 #work {
-  background: #464646;
+  background: #dddddd;
   /* Old browsers */
 
-  background: -moz-radial-gradient(center, ellipse cover, #464646 0%, #878787 100%);
+  background: -moz-radial-gradient(center, ellipse cover, #dddddd 0%, #6c86c5 100%);
   /* FF3.6+ */
 
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #464646), color-stop(100%, #878787));
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #dddddd), color-stop(100%, #6c86c5));
   /* Chrome,Safari4+ */
 
-  background: -webkit-radial-gradient(center, ellipse cover, #464646 0%, #878787 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #dddddd 0%, #6c86c5 100%);
   /* Chrome10+,Safari5.1+ */
 
-  background: -o-radial-gradient(center, ellipse cover, #464646 0%, #878787 100%);
+  background: -o-radial-gradient(center, ellipse cover, #dddddd 0%, #6c86c5 100%);
   /* Opera 12+ */
 
-  background: -ms-radial-gradient(center, ellipse cover, #464646 0%, #878787 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #dddddd 0%, #6c86c5 100%);
   /* IE10+ */
 
-  background: radial-gradient(center, ellipse cover, #464646 0%, #878787 100%);
+  background: radial-gradient(center, ellipse cover, #dddddd 0%, #6c86c5 100%);
   /* W3C */
 
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='@start', endColorstr='@stop', GradientType=1);
@@ -236,6 +236,9 @@ li {
   text-align: justify;
   margin-bottom: 20px;
 }
+#projects {
+  margin-bottom: 10px;
+}
 /* -2 for borders */
 .proj_section {
   border-left: 1pt solid grey;
@@ -243,6 +246,7 @@ li {
   width: 264.6666666666667px;
   padding: 0px 20px;
   vertical-align: top;
+  line-height: 24px;
 }
 .proj_section:first-child {
   border-left: 1pt solid transparent;
@@ -273,35 +277,35 @@ li {
   box-shadow: 0px 0px 2px 1px #555555;
 }
 .big_project p {
-  margin-top: 2px;
   color: black;
-  font-size: 80%;
+  font-size: 85%;
 }
 .big_project .small {
-  font-size: 70%;
+  font-size: 75%;
 }
-.big_p {
-  cursor: pointer;
-  line-height: 20px;
+.desc {
+  display: none;
+  color: black;
+  padding-top: 20px;
+  border-top: 1pt solid #777;
 }
-/* onTapp box */
-.p_special {
-  height: 75px;
-  width: 128px;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.85);
+.desc .left {
+  float: left;
+  display: inline-block;
+  width: 44%;
+  text-align: justify;
 }
-.caption {
+.desc .right {
+  float: right;
+  display: inline-block;
+  width: 54%;
+}
+.desc .right img {
+  width: 100%;
+}
+.desc p {
   font-size: 14px;
-  line-height: 14px;
-  height: 10px;
-  color: black;
-  display: block;
-  margin: 2px 0px;
-}
-.caption_kicker {
-  color: black;
-  font-size: 9px;
+  line-height: 20px;
 }
 /* Hidden div that slides down on project click */
 .project_display {
@@ -319,12 +323,6 @@ li {
   top: 458px;
   font-size: 10px;
   cursor: pointer;
-}
-.proj_desc {
-  margin-top: 10px;
-}
-.desc_left {
-  width: 420px;
 }
 .desc_title {
   margin-top: -7px;
@@ -344,15 +342,6 @@ li {
   text-align: justify;
   line-height: 20px;
   margin-top: 5px;
-}
-.desc_right {
-  float: right;
-  margin-top: 10px;
-}
-.desc_right img {
-  border: 1pt solid rgba(0, 0, 0, 0.3);
-  height: 300px;
-  width: 310px;
 }
 /*=========================OLD STUFF ====================*/
 /*
