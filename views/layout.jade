@@ -1,14 +1,29 @@
 !!! 5
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style_small.css')
-    link(rel='icon', href='/images/r2.ico')
-    link(href='http://fonts.googleapis.com/css?family=Iceland|Quantico|Ropa+Sans|Gudea|Asap|Asul|Droid+Sans+Mono|Open+Sans|Josefin+Slab|Lato|Mako|Glegoo|Nixie+One', rel='stylesheet', type='text/css')
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]><!--><html xmlns:fb="http://ogp.me/ns/fb#"><!--<![endif]-->
+head
+  title= title
+  link(rel='stylesheet', href='/stylesheets/a.css')
+  link(rel='stylesheet', href='/stylesheets/style.css')
+  link(rel='icon', href='/images/r2.ico')
+  link(href='http://fonts.googleapis.com/css?family=Iceland|Quantico|Ropa+Sans|Gudea|Asap|Asul|Droid+Sans+Mono|Open+Sans|Josefin+Slab|Lato|Mako|Glegoo|Nixie+One', rel='stylesheet', type='text/css')
 
-    script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js')
-    script(type='text/javascript', src='/javascripts/colorPlugin.js')
-    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js')
-    script(type='text/javascript', src='javascripts/main.js')
-    
-  body!=body
+  script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js')
+  script(type='text/javascript', src='/javascripts/colorPlugin.js')
+  script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js')
+  script(type='text/javascript', src='javascripts/main.js')
+  script(type="text/javascript").
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30460047-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+body!=body
+</html>

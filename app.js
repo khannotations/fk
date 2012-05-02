@@ -4,6 +4,8 @@
 
 var express = require('express')
   , routes = require('./routes')
+  , pub = __dirname + "/public"
+  , lessErrorHandler = require ('./lib/less_errors.js');
 
 var app = module.exports = express.createServer();
 // Configuration
@@ -14,7 +16,7 @@ app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.bodyParser());
-  app.set('env', 'production');
+  //app.set('env', 'production');
   app.disable('view cache');
   app.use(express.methodOverride());
   app.use(express.cookieParser());
@@ -25,7 +27,12 @@ app.configure(function(){
     secret: "CmRp", 
     cookie: {expires: myDate}
   }));
-  app.use(express.static(__dirname + '/public'));
+  app.use(require('connect-less')({ src: pub}));
+  //app.use(express.compiler({ src:pub, enable: ['less'] }));
+
+  app.use(lessErrorHandler);
+
+  app.use(express.static(pub));
   app.use(app.router);
 });
 

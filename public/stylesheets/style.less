@@ -1,0 +1,412 @@
+/*
+For faiazkhan.com, by Faiaz Khan. 
+Edited February 16, 2012
+*/
+
+/*===============================OVER-ARCHING=================================*/
+
+@import "base.less";
+
+@min-width: 920px;
+@min-height: 600px;
+@left: 80px;
+@pad: 25px;
+
+body {
+  font-family: Glegoo;
+  font-family: Nixie One;
+  font-size: 100%;  
+  background-color: black;
+  color: white;
+  width: 100%;
+  min-width: @min-width;
+  height: 100%;
+  min-height: @min-height;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  display: inline-block;
+}
+
+.crimson { color: crimson; }
+.crimson:hover{ color: OrangeRed; }
+.hidden { display: none; }
+.big { font-size: 20px; line-height: 24px;}
+.blue { color: deepskyblue; }
+
+.nav_bar {
+  margin-left: @left;
+  color: silver;
+  font-size: 16px;
+  line-height: 16px;
+}
+.nav_button {
+  padding-right: 50px;
+  padding-top: 16px;
+  margin: 0px;
+  cursor: pointer;
+  &:hover {
+    color: lightcyan;
+  }
+  &:selected {
+    color: deepskyblue;
+  }
+}
+.square {
+  height: 100%;
+  width: 100%;
+  min-width: @min-width;
+  min-height: @min-height;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  position: absolute;
+}
+
+.contain {
+  width: @min-width;
+  padding: 20px @pad;
+  position: absolute;
+  color: white;
+  font-size: 13pt;
+  line-height: 28pt;
+}
+
+.fb-like, .fb-like iframe { height: 35px; }
+
+#footer {
+  display: block;
+  position: absolute;
+  left: @left;
+  bottom: 0px;
+  color: white;
+  font-size: 10px;
+  line-height: 16px;
+  height: 20px;
+  width: 810px;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+
+
+/*===================================LEFT BAR=================================*/
+
+#sidebar{
+  position: absolute;
+  /*
+  left: 0px;
+  top: 145px;
+  height: 130px;
+  width: 48px;
+  */
+  left: @left + @min-width + 2*@pad - 168;
+  top: 0px;
+  width: 168px;
+  height: 30px;
+  padding-top: 13px;
+  //border: 1pt solid silver;
+  border-top: none;
+  z-index: 5;
+  //.rounded(10px);
+  opacity: 0.7;
+  &:hover {
+    opacity: 1;
+  }
+  li {
+    margin-left: 5px;
+    padding-left: 7px;
+    font-size: 14px;
+    line-height: 22px;
+    color: white;
+  }
+}
+
+.title {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+#about {
+  position: absolute;
+  top: 12px;
+  left: @left;
+  padding-top: 5px;
+  width: 350px;
+  height: 100px;
+  background-color: #FAFAFA;
+  color: black;
+  font-size: 13px;
+  font-family: "Lucida Grande", "Helvetica Neue", Verdana, sans-serif;
+  line-height: 19px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+}
+
+#fb_icon {
+  background-image: url('/images/fb_off.png');
+}
+#fb_icon:hover {
+  background-image: url('/images/fb_on.png');
+}
+#tw_icon {
+  background-image: url('/images/twitter_off.png');
+}
+#tw_icon:hover {
+  background-image: url('/images/twitter_on.png');
+}
+#in_icon {
+  background-image: url('/images/in_off.png');
+}
+#in_icon:hover {
+  background-image: url('/images/in_on.png');
+}
+#mail_icon {
+  background-image: url('/images/mail_off.png');
+}
+#mail_icon:hover {
+  background-image: url('/images/mail_on.png');
+}
+#git_icon {
+  background-image: url('/images/git_off.png');
+}
+#git_icon:hover {
+  background-image: url('/images/git_on.png');
+}
+
+/*=====================CONTAINERS and SQUARES=================================*/
+
+#index {
+  background-image: url('/images/chicago.jpg');
+  //background-image: url('/images/beach.jpg');
+  z-index: 1;
+  top: 0px;
+}
+
+#index_c {
+  top: 50px;
+  left: 280px;
+}
+
+.rafi {
+  min-width: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#play {
+  background-image: url('/images/bhangra3.jpg');
+  //background-image: url('/images/beach.jpg');
+  display: none;
+}
+#play_c {
+  top: 70px;
+  left: @left;
+  //background-color: #FAFAFA;
+  //border: 1pt solid grey;
+}
+
+#work {
+  //background-image: url('/images/back2.jpg');
+  .rad-gradient(rgb(70, 70, 70), rgb(135, 135, 135));
+  display: none;
+}
+
+
+#work_c {
+  top: 65px;
+  left: @left;
+  border: 1pt solid grey;
+  background-color: #FAFAFA;
+  padding: 20px @pad;
+}
+
+/*==================================WORK====================================*/
+
+#work_intro {
+  font: 14px "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+  color: rgba(0,0,0,0.8);
+  line-height: 24px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+@proj_width: (@min-width - 120)/3 - 2; /* -2 for borders */
+.proj_section {
+  border-left: 1pt solid grey;
+  display: inline-block;
+  width: @proj_width; 
+  padding: 0px 20px;
+  vertical-align: top;
+  &:first-child {
+    border-left: 1pt solid transparent;
+  }
+  &:last-child {
+    padding-right: 0px;
+  }
+
+  h5 {
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    color: #222;
+    text-indent: -10px;
+    font-weight: bold;
+  }
+}
+
+.big_project{
+  cursor: pointer;
+  margin-bottom: 10px;
+  img {
+    width: @proj_width;
+    height: @proj_width/4;
+    &:hover {
+      .box-shadow(0px 0px 2px 1px #555);
+    }
+  }
+  p {
+    margin-top: 2px;
+    color: black;
+    font-size: 80%;
+  }
+
+  .small {
+    font-size: 70%;
+  }
+
+}
+
+.big_p {
+  cursor: pointer;
+  line-height: 20px;
+}
+
+.p_img:hover {
+}
+/* onTapp box */
+.p_special {
+  height: 75px;
+  width: 128px;
+  padding: 10px;
+  background-color:rgba(0,0,0, 0.85);
+}
+
+.caption {
+  font-size: 14px;
+  line-height: 14px;
+  height: 10px;
+  color: black;
+  display:block;
+  margin: 2px 0px;
+}
+
+.caption_kicker {
+  color: black;
+  font-size: 9px;
+}
+
+/* Hidden div that slides down on project click */
+.project_display {
+  height: 330px;
+  width: 100%;
+  color: rgba(0,0,0,0.8);
+  display: none;
+  border-top: 3pt double rgba(0,0,0,0.6);
+  margin-top: 20px;
+  padding-top: 5px;
+}
+
+.hide_disp {
+  position: absolute;
+  right: 25px;
+  top: 458px;
+  font-size: 10px;
+  cursor:pointer;
+}
+.proj_desc {
+  margin-top: 10px;
+}
+.desc_left {
+  width: 420px;
+}
+.desc_title {
+  margin-top: -7px;
+  font-size: 42px;
+  line-height: 60px;
+  font-weight: bold;
+  color: deepskyblue;
+}
+.desc_role {
+  font: 16px "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 200;
+  line-height: 24px;
+  margin-bottom: 10px;
+  
+}
+.desc_desc{
+  font: 12.5px "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+  text-align: justify;
+  line-height: 20px;
+  margin-top: 5px;
+}
+.desc_right { 
+  float: right;
+  margin-top: 10px;
+  img {
+    border: 1pt solid rgba(0,0,0,0.3);
+    height: 300px;
+    width: 310px;
+  }
+}
+
+
+/*=========================OLD STUFF ====================*/
+/*
+#site {
+  position: absolute;
+  //font: 14pt 'Iceland', 'Helvetica Neue Light', sans-serif;
+  top: 0px;
+  left: 0px;
+  padding-left: 10px;
+  height: 100%;
+  width: 180px;
+  color: white;
+  z-index: 3;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: 1px 0px 1px 0px black;  
+  //border-right: 1pt solid rgba(230, 230, 230, 0.2);
+}
+
+#nameplate {
+  -webkit-transform: rotate(-30deg); 
+  -moz-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  font-size: 52px;
+  margin: 15px 0px 15px 10px;
+  display: block;
+}
+
+#info {
+  width: 150px;
+  height: 45px;
+  line-height: 22px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  color: white;
+}
+
+*/
