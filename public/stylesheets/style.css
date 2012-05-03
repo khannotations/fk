@@ -2,7 +2,7 @@
 For faiazkhan.com, by Faiaz Khan. 
 Edited February 16, 2012
 */
-/*===============================OVER-ARCHING=================================*/
+/*=============================OVER-ARCHING=================================*/
 body {
   font-family: Glegoo;
   font-family: Nixie One;
@@ -223,7 +223,7 @@ li {
   /* IE6-9 fallback on horizontal gradient */
 
   display: none;
-  height: 3965px;
+  height: 3980px;
 }
 #work_c {
   top: 65px;
@@ -314,29 +314,29 @@ li {
   width: 44%;
   text-align: justify;
 }
-.desc .left a {
-  color: crimson;
-}
 .desc .right {
   float: right;
   display: inline-block;
   width: 50%;
 }
-.desc .right img {
-  width: 100%;
-  max-height: 350px;
+.desc a {
+  color: crimson;
 }
-.desc .right a img:hover {
+.desc a img:hover {
   -webkit-box-shadow: 0px 0px 2px 1px #555555;
   -moz-box-shadow: 0px 0px 2px 1px #555555;
   box-shadow: 0px 0px 2px 1px #555555;
+}
+.desc img {
+  width: 100%;
+  max-height: 350px;
 }
 .desc p {
   font-size: 14px;
   line-height: 20px;
   text-indent: 10px;
 }
-.desc:last-child {
+.desc.short {
   height: 340px;
 }
 .desc_title {

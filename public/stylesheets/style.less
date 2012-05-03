@@ -3,7 +3,7 @@ For faiazkhan.com, by Faiaz Khan.
 Edited February 16, 2012
 */
 
-/*===============================OVER-ARCHING=================================*/
+/*=============================OVER-ARCHING=================================*/
 
 @import "base.less";
 
@@ -222,7 +222,7 @@ li {
   //background-image: url('/images/back2.jpg');
   .rad-gradient(#DDD, lighten(#6c86c5, 0%));
   display: none;
-  height: (@desc_height + @pad) * 9.5 + 70;
+  height: (@desc_height + 2*@pad) * 9 + 20;
 }
 
 
@@ -320,34 +320,32 @@ li {
     display: inline-block;
     width: 44%;
     text-align: justify;
-    a {
-      color: crimson;
-    }
   }
-
   .right {
     float: right;
     display: inline-block;
     width: 50%;
+  }
 
-    img {
-      width: 100%;
-      max-height: 350px;
-      &:hover {
-      }
-    }
-    a img:hover {
+  a {
+    color: crimson;
+    img:hover {
       .box-shadow(0px 0px 2px 1px #555);
-
     }
   }
+
+  img {
+    width: 100%;
+    max-height: 350px;
+  }
+
   p { 
     font-size: 14px;
     line-height: 20px;
     text-indent: 10px;
   }
 
-  &:last-child {
+  &.short {
     height: @desc_height - 40;
   }
 }
