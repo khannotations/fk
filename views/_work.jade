@@ -6,147 +6,175 @@
     
   #work_c.contain
     #work_intro.fade
-      p I program and design, usually in sync. I like A.I., games, open source things, really witty puns, and that bubbly feeling that comes from writing or seeing beautiful code.
-      p Check some of my work out!
+      p I program and design, sometimes separately, but usually together. I like A.I., games, open source things, really witty puns, and that bubbly feeling that comes from writing or seeing beautiful code.
+      p This is what I've made...
 
     #projects
       .proj_section
+        h5 Both-ing
+        .big_project(target='ontapp', tokens="node db amp js adobe")
+          img(src='/images/ontapp.png', alt='onTapp'')
+          p onTapp
+        .big_project(target='screw', tokens="rails js css bs")
+          img(src='/images/screw.png', alt='Screw Me Yale'')
+          p Screw Me Yale 
+
+      .proj_section
         h5 Programming
-        .big_project
-          .big_p.slide(target='galaxy')
-            img(src='/images/galaxy.png', alt='Galaxy')
-            p Galaxy Tools :
-              span.small  Software Design | Python | R
-        .big_project
-          .big_p.slide(target='colors')
-            img(src='/images/psych.png', alt='Department of Psychology, University of Chicago')
-            p Seeing Colors : 
-              span.small Guided Research | Java
+        .big_project(target='processing', tokens="java")
+          img(src='/images/processing.png', alt='Schedulizer')
+          p Schedulizer 
+        .big_project(target='galaxy', tokens="python")
+          img(src='/images/galaxy.png', alt='Galaxy')
+          p Galaxy Tools
+        .big_project(target='colors', tokens="java")
+          img(src='/images/psych.png', alt='Department of Psychology, University of Chicago')
+          p Seeing Colors 
+
       .proj_section
         h5 Designing
-        .big_project
-          .big_p.slide(target='maitri')
-            img(src='/images/maitri.png', alt='Maitri Massage'')
-            p Maitri Massage : 
-              span.small Rails | Less.css
-      .proj_section
-        h5 Both-ing
-        .big_project
-          .big_p.slide(target='ontapp')
-            img(src='/images/ontapp.png', alt='onTapp'')
-            p onTapp : 
-              span.small Node | Express | Jade | MongoDB
-        .big_project
-          .big_p.slide(target='screw')
-            img(src='/images/screw.png', alt='Screw Me Yale'')
-            p Screw Me Yale : 
-              span.small Rails | Bootstrap | CAS 
-        .big_project
-          .big_p.slide(target='processing')
-            img(src='/images/processing.png', alt='Schedulizer')
-            p Schedulizer : 
-              span.small Java | Processing
+        .big_project(target='maitri', tokens="rails js css")
+          img(src='/images/maitri.png', alt='Maitri Massage'')
+          p Maitri Massage 
+        .big_project(target='jashan', tokens="rails js css adobe")
+          img(src='/images/jashan.png', alt='Yale Jashan Bhangra'')
+          p Yale Jashan Bhangra
+        .big_project(target='avishary', tokens="node js css bs")
+          img(src='/images/avishary.png', alt='Avishary'')
+          p Avishary 
+
+    #expertise
+      .section
+        ul
+          li.token(name="node") Node.js [ Express, Jade, Socket IO ]
+          li.token(name="rails") Ruby on Rails / Heroku / Git
+          li.token(name="db") MongoDB / Redis
+          li.token(name="amp") Apache / MySQL / PHP
+      .section   
+        ul
+         li.token(name="js") Javascript / jQuery
+         li.token(name="c") C [ Message Passing Interface ]
+         li.token(name="python") Python
+         li.token(name="java") Java [ Processing ]
+      .section    
+        ul
+          li.token(name="css") Less / Sass
+          li.token(name="bs") Twitter Bootstrap
+          li.token(name="adobe") Photoshop, InDesign, Illustrator
           
     #descs
-      .hide_disp ^ Hide
       .desc(name="ontapp")
         .left
           .desc_title onTapp
           .desc_role Co-founder | 
             span(style="font-size: 15px;") September 2011 - present
-          p &nbsp;&nbsp;onTapp is a web application designed to facilitate ordering from restaurants online. Leveraging customized deals, networks and a scoring system, onTapp makes food-ordering more social and, well, more fun! The site’s back-end was originally written in Apache, PHP and MySQL, but switched early on to Node.js with Express, Jade and MongoDB. Server-side code is written in jQuery.
+          p onTapp is a web application designed to facilitate ordering from restaurants online. Leveraging customized deals, networks and a scoring system, onTapp makes food-ordering more social and, well, more fun! The site’s back-end was originally written in Apache, PHP and MySQL, but switched early on to Node.js with Express, Jade and MongoDB. Server-side code is written in jQuery.
           p
-            a(href='http://www.yaleontapp.com', target='_blank')
-              span.crimson &nbsp;&nbsp;yaleontapp.com
-            | — slated to debut Spring 2012.
+            a(href='http://www.yaleontapp.com', target='_blank') yaleontapp.com
+            | —-slated to debut Spring 2012.
           p
             <div class="fb-like" data-href="http://www.yaleontapp.com" data-send="true" data-width="400" data-show-faces="false" data-colorscheme="light" style='margin-top: 20px;'></div>
         .right
           a(href='http://www.yaleontapp.com', target='_blank')
             img(src='/images/ontapp_ss.png')
-      //-
-        #processing_desc.proj_desc.block
-          .desc_left
-            .desc_title.block The 'Schedulizer'
-            .desc_role.block For May Project 2011, University High School
-            .desc_desc.block &nbsp;&nbsp;Designed to investigate how to satisfy the most high school course requests for the 2011-2012 school year, taking into account the constraints on the number of class periods, classrooms and teachers, by creating a visualization of the problem. The app also runs a graph-traversal algorithm to try to minimize the number of class periods needed to satisfy all the requests. It turns out that if everyone got every class they wanted, about 130 periods would be needed!
-              br/
-              | &nbsp;&nbsp;Also just a fun app to play with—unfortunately not online yet. Made on the visualization engine 
-              a(href='http://www.processing.org')
-                span.crimson Processing
-              |, written completely in Java.
-          .desc_right
-            img(src='/images/process_ss.png')
-        #galaxy_desc.proj_desc.block 
-          .desc_left
-            .desc_title.block Galaxy Tools
-            .desc_role.block Computational Institute, University of Chicago
-              br/ 
-              span(style="font-size: 15px;") May - August 2011
-            .desc_desc.block &nbsp;&nbsp;Designed and implemented tools for Galaxy (an open, web-based platform for data intensive biomedical research) and GEDI (a gene database). Written in Python and R, the tools identified statistically significant differences in massive sets of microarray data to pinpoint which genes may contain mutations. The next step would be to cross check those genes against related ones in GEDI, identifying precisely which pathways a particular mutation influenced.
-              br/
-              | &nbsp;&nbsp;Group Leader:
-              a(href='http://www.mcs.anl.gov/~madduri/')
-                span.crimson Ravi Madduri 
-              |. Also check out
-              a(href='http://main.g2.bx.psu.edu/')
-                span.crimson Galaxy 
-              | and 
-              a(href='http://www.childrenshospital.org/research/ingber/GEDI/gedihome.htm')
-                span.crimson GEDI
-              |.
-          .desc_right
-            img(src='/images/galaxy_ss.png')
-        #psych_desc.proj_desc.block 
-          .desc_left
-            .desc_title.blocks Seeing Colors
-            .desc_role.block Department of Psychology, University of Chicago
-              br/ 
-              span(style="font-size: 15px;") June - August 2010
-            .desc_desc.block &nbsp;&nbsp;&nbsp;&nbsp;Explored whether humans have inherent cognitive biases in color-naming despite differences in native language. Hypothesizing that they do tend to name colors similarly, I envisioned and programmed an interactive computer animation, recruited test subjects 3 and 4 years of age and conducted the self-designed experiment. The results showed a difference in the ability to distinguish colors within certain groups, which supported the hypothesis.
-              br/
-              | &nbsp;&nbsp;Group Leader:
-              a(href='http://psychology.uchicago.edu/people/faculty/slevine.shtml')
-                span.crimson Dr. Susan Levine
-              |. With the 
-              a(href='http://www.ucls.uchicago.edu/schools/high-school/summerlink/index.aspx')
-                span.crimson SummerLink 
-              | program at the University of Chicago Laboratory High School (U-High!)
-          .desc_right
-            img(src='/images/color.jpg')
-        #notes_desc.proj_desc.block 
-          .desc_left
-            .desc_title.blocks Gimme an Ear
-            .desc_role.block Independent project | 
-              span(style="font-size: 15px;") October 2011
-            .desc_desc.block &nbsp;&nbsp;Completely discouraged by my utter lack of pitching ability, I resolved to create a somewhat fun app to help me distinguish pitches and harmonies better. The product was 'Gimme an Ear', which, in all honesty, turned out to be only somewhat helpful. GAE simply plays two notes together or distinctly, and the user's task is to identify the interval. The next step would be to introduce 3-note chords, or (when browsers can implement this natively), record the user humming and play it back. Then it would be possible to track progress over time, or introduce a level system, in which the challenges get harder and harder!<br/>&nbsp;&nbsp;Written with Express and Jade in Node. Check it out 
-              a(href='/notes').crimson here.
-          .desc_right
-            img(src='/images/notes_ss.png')
-        #prom_desc.proj_desc.block 
-          .desc_left
-            .desc_title.blocks Promatch
-            .desc_role.block Independent project | 
-              span(style="font-size: 15px;") April 2011
-            .desc_desc.block &nbsp;&nbsp;Prom-proposing season is a dismal time for many. To liven up the general attitude and to foster a healthy sense of competition in my graduating class, I designed Promatch, an online bracket where Class of 2011'ers could vote on with whom they thought their classmates would go to prom (after signing in, of course, so they would be accountable for their choices).<br/>&nbsp;&nbsp;My first foray into web design, HTML, CSS, PHP and MySQL, the site was no feat in design or implementation. But it was my first experience designing something for the sheer joy of it, and giving it away for free; a feeling on which I'm still hooked. The project was recently taken offline—the winner received a grand prize of supreme satisfaction.
-          .desc_right
-            img(src='/images/prom_ss.png')
-//-
-            #project_container.block
-              #row_1.project_row(target='desc_1')
-                
-                
-                
-                
-              
-              #row_2.project_row(target='desc_1')
-                .big_project
-                  .big_p.slide(target='notes_desc')
-                    img(src='/images/notes.png', alt='Gimme an Ear').p_img
-                    .caption Gimme an Ear
-                    .caption_kicker Node.js | jQuery
-                .big_project
-                  .big_p.slide(target='prom_desc')
-                    img(src='/images/prom.png', alt='Promatch').p_img
-                    .caption Promatch
-                    .caption_kicker PHP | MySQL | Apache
+      .desc(name="screw")
+        .left
+          .desc_title Screw Me Yale
+          .desc_role 3rd place, Yale College Council App Challenge
+            br/ 
+            span(style="font-size: 15px;") April 2012
+          p This isn't entirely what it sounds like--'Screws' at Yale are dances where your roommate gets to choose your date. While some rejoice in the opportunity to play cupid, others find it a hassle. For them, there's 
+            a(href="//screwmeyale.com", target='_blank') Screw Me Yale
+            | , a playful matchmaker and my first full-scale app in Rails. 
+          p It won't be used in practice until Fall 2012, but it's all geared to go, complete with a listing of every single student (scraped off the Yale Facebook).
+          p The 
+            a(href="//ycc.yale.edu", target='_blank') YCC
+            |  was kind enough to give it 
+            a(href="http://www.yaledailynews.com/news/2012/apr/19/cross-campus-41912/", target='_blank') 3rd place
+            |  in the App Challenge--hopefully it lives up to its prize! 
+          p Built on a very traditional stack of Rails, Heroku, Git and some sweet gems. 
+        .right
+          a(href="//screwmeyale.com", target='_blank')
+            img(src='/images/screw_ss.png')
+      .desc(name="processing")
+        .left
+          .desc_title The 'Schedulizer'
+          .desc_role For May Project 2011, University High School
+          p Designed to investigate how to satisfy the most high school course requests for the 2011-2012 school year, taking into account the constraints on the number of class periods, classrooms and teachers, by creating a visualization of the problem. The app also runs a graph-traversal algorithm to try to minimize the number of class periods needed to satisfy all the requests. It turns out that if everyone got every class they wanted, about 130 periods would be needed!
+          p &nbsp;&nbsp;Also just a fun app to play with—unfortunately not online yet. Made on the visualization engine 
+            a(href='http://www.processing.org', target='_blank') Processing
+            |, written completely in Java.
+        .right
+          img(src='/images/process_ss.png')
+      .desc(name="galaxy")
+        .left
+          .desc_title Galaxy Tools
+          .desc_role Computational Institute, University of Chicago
+            br/ 
+            span(style="font-size: 15px;") May - August 2011
+          p Designed and implemented tools for Galaxy (an open, web-based platform for data intensive biomedical research) and GEDI (a gene database). Written in Python and R, the tools identified statistically significant differences in massive sets of microarray data to pinpoint which genes may contain mutations. The next step would be to cross check those genes against related ones in GEDI, identifying precisely which pathways a particular mutation influenced.
+          p Group Leader: 
+            a(href='http://www.mcs.anl.gov/~madduri/', target='_blank') Ravi Madduri 
+            |. Also check out 
+            a(href='http://main.g2.bx.psu.edu/') Galaxy 
+            | and 
+            a(href='http://www.childrenshospital.org/research/ingber/GEDI/gedihome.htm', target='_blank') GEDI
+            |.
+        .right
+          img(src='/images/galaxy_ss.png')
+      .desc(name="colors")
+        .left
+          .desc_title Seeing Colors
+          .desc_role Department of Psychology, University of Chicago
+            br/ 
+            span(style="font-size: 15px;") June - August 2010
+          p Explored whether humans have inherent cognitive biases in color-naming despite differences in native language. Hypothesizing that they do tend to name colors similarly, I envisioned and programmed an interactive computer animation, recruited test subjects 3 and 4 years of age and conducted the self-designed experiment. The results showed a difference in the ability to distinguish colors within certain groups, which supported the hypothesis.
+          p Group Leader: 
+            a(href='http://psychology.uchicago.edu/people/faculty/slevine.shtml', target='_blank') Dr. Susan Levine
+            |. With the 
+            a(href='http://www.ucls.uchicago.edu/schools/high-school/summerlink/index.aspx', target='_blank') SummerLink 
+            | program at the University of Chicago Laboratory High School (U-High!)
+        .right
+          img(src='/images/color.jpg')
+      .desc(name="maitri")
+        .left
+          .desc_title Maitri Massage
+          .desc_role April 2012
+          p My first foray into web development for clients, this is the main website for 
+            a(href="//maitrimassagelmt.com", target='_blank') Maitri Massage Lmt
+            |, a small massage therapy studio run by 
+            a(href="//hannahproch.com", target='_blank') Hannah Proch. 
+          p My first time extensively using Less.css--made quite a difference. Visit the site to see it in action! Death to Internet Explorer!
+        .right
+          a(href="//maitrimassagelmt.com", target='_blank')
+            img(src='/images/maitri_ss.png')
+      .desc(name="jashan")
+        .left
+          .desc_title Yale Jashan Bhangra
+          .desc_role Spring 2012
+          p Nothing brings me greater pleasure than designing the website of my own team, 
+            span.crimson Yale Jashan Bhangra
+            |. Unlike Maitri, this site is loaded with pictures, video and music. It's not officially up yet, but should be up soon! (in Indian time)
+        .right
+          img(src='/images/jashan_ss.png')
+      .desc(name="avishary")
+        .left
+          .desc_title Avishary
+          .desc_role Hackathon at NYU (HackNY), March 25, 2011
+          p During a 24-hour coding spree, my buddy 
+            a(href="//twitter.com/#!/akshay_nathan", target='_blank') Akshay
+            |  and I came up with a fun way to share edited pictures, right as you browse the web. 
+            a(href="//avishary.nodejitsu.com", target='_blank') Avishary
+            |  is a bookmarklet that allows you edit any image on the web with 
+            a(href="//aviary.com", target='_blank') Aviary
+            |, then share it to Facebook, Tumblr or Twitter immediately, or download it for your saving pleasure. 
+        .right
+          a(href="//avishary.nodejitsu.com", target='_blank')
+            img(src='/images/avishary_ss.png')
+
+
+
+  .footer faiazkhan.com runs Node.js with Express, Jade and jQuery. Bhangra photo courtesy of Clyatt Jasper, Columbia University. 
+    br
+    | Chicago photo courtesy of Sarah Husain. &#169; Faiaz Khan 2012. 
+    a(href='http://github.com/rafi-khan/fk', style='text-decoration: underline', target='_blank') Source

@@ -10,7 +10,7 @@ Edited February 16, 2012
 @min-width: 920px;
 @min-height: 600px;
 @left: 80px;
-@pad: 25px;
+@pad: 30px;
 
 body {
   font-family: Glegoo;
@@ -27,6 +27,9 @@ body {
 a {
   text-decoration: none;
   color: white;
+  &:hover {
+    text-decoration:underline;
+  }
 }
 
 li {
@@ -70,7 +73,7 @@ li {
 
 .contain {
   width: @min-width;
-  padding: 20px @pad;
+  padding: @pad @pad;
   position: absolute;
   color: white;
   font-size: 13pt;
@@ -79,7 +82,7 @@ li {
 
 .fb-like, .fb-like iframe { height: 35px; }
 
-#footer {
+.footer {
   display: block;
   position: absolute;
   left: @left;
@@ -95,7 +98,7 @@ li {
 
 
 
-/*===================================LEFT BAR=================================*/
+/*=================================LEFT BAR=================================*/
 
 #sidebar{
   position: absolute;
@@ -113,7 +116,6 @@ li {
   //border: 1pt solid silver;
   border-top: none;
   z-index: 5;
-  //.rounded(10px);
   opacity: 0.7;
   &:hover {
     opacity: 1;
@@ -124,6 +126,11 @@ li {
     font-size: 14px;
     line-height: 22px;
     color: white;
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
   }
 }
 
@@ -146,11 +153,7 @@ li {
   line-height: 19px;
 }
 
-.icon {
-  width: 30px;
-  height: 30px;
-  background-size: contain;
-}
+
 
 #fb_icon {
   background-image: url('/images/fb_off.png');
@@ -183,7 +186,7 @@ li {
   background-image: url('/images/git_on.png');
 }
 
-/*=====================CONTAINERS and SQUARES=================================*/
+/*=====================CONTAINERS and SQUARES===============================*/
 
 #index {
   background-image: url('/images/chicago.jpg');
@@ -214,11 +217,12 @@ li {
   //background-color: #FAFAFA;
   //border: 1pt solid grey;
 }
-
+@desc_height: 380px;
 #work {
   //background-image: url('/images/back2.jpg');
   .rad-gradient(#DDD, lighten(#6c86c5, 0%));
   display: none;
+  height: (@desc_height + @pad) * 9.5 + 70;
 }
 
 
@@ -227,7 +231,6 @@ li {
   left: @left;
   border: 1pt solid grey;
   background-color: #FAFAFA;
-  padding: 20px @pad;
 }
 
 /*==================================WORK====================================*/
@@ -268,60 +271,102 @@ li {
     text-indent: -10px;
     font-weight: bold;
   }
+
+}
+
+.section {
+  display: inline-block;
+  width: @proj_width; 
+  padding: 0px 20px;
+  vertical-align: top;
+  color:#333;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 20px;
+  li {
+    display: block;
+  }
 }
 
 .big_project{
   cursor: pointer;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  &:hover > img {
+    .box-shadow(0px 0px 2px 1px #555);
+  }
   img {
     width: @proj_width;
     height: @proj_width/4;
-    &:hover {
-      .box-shadow(0px 0px 2px 1px #555);
-    }
+    
   }
   p {
     color: black;
-    font-size: 85%;
+    font-size: 90%;
+    line-height: 90%;
   }
   .small {
-    font-size: 75%;
+    font-size: 80%;
   }
 }
 .desc {
-  display: none;
   color: black;
-  padding-top: 20px;
+  height: @desc_height;
+  padding-top: 30px;
   border-top: 1pt solid #777;
-  div {
-    //border: 1pt solid red;
-  }
   .left {
     float: left;
     display: inline-block;
     width: 44%;
     text-align: justify;
-
-    
+    a {
+      color: crimson;
+    }
   }
 
   .right {
     float: right;
     display: inline-block;
-    width: 54%;
+    width: 50%;
 
     img {
       width: 100%;
+      max-height: 350px;
+      &:hover {
+      }
+    }
+    a img:hover {
+      .box-shadow(0px 0px 2px 1px #555);
+
     }
   }
-
-  p{ 
+  p { 
     font-size: 14px;
     line-height: 20px;
+    text-indent: 10px;
+  }
+
+  &:last-child {
+    height: @desc_height - 40;
   }
 }
 
-/* Hidden div that slides down on project click */
+.desc_title {
+  text-align: left;
+  margin-top: -12px;
+  font-size: 42px;
+  line-height: 60px;
+  font-weight: bold;
+  color: deepskyblue;
+}
+.desc_role {
+  font: 16px "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 200;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+/*=========================OLD STUFF ====================*/
+/*
+/* Hidden div that slides down on project click 
 .project_display {
   height: 330px;
   width: 100%;
@@ -340,20 +385,6 @@ li {
   cursor:pointer;
 }
 
-.desc_title {
-  margin-top: -7px;
-  font-size: 42px;
-  line-height: 60px;
-  font-weight: bold;
-  color: deepskyblue;
-}
-.desc_role {
-  font: 16px "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
-  font-weight: 200;
-  line-height: 24px;
-  margin-bottom: 10px;
-  
-}
 .desc_desc{
   font: 12.5px "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
   text-align: justify;
@@ -362,8 +393,7 @@ li {
 }
 
 
-/*=========================OLD STUFF ====================*/
-/*
+
 #site {
   position: absolute;
   //font: 14pt 'Iceland', 'Helvetica Neue Light', sans-serif;

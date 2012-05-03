@@ -10,62 +10,47 @@ $(document).ready(function() {
   var h = $(window).height();
   $("#work").css({"top":"0px", "left":w+"px"});
   $("#play").css({"top":"0px", "left":"-"+w+"px"});
-  $(".proj_desc").hide();
   $("#sidebar").hide()
   setTimeout(function(){$("body").animate({scrollTop:0}, 100);}, 500);
   fadeContent();
-  
+  $(".icon").hover();
+
+
   /* ========================== EVENT HANDLERS ===============================*/
-  
-  $(".nav_button").live('click', function() {   // For switching views
+  $(".big_project").click(function() {
+    $("body").animate({
+      scrollTop: $(".desc[name='"+$(this).attr("target")+"']").offset().top
+    }, 500)
+  });
+  var orig_color = $(".token").css("color");
+  var orig_td = $(".token").css("textDecoration");
+  $(".big_project").mouseenter(function() {
+    tok = $(this).attr("tokens").split(" ");
+    $(tok).each(function(i, j) {
+      $(".token[name='"+j+"']").css({
+        color: "black",
+        textDecoration: "underline"
+      })
+    })
+  }).mouseleave(function() {
+    $(".token").css({
+      color: orig_color,
+      textDecoration: orig_td
+    })
+  })
+
+  $(".nav_button").click(function() {   // For switching views
     if(!($(this).hasClass(currWindow))) {       // if not clicked curr window
       $(".hidden").slideUp("fast");
       moveOut(currWindow, time, true);
       currWindow = moveIn($(this), time);
     }
   });
-  /* Handles 'work' view, slide down on project click */
-  var curr_proj_id = "";                        // Store current project
-  var new_height = 960;                         // New height of 'work' square
-  var work_height = $("#work").height();        // Store old height
-  $(".big_p").live('click', function(){
-    // Change height, fix footer to bottom and scroll body down
-    $("#work").animate({height: new_height }, 500);
-    $("#footer").animate({top: new_height-$("footer").outerHeight() }, 100);
-    $("body").animate({
-      scrollTop: $("#row_1").offset().top-12
-    }, 500);
-    var obj = $(this);                          // Store object
-    var id = "#"+obj.attr("target");            // Get 'target' description
-    if(id != curr_proj_id) {                    // If it's not the curr proj
-      if(curr_proj_id === "") {
-        $("#desc_1").slideDown("fast", function(){  // Show target
-          $(id).show(200);
-        });
-      }
-      else {
-        $(curr_proj_id).hide(200, function(){   // If one is showing, hide it
-          $("#desc_1").slideDown(0, function(){ // first
-            $(id).show(200);
-          });
-        });
-      }
-      curr_proj_id = id;                        // Set the new id
-    }
-  });
-  $(".hide_disp").live('click', function() {    // Hide button on description
-    var t = $(this);
-    $("body").animate({ scrollTop: 0 }, 300);
-    t.parent().slideUp(350);
-    $("#work").animate({ height: work_height }, 300, function(){
-      $("#footer").animate({top: work_height-$("footer").outerHeight()}, 300);
-    });
-    $(curr_proj_id).hide();
-    curr_proj_id = "";
-  });
+
+
   $(".rafi").mouseenter(function(){$(this).html("&nbsp;;)");})
             .mouseleave(function(){$(this).html("Rafi");});
-});
+  });
 
 var i_back = "1";
 var p_back = "bhangra3";
@@ -81,9 +66,11 @@ function moveIn(obj, time) {
     ret = "index";
   }
   else if(obj.hasClass('work')) {
-    $("#work").animate({"left":"0px"}, time);
+    $("#work").animate({"left":"0px"}, time, function() {
+      $("#footer").css({bottom: 0});
+    });
     $("#work").show();
-    $("body").css({"backgroundColor" : "rgb(70, 70, 70)" });
+    //$("body").css({"backgroundColor" : "rgb(70, 70, 70)" });
     // Show the icons
     setTimeout(function(){$("#sidebar").slideToggle("normal");}, 100);
     ret = "work";
@@ -99,8 +86,9 @@ function moveIn(obj, time) {
     $("#play").css({"backgroundImage": "url('/images/"+p_back+".jpg')"});
     //p_back = p_back=="bhangra3" ? "beach" : "bhangra3";
     $("#play").animate({"left":"0px"}, time);
+      $("#footer").css({bottom: 0});
     $("#play").show();
-    $("footer").css({"backgroundColor": "rgba(0,0,0,0.8)"});
+    $("footer").css({"backgroundColor": "rgba(0,0,0,0.8)", bottom: 0});
     
     /*
     $("#site_bottom").fadeOut(function() {
@@ -132,7 +120,6 @@ function moveOut(wind, time, flag, callback) {
       callback();
     });
     $("body").css({"backgroundColor" : "black" });
-    //if(flag) setTimeout(function(){$("#sidebar").toggle("slide");}, 100);
     if(flag) setTimeout(function(){$("#sidebar").slideToggle("fast");}, 100);
 
   }
@@ -159,4 +146,53 @@ function fadeContent(callback) {
     $(butt).animate({opacity:1}, 500);
   });
   if(typeof callback === "function") callback();
-}    
+}
+
+
+  /* Handles 'work' view, slide down on project click */
+  /*
+  var curr_proj = "";                        // Store current project
+  var new_height = 960;                         // New height of 'work' square
+  var work_height = $("#work").height();        // Store old height
+  $(".big_project").click(function(){
+    t = this;
+    // Change height, fix footer to bottom and scroll body down
+    $("#work").animate({height: new_height }, 500);
+    $("#footer").animate({top: new_height-$("footer").outerHeight() }, 100);
+    $("body").animate({
+      scrollTop: $("#row_1").offset().top-12
+    }, 500);
+    var target = $(t).attr("target")                          // Store target
+    console.log(target)
+    if(target !== curr_proj) {
+      //$(".desc").hide();
+      $(".desc[name='target']").show();
+    }
+    if(id != curr_proj_id) {                    // If it's not the curr proj
+      if(curr_proj_id === "") {
+        $("#desc_1").slideDown("fast", function(){  // Show target
+          $(id).show(200);
+        });
+      }
+      else {
+        $(curr_proj_id).hide(200, function(){   // If one is showing, hide it
+          $("#desc_1").slideDown(0, function(){ // first
+            $(id).show(200);
+          });
+        });
+      }
+      curr_proj = target;                        // Set the new id
+    }
+  });
+
+  $(".hide_disp").live('click', function() {    // Hide button on description
+    var t = $(this);
+    $("body").animate({ scrollTop: 0 }, 300);
+    t.parent().slideUp(350);
+    $("#work").animate({ height: work_height }, 300, function(){
+      $("#footer").animate({top: work_height-$("footer").outerHeight()}, 300);
+    });
+    $(curr_proj_id).hide();
+    curr_proj_id = "";
+  });
+*/

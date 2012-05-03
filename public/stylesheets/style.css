@@ -18,6 +18,9 @@ a {
   text-decoration: none;
   color: white;
 }
+a:hover {
+  text-decoration: underline;
+}
 li {
   display: inline-block;
 }
@@ -67,7 +70,7 @@ li {
 }
 .contain {
   width: 920px;
-  padding: 20px 25px;
+  padding: 30px 30px;
   position: absolute;
   color: white;
   font-size: 13pt;
@@ -77,7 +80,7 @@ li {
 .fb-like iframe {
   height: 35px;
 }
-#footer {
+.footer {
   display: block;
   position: absolute;
   left: 80px;
@@ -90,7 +93,7 @@ li {
   text-align: center;
   padding: 20px 0px;
 }
-/*===================================LEFT BAR=================================*/
+/*=================================LEFT BAR=================================*/
 #sidebar {
   position: absolute;
   /*
@@ -100,7 +103,7 @@ li {
   width: 48px;
   */
 
-  left: 882px;
+  left: 892px;
   top: 0px;
   width: 168px;
   height: 30px;
@@ -119,6 +122,11 @@ li {
   line-height: 22px;
   color: white;
 }
+#sidebar .icon {
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+}
 .title {
   font-size: 15px;
   line-height: 22px;
@@ -135,11 +143,6 @@ li {
   font-size: 13px;
   font-family: "Lucida Grande", "Helvetica Neue", Verdana, sans-serif;
   line-height: 19px;
-}
-.icon {
-  width: 30px;
-  height: 30px;
-  background-size: contain;
 }
 #fb_icon {
   background-image: url('/images/fb_off.png');
@@ -171,7 +174,7 @@ li {
 #git_icon:hover {
   background-image: url('/images/git_on.png');
 }
-/*=====================CONTAINERS and SQUARES=================================*/
+/*=====================CONTAINERS and SQUARES===============================*/
 #index {
   background-image: url('/images/chicago.jpg');
   z-index: 1;
@@ -220,13 +223,13 @@ li {
   /* IE6-9 fallback on horizontal gradient */
 
   display: none;
+  height: 3965px;
 }
 #work_c {
   top: 65px;
   left: 80px;
   border: 1pt solid grey;
   background-color: #FAFAFA;
-  padding: 20px 25px;
 }
 /*==================================WORK====================================*/
 #work_intro {
@@ -263,30 +266,44 @@ li {
   text-indent: -10px;
   font-weight: bold;
 }
+.section {
+  display: inline-block;
+  width: 264.6666666666667px;
+  padding: 0px 20px;
+  vertical-align: top;
+  color: #333;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 20px;
+}
+.section li {
+  display: block;
+}
 .big_project {
   cursor: pointer;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+.big_project:hover > img {
+  -webkit-box-shadow: 0px 0px 2px 1px #555555;
+  -moz-box-shadow: 0px 0px 2px 1px #555555;
+  box-shadow: 0px 0px 2px 1px #555555;
 }
 .big_project img {
   width: 264.6666666666667px;
   height: 66.16666666666667px;
 }
-.big_project img:hover {
-  -webkit-box-shadow: 0px 0px 2px 1px #555555;
-  -moz-box-shadow: 0px 0px 2px 1px #555555;
-  box-shadow: 0px 0px 2px 1px #555555;
-}
 .big_project p {
   color: black;
-  font-size: 85%;
+  font-size: 90%;
+  line-height: 90%;
 }
 .big_project .small {
-  font-size: 75%;
+  font-size: 80%;
 }
 .desc {
-  display: none;
   color: black;
-  padding-top: 20px;
+  height: 380px;
+  padding-top: 30px;
   border-top: 1pt solid #777;
 }
 .desc .left {
@@ -295,37 +312,34 @@ li {
   width: 44%;
   text-align: justify;
 }
+.desc .left a {
+  color: crimson;
+}
 .desc .right {
   float: right;
   display: inline-block;
-  width: 54%;
+  width: 50%;
 }
 .desc .right img {
   width: 100%;
+  max-height: 350px;
+}
+.desc .right a img:hover {
+  -webkit-box-shadow: 0px 0px 2px 1px #555555;
+  -moz-box-shadow: 0px 0px 2px 1px #555555;
+  box-shadow: 0px 0px 2px 1px #555555;
 }
 .desc p {
   font-size: 14px;
   line-height: 20px;
+  text-indent: 10px;
 }
-/* Hidden div that slides down on project click */
-.project_display {
-  height: 330px;
-  width: 100%;
-  color: rgba(0, 0, 0, 0.8);
-  display: none;
-  border-top: 3pt double rgba(0, 0, 0, 0.6);
-  margin-top: 20px;
-  padding-top: 5px;
-}
-.hide_disp {
-  position: absolute;
-  right: 25px;
-  top: 458px;
-  font-size: 10px;
-  cursor: pointer;
+.desc:last-child {
+  height: 340px;
 }
 .desc_title {
-  margin-top: -7px;
+  text-align: left;
+  margin-top: -12px;
   font-size: 42px;
   line-height: 60px;
   font-weight: bold;
@@ -337,14 +351,36 @@ li {
   line-height: 24px;
   margin-bottom: 10px;
 }
-.desc_desc {
+/*=========================OLD STUFF ====================*/
+/*
+/* Hidden div that slides down on project click 
+.project_display {
+  height: 330px;
+  width: 100%;
+  color: rgba(0,0,0,0.8);
+  display: none;
+  border-top: 3pt double rgba(0,0,0,0.6);
+  margin-top: 20px;
+  padding-top: 5px;
+}
+
+.hide_disp {
+  position: absolute;
+  right: 25px;
+  top: 458px;
+  font-size: 10px;
+  cursor:pointer;
+}
+
+.desc_desc{
   font: 12.5px "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
   text-align: justify;
   line-height: 20px;
   margin-top: 5px;
 }
-/*=========================OLD STUFF ====================*/
-/*
+
+
+
 #site {
   position: absolute;
   //font: 14pt 'Iceland', 'Helvetica Neue Light', sans-serif;
