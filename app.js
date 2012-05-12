@@ -46,6 +46,9 @@ app.configure('production', function(){
 
 // Routes
 app.get('/', routes.index);
+app.get('/portfolio', routes.index);
+app.get('/thelife', routes.index);
+
 
 //app.get('/intro', routes.intro);
 app.get('/notes', routes.notes);

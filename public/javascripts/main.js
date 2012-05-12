@@ -43,9 +43,31 @@ $(document).ready(function() {
     if(!($(this).hasClass(currWindow))) {       // if not clicked curr window
       $(".hidden").slideUp("fast");
       moveOut(currWindow, time, true);
-      currWindow = moveIn($(this), time);
+      currWindow = moveIn($(this), time, true);
     }
   });
+
+  var path = window.location.pathname
+  console.log(path)
+  if (path === "/portfolio") {
+    $(".nav_button.work").click()
+  }
+  else if (path === "/thelife") {
+    $(".nav_button.play").click()
+  }
+  else if (path === "/") {
+    $(".nav_button.index").click()
+
+  }
+
+  window.onpopstate = function(event) {
+    l = (event.state && event.state.view) || "";
+    if (l !== "") {
+      moveOut(currWindow, time, true)
+      currWindow = moveIn($("."+l)[0], time, false);
+      back = true;
+    }
+  }
 
 
   $(".rafi").mouseenter(function(){$(this).html("&nbsp;;)");})
@@ -55,17 +77,21 @@ $(document).ready(function() {
 var i_back = "1";
 var p_back = "bhangra3";
 /* Handles how each view moves in */
-function moveIn(obj, time) {
+function moveIn(obj, time, push) {
   var ret = "hack";
-  if(obj.hasClass('index')) {
+  if($(obj).hasClass('index')) {
     $("#index").css({"backgroundImage": "url('/images/chicago"+i_back+".jpg')"});     // Change bground image
     i_back = i_back=="" ? "1" : "";               // Get ready for next change
     $("#index").animate({"top":"0px"}, time);     // Move down
     $("#index").show();                          
     //$("#site").toggle("slide");
+    if (push)
+      window.history.pushState({view: "index"}, "Faiaz Khan", "/");
+
     ret = "index";
+
   }
-  else if(obj.hasClass('work')) {
+  else if($(obj).hasClass('work')) {
     $("#work").animate({"left":"0px"}, time, function() {
       $("#footer").css({bottom: 0});
     });
@@ -74,6 +100,8 @@ function moveIn(obj, time) {
     // Show the icons
     setTimeout(function(){$("#sidebar").slideToggle("normal");}, 100);
     ret = "work";
+    if(push)
+      window.history.pushState({view: "work"}, "Faiaz Khan", "/portfolio");
     
     /* OLD CODE
     $("#site_bottom").fadeOut(function() {
@@ -82,22 +110,23 @@ function moveIn(obj, time) {
     */
     //setTimeout(function(){$("#sidebar").toggle("slide");}, 200);
   }
-  else if(obj.hasClass('play')) {
+  else if($(obj).hasClass('play')) {
     $("#play").css({"backgroundImage": "url('/images/"+p_back+".jpg')"});
     //p_back = p_back=="bhangra3" ? "beach" : "bhangra3";
     $("#play").animate({"left":"0px"}, time);
       $("#footer").css({bottom: 0});
     $("#play").show();
     $("footer").css({"backgroundColor": "rgba(0,0,0,0.8)", bottom: 0});
-    
+    //window.location.pathname = "/thelife"
     /*
     $("#site_bottom").fadeOut(function() {
       $(this).html(site['play']).fadeIn();
     });
     */
     ret = "play";
+    if(push)
+      window.history.pushState({view: "play"}, "Faiaz Khan", "/thelife");
   }
-  fadeContent();
   return ret;
 }
 /* Handles how each view exits */
@@ -130,6 +159,7 @@ function moveOut(wind, time, flag, callback) {
     });
     $("#footer").css({"backgroundColor": "transparent"});
   }
+
 }
 /* Fades in certain text -- just for effects */
 function fadeContent(callback) {
