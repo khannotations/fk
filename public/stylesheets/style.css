@@ -3,6 +3,11 @@ For faiazkhan.com, by Faiaz Khan.
 Edited February 16, 2012
 */
 /*=============================OVER-ARCHING=================================*/
+html,
+body {
+  min-height: 100%;
+  width: 100%;
+}
 body {
   font-family: Glegoo;
   font-family: Nixie One;
@@ -12,7 +17,6 @@ body {
   width: 100%;
   min-width: 920px;
   height: 100%;
-  min-height: 600px;
 }
 a {
   text-decoration: none;
@@ -223,7 +227,7 @@ li {
   /* IE6-9 fallback on horizontal gradient */
 
   display: none;
-  height: 3980px;
+  height: 3890px;
 }
 #work_c {
   top: 65px;

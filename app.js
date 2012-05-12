@@ -16,7 +16,7 @@ app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.bodyParser());
-  app.set('env', 'production');
+  //app.set('env', 'production');
   app.disable('view cache');
   app.use(express.methodOverride());
   app.use(express.cookieParser());

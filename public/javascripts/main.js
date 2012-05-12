@@ -12,7 +12,7 @@ $(document).ready(function() {
   $("#play").css({"top":"0px", "left":"-"+w+"px"});
   $("#sidebar").hide()
   setTimeout(function(){$("body").animate({scrollTop:0}, 100);}, 500);
-  fadeContent();
+  //fadeContent();
   $(".icon").hover();
 
 

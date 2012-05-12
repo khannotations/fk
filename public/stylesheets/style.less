@@ -12,6 +12,10 @@ Edited February 16, 2012
 @left: 80px;
 @pad: 30px;
 
+html, body {
+  min-height: 100%;
+  width: 100%;
+}
 body {
   font-family: Glegoo;
   font-family: Nixie One;
@@ -21,7 +25,7 @@ body {
   width: 100%;
   min-width: @min-width;
   height: 100%;
-  min-height: @min-height;
+  //min-height: @min-height;
 }
 
 a {
@@ -222,7 +226,7 @@ li {
   //background-image: url('/images/back2.jpg');
   .rad-gradient(#DDD, lighten(#6c86c5, 0%));
   display: none;
-  height: (@desc_height + 2*@pad) * 9 + 20;
+  height: (@desc_height + 2*@pad) * 9 - 70;
 }
 
 
