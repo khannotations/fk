@@ -46,19 +46,19 @@ $(document).ready(function() {
       currWindow = moveIn($(this), time, true);
     }
   });
-
-  var path = window.location.pathname
-  console.log(path)
-  if (path === "/portfolio") {
-    $(".nav_button.work").click()
-  }
-  else if (path === "/thelife") {
-    $(".nav_button.play").click()
-  }
-  else if (path === "/") {
-    $(".nav_button.index").click()
-
-  }
+  setTimeout(function() {
+    var path = window.location.pathname
+    if (path === "/portfolio") {
+      $(".nav_button.work").click()
+    }
+    else if (path === "/thelife") {
+      $(".nav_button.play").click()
+    }
+    else if (path === "/") {
+      $(".nav_button.index").click()
+    }
+  }, 200)
+  
 
   window.onpopstate = function(event) {
     l = (event.state && event.state.view) || "";
