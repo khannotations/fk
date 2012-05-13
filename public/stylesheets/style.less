@@ -64,10 +64,12 @@ li {
     color: deepskyblue;
   }
 }
+
+@square_width: @min-width + 2*@pad + 2*@left;
 .square {
   height: 100%;
   width: 100%;
-  min-width: @min-width;
+  min-width: @square_width;
   min-height: @min-height;
   background-repeat: no-repeat;
   background-size: cover;
@@ -199,9 +201,12 @@ li {
   top: 0px;
 }
 
+@ind_offset: 200;
+
 #index_c {
   top: 50px;
-  left: 280px;
+  left: @left + @ind_offset;
+  width: @min-width - @ind_offset;
 }
 
 .rafi {
@@ -253,7 +258,7 @@ li {
   margin-bottom: 10px;
 }
 
-@proj_width: (@min-width - 120)/3 - 2; /* -2 for borders */
+@proj_width: (@min-width - 4*@pad)/3 - 2; /* for -2 for borders */
 .proj_section {
   border-left: 1pt solid grey;
   display: inline-block;

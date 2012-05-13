@@ -14,7 +14,7 @@ $(document).ready(function() {
   setTimeout(function(){$("body").animate({scrollTop:0}, 100);}, 500);
   //fadeContent();
   $(".icon").hover();
-
+  alert("body "+$("body").width()+" wind "+ $(window).width());
 
   /* ========================== EVENT HANDLERS ===============================*/
   $(".big_project").click(function() {
@@ -50,12 +50,18 @@ $(document).ready(function() {
     var path = window.location.pathname
     if (path === "/portfolio") {
       $(".nav_button.work").click()
+      window.history.pushState({view: "work"}, "Faiaz Khan", "/portfolio");
+
     }
     else if (path === "/thelife") {
       $(".nav_button.play").click()
+      window.history.pushState({view: "play"}, "Faiaz Khan", "/thelife");
+
     }
     else if (path === "/") {
       $(".nav_button.index").click()
+      window.history.pushState({view: "index"}, "Faiaz Khan", "/");
+
     }
   }, 200)
   
