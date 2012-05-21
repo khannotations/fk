@@ -50,12 +50,21 @@ li {
   margin-left: @left;
   color: silver;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 26px;
+  width: @min-width + 2* @pad;
+
+  > li {
+    padding-right: 50px;
+    padding-top: 16px;
+    margin: 0px;
+    &:last-child {
+      padding-right: 0px;
+    }
+  }
+
 }
+
 .nav_button {
-  padding-right: 50px;
-  padding-top: 16px;
-  margin: 0px;
   cursor: pointer;
   &:hover {
     color: lightcyan;
@@ -106,31 +115,15 @@ li {
 
 /*=================================LEFT BAR=================================*/
 
+//@side_width: 468px;
 #sidebar{
-  position: absolute;
-  /*
-  left: 0px;
-  top: 145px;
-  height: 130px;
-  width: 48px;
-  */
-  left: @left + @min-width + 2*@pad - 168;
-  top: 0px;
-  width: 168px;
-  height: 30px;
-  padding-top: 13px;
-  //border: 1pt solid silver;
-  border-top: none;
   z-index: 5;
-  opacity: 0.7;
-  &:hover {
-    opacity: 1;
-  }
   li {
     margin-left: 5px;
     padding-left: 7px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
+    vertical-align: middle;
     color: white;
   }
   .icon {
@@ -159,7 +152,10 @@ li {
   line-height: 19px;
 }
 
+#me_icon {
+  background-image: url('/images/me.jpg');
 
+}
 
 #fb_icon {
   background-image: url('/images/fb_off.png');

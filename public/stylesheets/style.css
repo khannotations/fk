@@ -48,12 +48,18 @@ li {
   margin-left: 80px;
   color: silver;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 26px;
+  width: 980px;
 }
-.nav_button {
+.nav_bar > li {
   padding-right: 50px;
   padding-top: 16px;
   margin: 0px;
+}
+.nav_bar > li:last-child {
+  padding-right: 0px;
+}
+.nav_button {
   cursor: pointer;
 }
 .nav_button:hover {
@@ -99,31 +105,14 @@ li {
 }
 /*=================================LEFT BAR=================================*/
 #sidebar {
-  position: absolute;
-  /*
-  left: 0px;
-  top: 145px;
-  height: 130px;
-  width: 48px;
-  */
-
-  left: 892px;
-  top: 0px;
-  width: 168px;
-  height: 30px;
-  padding-top: 13px;
-  border-top: none;
   z-index: 5;
-  opacity: 0.7;
-}
-#sidebar:hover {
-  opacity: 1;
 }
 #sidebar li {
   margin-left: 5px;
   padding-left: 7px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
+  vertical-align: middle;
   color: white;
 }
 #sidebar .icon {
@@ -147,6 +136,9 @@ li {
   font-size: 13px;
   font-family: "Lucida Grande", "Helvetica Neue", Verdana, sans-serif;
   line-height: 19px;
+}
+#me_icon {
+  background-image: url('/images/me.jpg');
 }
 #fb_icon {
   background-image: url('/images/fb_off.png');
