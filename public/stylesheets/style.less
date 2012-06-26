@@ -189,8 +189,8 @@ li {
 /*=====================CONTAINERS and SQUARES===============================*/
 
 #index {
-  background-image: url('/images/chicago.jpg');
-  //background-image: url('/images/beach.jpg');
+  background-image: url('/images/backgrounds/chicago.jpg');
+  //background-image: url('/images/backgrounds/beach.jpg');
   z-index: 1;
   top: 0px;
 }
@@ -210,8 +210,8 @@ li {
 }
 
 #play {
-  background-image: url('/images/bhangra3.jpg');
-  //background-image: url('/images/beach.jpg');
+  background-image: url('/images/backgrounds/bhangra3.jpg');
+  //background-image: url('/images/backgrounds/beach.jpg');
   display: none;
 }
 #play_c {
@@ -222,7 +222,7 @@ li {
 }
 @desc_height: 380px;
 #work {
-  //background-image: url('/images/back2.jpg');
+  //background-image: url('/images/backgrounds/back2.jpg');
   .rad-gradient(#DDD, lighten(#6c86c5, 0%));
   display: none;
   height: (@desc_height + 2*@pad) * 9 - 70;
@@ -235,8 +235,6 @@ li {
   border: 1pt solid grey;
   background-color: #FAFAFA;
 }
-
-// @blog-height: ;
 
 #blog {
   background-image: url('/images/italia/back.jpg');
@@ -312,7 +310,9 @@ li {
 
   }
   img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 500px;
+    margin: auto;
     vertical-align: top;
     .drop-shadow(0px, 0px, 1px, 1px, #888);
   }
@@ -324,13 +324,22 @@ li {
   }
 }
 
+.tall {
+  margin-left: 95px;
+}
+.caption {
+  font-size: 12px;
+  text-align: center;
+}
+
 #translate {
   //margin-top: 20px;
   float: right;
-  width: 45%;
-  span {
-    padding: 15px;
-    color: black;
+  width: 300px;
+  color: black;
+  .btn {
+    float:right;
+    padding: 5px 15px;
     margin-right: 10px;
   }
 }

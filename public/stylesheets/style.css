@@ -173,7 +173,7 @@ li {
 }
 /*=====================CONTAINERS and SQUARES===============================*/
 #index {
-  background-image: url('/images/chicago.jpg');
+  background-image: url('/images/backgrounds/chicago.jpg');
   z-index: 1;
   top: 0px;
 }
@@ -188,7 +188,7 @@ li {
   cursor: pointer;
 }
 #play {
-  background-image: url('/images/bhangra3.jpg');
+  background-image: url('/images/backgrounds/bhangra3.jpg');
   display: none;
 }
 #play_c {
@@ -293,7 +293,9 @@ li {
   vertical-align: top;
 }
 .entry img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 500px;
+  margin: auto;
   vertical-align: top;
   -webkit-box-shadow: 0px 0px 1px 1px #888888;
   -moz-box-shadow: 0px 0px 1px 1px #888888;
@@ -305,13 +307,21 @@ li {
   margin-bottom: 5px;
   text-align: justify;
 }
+.tall {
+  margin-left: 95px;
+}
+.caption {
+  font-size: 12px;
+  text-align: center;
+}
 #translate {
   float: right;
-  width: 45%;
-}
-#translate span {
-  padding: 15px;
+  width: 300px;
   color: black;
+}
+#translate .btn {
+  float: right;
+  padding: 5px 15px;
   margin-right: 10px;
 }
 #to-english {

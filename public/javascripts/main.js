@@ -4,10 +4,37 @@ Edited February 16, 2012
 */
 $(document).ready(function() {
 
+  /*
   $('.nivoSlider').nivoSlider({
     effect: "fold,fade,sliceDown,slideInRight",
     //directionNavHide: false,
     pauseTime: 5000
+  });
+*/
+  console.log($.fancybox.transitions);
+  $(".fancybox-thumb").fancybox({
+    //prevEffect  : 'none',
+    //nextEffect  : 'none',
+    changeFade: 1000,
+    titlePosition: 'over',
+    padding: 0,
+    overlayOpacity: 0.8,
+    overlayColor: '#000',
+    helpers : {
+      title : {
+        type: 'outside'
+      },
+      overlay : {
+        opacity : 0.8,
+        css : {
+          'background-color' : '#000'
+        }
+      },
+      thumbs  : {
+        width : 50,
+        height  : 50
+      }
+    }
   });
 
   $(".english").hide();
@@ -136,7 +163,7 @@ var p_back = "bhangra3";
 function moveIn(obj, time, push) {
   var ret = "hack";
   if($(obj).hasClass('index')) {
-    $("#index").css({"backgroundImage": "url('/images/chicago"+i_back+".jpg')"});     // Change bground image
+    $("#index").css({"backgroundImage": "url('/images/backgrounds/chicago"+i_back+".jpg')"});     // Change bground image
     i_back = i_back==="" ? "1" : "";              // Get ready for next change
     $("#index").animate({"top":"0px"}, time);     // Move down
     $("#index").show();
@@ -166,7 +193,7 @@ function moveIn(obj, time, push) {
 
   }
   else if($(obj).hasClass('play')) {
-    $("#play").css({"backgroundImage": "url('/images/"+p_back+".jpg')"});
+    $("#play").css({"backgroundImage": "url('/images/backgrounds/"+p_back+".jpg')"});
     //p_back = p_back=="bhangra3" ? "beach" : "bhangra3";
     $("#play").animate({"left":"0px"}, time);
     $("#footer").css({bottom: 0});
