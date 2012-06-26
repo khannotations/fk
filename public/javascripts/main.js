@@ -1,42 +1,68 @@
 /*
-Written for faiazkhan.com, by Faiaz Khan. 
+Written for faiazkhan.com, by Faiaz Khan.
 Edited February 16, 2012
 */
-$(document).ready(function() { 
+$(document).ready(function() {
+
+  $('.nivoSlider').nivoSlider({
+    effect: "fold,fade,sliceDown,slideInRight",
+    //directionNavHide: false,
+    pauseTime: 5000
+  });
+
+  $(".english").hide();
+
   var time = 600;
   var w = $(window).width();
   var h = $(window).height();
-  var windows = ["index", "work", "play"];
+  var windows = ["index", "work", "play", "blog"];
   var currWindow;
 
-  var path = window.location.pathname
+  var path = window.location.pathname;
 
   if (path === "/") {
     $("#work").css({top:"0px", left:w+"px"});
     $("#play").css({top:"0px", left:"-"+w+"px"});
-    $("#sidebar").hide()
+    $("#blog").css({top:h+"px", left:"0px"});
+
+    $("#sidebar").hide();
 
     currWindow = windows[0];
 
     window.history.pushState({view: "index"}, "Faiaz Khan", "/");
   }
   else if (path === "/portfolio") {
-    $("#index").hide().css({top: "-"+h+"px"})
+    $("#index").hide().css({top: "-"+h+"px"});
     $("#work").css({top: "0px", left: "0px"}).show();
     $("#play").css({top:"0px", left:"-"+w+"px"});
+    $("#blog").css({top:"-"+h+"px", left:"0px"});
 
     currWindow = windows[1];
-    window.history.pushState({view: "work"}, "Faiaz Khan", "/portfolio");
+    window.history.pushState({view: "work"}, "Faiaz Khan | Portfolio", "/portfolio");
 
   }
   else if (path === "/thelife") {
-    $("#index").hide().css({top: "-"+h+"px"})
+    $("#index").hide().css({top: "-"+h+"px"});
     $("#play").css({top: "0px", left: "0px"}).show();
     $("#work").css({top:"0px", left:w+"px"});
-    $("#sidebar").hide()
+    $("#blog").css({top:"-"+h+"px", left:"0px"});
+
+    $("#sidebar").hide();
     currWindow = windows[2];
 
-    window.history.pushState({view: "play"}, "Faiaz Khan", "/thelife");
+    window.history.pushState({view: "play"}, "Faiaz Khan | The Life", "/thelife");
+
+  }
+  else if (path === "/italia") {
+    $("#index").hide().css({top: "-"+h+"px"});
+    $("#play").css({top: "0px", left:"-"+w+"px"});
+    $("#work").css({top:"0px", left:w+"px"});
+    $("#blog").css({top:"0px", left:"0px"}).show();
+
+    $("#sidebar").hide();
+    currWindow = windows[3];
+
+    window.history.pushState({view: "blog"}, "Faiaz Khan | Un'estate in Italia", "/italia");
 
   }
 
@@ -48,7 +74,7 @@ $(document).ready(function() {
   $(".big_project").click(function() {
     $("body").animate({
       scrollTop: $(".desc[name='"+$(this).attr("target")+"']").offset().top
-    }, 500)
+    }, 500);
   });
 
   var orig_color = $(".token").css("color");
@@ -60,14 +86,14 @@ $(document).ready(function() {
       $(".token[name='"+j+"']").css({
         color: "black",
         textDecoration: "underline"
-      })
-    })
+      });
+    });
   }).mouseleave(function() {
     $(".token").css({
       color: orig_color,
       textDecoration: "none"
-    })
-  })
+    });
+  });
 
   $(".nav_button").click(function() {           // For switching views
     if(!($(this).hasClass(currWindow))) {       // if not clicked curr window
@@ -81,11 +107,23 @@ $(document).ready(function() {
   window.onpopstate = function(event) {
     l = (event.state && event.state.view) || "";
     if (l !== "") {
-      moveOut(currWindow, time, true)
+      moveOut(currWindow, time, true);
       currWindow = moveIn($("."+l)[0], time, false);
       back = true;
     }
-  }
+  };
+
+  $("#to-italiano").click(function() {
+    $(".english").hide();
+    $(".italiano").show();
+    $(".notice").slideUp("fast");
+
+  });
+  $("#to-english").click(function() {
+    $(".italiano").hide();
+    $(".english").show();
+    $(".notice").slideDown("fast");
+  });
 
   $(".rafi")
     .mouseenter(function(){$(this).html("&nbsp;;)");})
@@ -99,10 +137,9 @@ function moveIn(obj, time, push) {
   var ret = "hack";
   if($(obj).hasClass('index')) {
     $("#index").css({"backgroundImage": "url('/images/chicago"+i_back+".jpg')"});     // Change bground image
-    i_back = i_back=="" ? "1" : "";               // Get ready for next change
+    i_back = i_back==="" ? "1" : "";              // Get ready for next change
     $("#index").animate({"top":"0px"}, time);     // Move down
-    $("#index").show();                          
-
+    $("#index").show();
     if (push)
       window.history.pushState({view: "index"}, "Faiaz Khan", "/");
 
@@ -116,7 +153,7 @@ function moveIn(obj, time, push) {
     $("#work").show();
 
     // Show the icons
-    setTimeout(function(){$("#sidebar").slideToggle("normal");}, 100);
+    setTimeout(function(){$("#sidebar").slideDown("normal");}, 100);
     ret = "work";
     if(push)
       window.history.pushState({view: "work"}, "Faiaz Khan", "/portfolio");
@@ -132,7 +169,7 @@ function moveIn(obj, time, push) {
     $("#play").css({"backgroundImage": "url('/images/"+p_back+".jpg')"});
     //p_back = p_back=="bhangra3" ? "beach" : "bhangra3";
     $("#play").animate({"left":"0px"}, time);
-      $("#footer").css({bottom: 0});
+    $("#footer").css({bottom: 0});
     $("#play").show();
     $("footer").css({"backgroundColor": "rgba(0,0,0,0.8)", bottom: 0});
 
@@ -145,14 +182,24 @@ function moveIn(obj, time, push) {
     if(push)
       window.history.pushState({view: "play"}, "Faiaz Khan", "/thelife");
   }
+  else if($(obj).hasClass('blog')) {
+    $("#blog").animate({"top":"0px"}, time);
+    $("#footer").css({bottom: 0});
+    $("#blog").show();
+    // $("footer").css({"backgroundColor": "rgba(0,0,0,0.8)", bottom: 0});
+
+    ret = "blog";
+    if(push)
+      window.history.pushState({view: "blog"}, "Faiaz Khan | Un'estate in Italia", "/italia");
+  }
   return ret;
 }
 /* Handles how each view exits */
 function moveOut(wind, time, flag, callback) {
-  if(!(typeof callback === "function")) {
+  if(typeof callback !== "function") {
     callback = function(){};
   }
-  var h = $(window).height()+"px"
+  var h = $(window).height()+"px";
   var w = $(window).width()+"px";
   if(wind == "index") {
     $("#index").animate({"top":"-"+h}, time, function(){
@@ -177,26 +224,14 @@ function moveOut(wind, time, flag, callback) {
     });
     $("#footer").css({"backgroundColor": "transparent"});
   }
+  else if(wind == "blog") {
+    $("#blog").animate({"top":h}, time, function(){
+      $("#blog").hide();
+      callback();
+    });
+    // $("#footer").css({"backgroundColor": "transparent"});
+  }
 }
-
-/* Fades in certain text -- just for effects */
-/*
-function fadeContent(callback) {
-  $(".nav_button").css({opacity:0});
-  $(".fade").css({opacity:0});
-  var j=0;
-  $.each($(".fade"), function(i,val) {
-    setTimeout(function() {
-      $(val).animate({opacity:1}, 1500);
-    }, j*100);
-    j++;
-  });
-  $.each($(".nav_button"), function(i, butt) {
-    $(butt).animate({opacity:1}, 500);
-  });
-  if(typeof callback === "function") callback();
-}
-*/
 
   /* Handles 'work' view, slide down on project click */
   /*

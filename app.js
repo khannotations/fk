@@ -4,7 +4,7 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , pub = __dirname + "/public"
+  , pub = __dirname + "/public";
   //, lessErrorHandler = require ('./lib/less_errors.js');
 
 var app = module.exports = express.createServer();
@@ -22,9 +22,9 @@ app.configure(function(){
   app.use(express.cookieParser());
   var myDate=new Date();
   myDate.setDate(myDate.getDate()+365);
-  app.use(express.session({ 
-    page: "none", 
-    secret: "CmRp", 
+  app.use(express.session({
+    page: "none",
+    secret: "CmRp",
     cookie: {expires: myDate}
   }));
   app.use(require('connect-less')({ src: pub}));
@@ -37,17 +37,20 @@ app.configure(function(){
 });
 
 app.configure('development', function(){
-  app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
+  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
 app.configure('production', function(){
-  app.use(express.errorHandler()); 
+  //app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+  app.use(express.errorHandler());
 });
 
 // Routes
 app.get('/', routes.index);
 app.get('/portfolio', routes.index);
 app.get('/thelife', routes.index);
+app.get('/italia', routes.index);
+
 
 
 //app.get('/intro', routes.intro);

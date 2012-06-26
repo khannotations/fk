@@ -11,7 +11,8 @@ Edited February 16, 2012
 @min-height: 600px;
 @left: 80px;
 @pad: 30px;
-
+@font: 14px;
+@line: 18px;
 html, body {
   min-height: 100%;
   width: 100%;
@@ -19,13 +20,13 @@ html, body {
 body {
   font-family: Glegoo;
   font-family: Nixie One;
-  font-size: 100%;  
+  font-size: @font;  
+  line-height: @line;
   background-color: black;
   color: white;
   width: 100%;
   min-width: @min-width;
   height: 100%;
-  //min-height: @min-height;
 }
 
 a {
@@ -88,7 +89,7 @@ li {
 
 .contain {
   width: @min-width;
-  padding: @pad @pad;
+  padding: @pad;
   position: absolute;
   color: white;
   font-size: 13pt;
@@ -115,7 +116,6 @@ li {
 
 /*=================================LEFT BAR=================================*/
 
-//@side_width: 468px;
 #sidebar{
   z-index: 5;
   li {
@@ -154,9 +154,7 @@ li {
 
 #me_icon {
   background-image: url('/images/me.jpg');
-
 }
-
 #fb_icon {
   background-image: url('/images/fb_off.png');
 }
@@ -236,6 +234,122 @@ li {
   left: @left;
   border: 1pt solid grey;
   background-color: #FAFAFA;
+}
+
+// @blog-height: ;
+
+#blog {
+  background-image: url('/images/italia/back.jpg');
+  background-attachment: fixed;
+  display: none;
+  overflow: scroll;
+}
+
+#blog_c {
+  top: 70px;
+  left: @left;
+  width: @min-width + 40;
+  border: 1pt solid #ccc;
+  background-color: rgba(255,255,255,0.8);
+  font-family: "Droid Sans";
+  margin-bottom: 30px;
+}
+@i-green: #009246;
+@i-white: #F1F2F1;
+@i-red: #CE2B37;
+.i-green {
+  color: @i-green;
+}
+.i-red {
+  color: @i-red;
+}
+.i-white {
+  color: @i-white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.75);
+
+}
+
+.top {
+  border-bottom: 1px dotted #aaa;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+
+}
+
+.entry {
+  padding-bottom: 20px;
+  margin-top: 20px;
+  border-bottom: 1px dotted #aaa;
+  color: black;
+  &:last-child {
+    border-bottom: none;
+  }
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .title {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 80%;
+    color: #333;
+  }
+  font-size: 0;
+
+  .left {
+    font-size: @font;
+    line-height: @line;
+    width: 40%;
+    margin-right: 5%;
+    display: inline-block;
+    //vertical-align: middle;
+  }
+  .right {
+    width: 55%;
+    display: inline-block;
+    vertical-align: top;
+
+  }
+  img {
+    width: 100%;
+    vertical-align: top;
+    .drop-shadow(0px, 0px, 1px, 1px, #888);
+  }
+  p {
+    margin-left: 10px;
+    text-indent: 10px;
+    margin-bottom: 5px;
+    text-align: justify;
+  }
+}
+
+#translate {
+  //margin-top: 20px;
+  float: right;
+  width: 45%;
+  span {
+    padding: 15px;
+    color: black;
+    margin-right: 10px;
+  }
+}
+#to-english {
+  .btn(lighten(@i-green, 20%));
+}
+#to-italiano {
+  .btn(lighten(@i-red, 20%));
+}
+
+.notice {
+  display: none;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 10px;
+  background-color: #DFF0D8;
+  border: 1pt solid #D6E9C6;
+  color: #468847;
 }
 
 /*==================================WORK====================================*/

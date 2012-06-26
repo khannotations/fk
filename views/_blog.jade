@@ -1,0 +1,24 @@
+#blog.square
+  ul.nav_bar
+    li.nav_button.index(target='about') ^ Home
+    li.nav_button.work(target='work') > Projects
+    li.nav_button.play(target='fun') < Life
+    li.nav_button.blog.selected(target='blog') Italia
+
+  #blog_c.contain 
+    .top
+      h1(style="width: 50%; display: inline-block;")
+        span.i-green Un'est
+        span.i-white ate in 
+        span.i-red Italia
+      #translate
+        span#to-english PRESS HERE FOR ENGLISH TRANSLATION
+        span#to-italiano Italiano
+      .notice I apologize -- my English is poor because my Italian is poor :-/
+
+    include entries/25-6.jade
+    include entries/24-6.jade
+
+
+
+
