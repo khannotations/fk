@@ -1,0 +1,12 @@
+a.fancybox-thumb(rel='26-6', href='/images/italia/26-6/IMG_0072.jpg', title='The shoes! Thoughts?')
+	img.tile(src='/images/italia/26-6/IMG_0072.jpg')
+
+a.fancybox-thumb.hide(rel='26-6', href='/images/italia/26-6/IMG_0069.JPG', title='The gecko that crawled into John's room!')
+	img.tile(src='/images/italia/26-6/IMG_0069.JPG')
+
+a.fancybox-thumb.hide(rel='26-6', href='/images/italia/26-6/IMG_0070.JPG', title='Our teacher really likes wild boars...and we found some pasta sauce made with their meat -____-')
+	img.tile(src='/images/italia/26-6/IMG_0070.JPG')
+
+a.fancybox-thumb.hide(rel='26-6', href='/images/italia/26-6/IMG_0071.jpg', title='A wall of profanity near the mall')
+	img.tile(src='/images/italia/26-6/IMG_0071.jpg')
+

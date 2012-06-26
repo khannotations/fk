@@ -45,6 +45,13 @@ li {
 .blue {
   color: deepskyblue;
 }
+#emergency {
+  z-index: -20;
+  position: fixed;
+  color: white;
+  top: 300px;
+  left: 300px;
+}
 .nav_bar {
   margin-left: 80px;
   color: silver;
@@ -121,55 +128,38 @@ li {
   height: 30px;
   background-size: contain;
 }
-.title {
-  font-size: 15px;
-  line-height: 22px;
-}
-#about {
-  position: absolute;
-  top: 12px;
-  left: 80px;
-  padding-top: 5px;
-  width: 350px;
-  height: 100px;
-  background-color: #FAFAFA;
-  color: black;
-  font-size: 13px;
-  font-family: "Lucida Grande", "Helvetica Neue", Verdana, sans-serif;
-  line-height: 19px;
-}
 #me_icon {
-  background-image: url('/images/me.jpg');
+  background-image: url('/images/icons/me.jpg');
 }
 #fb_icon {
-  background-image: url('/images/fb_off.png');
+  background-image: url('/images/icons/fb_off.png');
 }
 #fb_icon:hover {
-  background-image: url('/images/fb_on.png');
+  background-image: url('/images/icons/fb_on.png');
 }
 #tw_icon {
-  background-image: url('/images/twitter_off.png');
+  background-image: url('/images/icons/twitter_off.png');
 }
 #tw_icon:hover {
-  background-image: url('/images/twitter_on.png');
+  background-image: url('/images/icons/twitter_on.png');
 }
 #in_icon {
-  background-image: url('/images/in_off.png');
+  background-image: url('/images/icons/in_off.png');
 }
 #in_icon:hover {
-  background-image: url('/images/in_on.png');
+  background-image: url('/images/icons/in_on.png');
 }
 #mail_icon {
-  background-image: url('/images/mail_off.png');
+  background-image: url('/images/icons/mail_off.png');
 }
 #mail_icon:hover {
-  background-image: url('/images/mail_on.png');
+  background-image: url('/images/icons/mail_on.png');
 }
 #git_icon {
-  background-image: url('/images/git_off.png');
+  background-image: url('/images/icons/git_off.png');
 }
 #git_icon:hover {
-  background-image: url('/images/git_on.png');
+  background-image: url('/images/icons/git_on.png');
 }
 /*=====================CONTAINERS and SQUARES===============================*/
 #index {
@@ -252,7 +242,7 @@ li {
 }
 .i-white {
   color: #f1f2f1;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.75);
+  text-shadow: 1px 0 2px #000000;
 }
 .top {
   border-bottom: 1px dotted #aaa;
@@ -300,6 +290,11 @@ li {
   -webkit-box-shadow: 0px 0px 1px 1px #888888;
   -moz-box-shadow: 0px 0px 1px 1px #888888;
   box-shadow: 0px 0px 1px 1px #888888;
+}
+.entry img:hover {
+  -webkit-box-shadow: 0px 0px 2px 2px #555555;
+  -moz-box-shadow: 0px 0px 2px 2px #555555;
+  box-shadow: 0px 0px 2px 2px #555555;
 }
 .entry p {
   margin-left: 10px;
@@ -509,7 +504,7 @@ li {
 }
 /* for -2 for borders */
 .proj_section {
-  border-left: 1pt solid grey;
+  border-left: 1pt solid #ddd;
   display: inline-block;
   width: 264.6666666666667px;
   padding: 0px 20px;
@@ -680,6 +675,20 @@ li {
   border-radius: 5px;
   -moz-border-radius: 5px;
   color: white;
+}
+
+#about {
+  position: absolute;
+  top: 12px;
+  left: @left;
+  padding-top: 5px;
+  width: 350px;
+  height: 100px;
+  background-color: #FAFAFA;
+  color: black;
+  font-size: 13px;
+  font-family: "Lucida Grande", "Helvetica Neue", Verdana, sans-serif;
+  line-height: 19px;
 }
 
 */

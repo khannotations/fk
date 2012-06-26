@@ -47,6 +47,14 @@ li {
 .big { font-size: 20px; line-height: 30px;}
 .blue { color: deepskyblue; }
 
+#emergency {
+  z-index: -20;
+  position: fixed;
+  color: white;
+  top: 300px;
+  left: 300px;
+}
+
 .nav_bar {
   margin-left: @left;
   color: silver;
@@ -133,57 +141,38 @@ li {
   }
 }
 
-.title {
-  font-size: 15px;
-  line-height: 22px;
-}
-
-#about {
-  position: absolute;
-  top: 12px;
-  left: @left;
-  padding-top: 5px;
-  width: 350px;
-  height: 100px;
-  background-color: #FAFAFA;
-  color: black;
-  font-size: 13px;
-  font-family: "Lucida Grande", "Helvetica Neue", Verdana, sans-serif;
-  line-height: 19px;
-}
-
 #me_icon {
-  background-image: url('/images/me.jpg');
+  background-image: url('/images/icons/me.jpg');
 }
 #fb_icon {
-  background-image: url('/images/fb_off.png');
+  background-image: url('/images/icons/fb_off.png');
 }
 #fb_icon:hover {
-  background-image: url('/images/fb_on.png');
+  background-image: url('/images/icons/fb_on.png');
 }
 #tw_icon {
-  background-image: url('/images/twitter_off.png');
+  background-image: url('/images/icons/twitter_off.png');
 }
 #tw_icon:hover {
-  background-image: url('/images/twitter_on.png');
+  background-image: url('/images/icons/twitter_on.png');
 }
 #in_icon {
-  background-image: url('/images/in_off.png');
+  background-image: url('/images/icons/in_off.png');
 }
 #in_icon:hover {
-  background-image: url('/images/in_on.png');
+  background-image: url('/images/icons/in_on.png');
 }
 #mail_icon {
-  background-image: url('/images/mail_off.png');
+  background-image: url('/images/icons/mail_off.png');
 }
 #mail_icon:hover {
-  background-image: url('/images/mail_on.png');
+  background-image: url('/images/icons/mail_on.png');
 }
 #git_icon {
-  background-image: url('/images/git_off.png');
+  background-image: url('/images/icons/git_off.png');
 }
 #git_icon:hover {
-  background-image: url('/images/git_on.png');
+  background-image: url('/images/icons/git_on.png');
 }
 
 /*=====================CONTAINERS and SQUARES===============================*/
@@ -263,7 +252,7 @@ li {
 }
 .i-white {
   color: @i-white;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.75);
+  text-shadow: 1px 0 2px rgba(0, 0, 0, 1);
 
 }
 
@@ -293,6 +282,7 @@ li {
     font-size: 80%;
     color: #333;
   }
+
   font-size: 0;
 
   .left {
@@ -315,6 +305,9 @@ li {
     margin: auto;
     vertical-align: top;
     .drop-shadow(0px, 0px, 1px, 1px, #888);
+    &:hover {
+      .drop-shadow(0px, 0px, 2px, 2px, #555);
+    }
   }
   p {
     margin-left: 10px;
@@ -379,7 +372,7 @@ li {
 
 @proj_width: (@min-width - 4*@pad)/3 - 2; /* for -2 for borders */
 .proj_section {
-  border-left: 1pt solid grey;
+  border-left: 1pt solid #ddd;
   display: inline-block;
   width: @proj_width; 
   padding: 0px 20px;
@@ -556,6 +549,20 @@ li {
   border-radius: 5px;
   -moz-border-radius: 5px;
   color: white;
+}
+
+#about {
+  position: absolute;
+  top: 12px;
+  left: @left;
+  padding-top: 5px;
+  width: 350px;
+  height: 100px;
+  background-color: #FAFAFA;
+  color: black;
+  font-size: 13px;
+  font-family: "Lucida Grande", "Helvetica Neue", Verdana, sans-serif;
+  line-height: 19px;
 }
 
 */
