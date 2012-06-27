@@ -1,43 +1,8 @@
 /*
 Written for faiazkhan.com, by Faiaz Khan.
-Edited February 16, 2012
+Edited June 26, 2012
 */
 $(document).ready(function() {
-
-  /*
-  $('.nivoSlider').nivoSlider({
-    effect: "fold,fade,sliceDown,slideInRight",
-    //directionNavHide: false,
-    pauseTime: 5000
-  });
-*/
-  console.log($.fancybox.transitions);
-  $(".fancybox-thumb").fancybox({
-    //prevEffect  : 'none',
-    //nextEffect  : 'none',
-    changeFade: 1000,
-    titlePosition: 'over',
-    padding: 0,
-    overlayOpacity: 0.8,
-    overlayColor: '#000',
-    helpers : {
-      title : {
-        type: 'outside'
-      },
-      overlay : {
-        opacity : 0.8,
-        css : {
-          'background-color' : '#000'
-        }
-      },
-      thumbs  : {
-        width : 50,
-        height  : 50
-      }
-    }
-  });
-
-  $(".english").hide();
 
   var time = 600;
   var w = $(window).width();
@@ -62,7 +27,7 @@ $(document).ready(function() {
     $("#index").hide().css({top: "-"+h+"px"});
     $("#work").css({top: "0px", left: "0px"}).show();
     $("#play").css({top:"0px", left:"-"+w+"px"});
-    $("#blog").css({top:"-"+h+"px", left:"0px"});
+    $("#blog").css({top:h+"px", left:"0px"});
 
     currWindow = windows[1];
     window.history.pushState({view: "work"}, "Faiaz Khan | Portfolio", "/portfolio");
@@ -72,7 +37,7 @@ $(document).ready(function() {
     $("#index").hide().css({top: "-"+h+"px"});
     $("#play").css({top: "0px", left: "0px"}).show();
     $("#work").css({top:"0px", left:w+"px"});
-    $("#blog").css({top:"-"+h+"px", left:"0px"});
+    $("#blog").css({top:h+"px", left:"0px"});
 
     $("#sidebar").hide();
     currWindow = windows[2];
@@ -93,7 +58,41 @@ $(document).ready(function() {
 
   }
 
-  $(".icon").mouseenter(); // Load the icon images
+  $(".icon").mouseenter();          // Load the icon images
+  $(".english").hide();             // Hide english translations in blog
+  $(".fancybox-thumb").fancybox({   // Fancybox
+    //prevEffect  : 'none',
+    //nextEffect  : 'none',
+    changeFade: 1000,
+    titlePosition: 'over',
+    padding: 0,
+    overlayOpacity: 0.8,
+    overlayColor: '#000',
+    helpers : {
+      title : {
+        type: 'outside'
+      },
+      overlay : {
+        opacity : 0.8,
+        css : {
+          'background-color' : '#000'
+        }
+      },
+      thumbs  : {
+        width : 50,
+        height  : 50
+      }
+    }
+  });
+
+  /* NIVO SLIDER */
+  /*
+  $('.nivoSlider').nivoSlider({
+    effect: "fold,fade,sliceDown,slideInRight",
+    //directionNavHide: false,
+    pauseTime: 5000
+  });
+  */
 
   /* ========================== EVENT HANDLERS ============================= */
   
