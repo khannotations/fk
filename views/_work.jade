@@ -9,9 +9,17 @@
       include _sidebar
 
   #work_c.contain
-
+    h1 Hacker. Designer. Teacher.
     #projects
-       
+      .proj_section
+        h5 Apps
+        .big_project(target='ontapp', tokens="node db amp js adobe")
+          img(src='/images/portfolio/ontapp.png', alt='onTapp'')
+          p onTapp
+        .big_project(target='screw', tokens="rails js css bs")
+          img(src='/images/portfolio/screw.png', alt='Screw Me Yale'')
+          p Screw Me Yale
+
       .proj_section
         h5 Programming
         .big_project(target='processing', tokens="java")
@@ -35,15 +43,6 @@
         .big_project(target='avishary', tokens="node js css bs")
           img(src='/images/portfolio/avishary.png', alt='Avishary'')
           p Avishary 
-
-      .proj_section
-        h5 Both-ing
-        .big_project(target='ontapp', tokens="node db amp js adobe")
-          img(src='/images/portfolio/ontapp.png', alt='onTapp'')
-          p onTapp
-        .big_project(target='screw', tokens="rails js css bs")
-          img(src='/images/portfolio/screw.png', alt='Screw Me Yale'')
-          p Screw Me Yale
 
     #expertise
       .section
@@ -146,7 +145,8 @@
             a(href="//maitrimassagelmt.com", target='_blank') Maitri Massage Lmt
             |, a small massage therapy studio run by 
             a(href="//hannahproch.com", target='_blank') Hannah Proch. 
-          p My first time extensively using Less.css--made quite a difference. Visit the site to see it in action! Death to Internet Explorer!
+          p My first time extensively using Less.css--made quite a difference. Visit the site to see it in action! 
+          p Death to Internet Explorer!
         .right
           a(href="//maitrimassagelmt.com", target='_blank')
             img(src='/images/portfolio/maitri_ss.png')

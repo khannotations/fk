@@ -219,6 +219,11 @@ li {
   border: 1pt solid grey;
   background-color: #FAFAFA;
 }
+#work_c h1 {
+  font-family: Droid Sans;
+  color: deepSkyBlue;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
 #blog {
   background-image: url('/images/italia/back.jpg');
   background-attachment: fixed;
@@ -491,7 +496,7 @@ li {
 }
 /*==================================WORK====================================*/
 #work_intro {
-  font: 14px "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+  font: 14px "Droid Sans", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
   padding: 0px 20px;
   color: rgba(0, 0, 0, 0.8);
   line-height: 24px;
@@ -524,7 +529,7 @@ li {
   margin-bottom: 10px;
   color: #222;
   text-indent: -10px;
-  font-weight: bold;
+  text-shadow: 0 1px 1px #000000;
 }
 .section {
   display: inline-block;
@@ -567,6 +572,7 @@ li {
   border-top: 1pt solid #777;
 }
 .desc .left {
+  font-family: Droid Sans;
   float: left;
   display: inline-block;
   width: 44%;
@@ -598,6 +604,7 @@ li {
   height: 340px;
 }
 .desc_title {
+  font-family: Nixie One;
   text-align: left;
   margin-top: -12px;
   font-size: 42px;
@@ -606,7 +613,7 @@ li {
   color: deepskyblue;
 }
 .desc_role {
-  font: 16px "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+  font: 16px "Droid Sans", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
   font-weight: 200;
   line-height: 24px;
   margin-bottom: 10px;

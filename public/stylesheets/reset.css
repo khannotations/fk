@@ -48,11 +48,13 @@ table {
 
 h1 {
   font-size: 200%; 
+  line-height: 200%;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
 }
 
 h2 {
   font-size: 180%;
+  line-height: 180%;
   text-transform: uppercase;
 }
 
