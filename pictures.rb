@@ -1,6 +1,6 @@
 inp = File.open("in.txt", "r")
 out = File.open("out.txt", "w")
-rel = "26-6" # change this every day!!
+rel = "27-6" # change this every day!!
 
 extra = "" # to add the .hide class later (or .tall)
 inp.each do |line|

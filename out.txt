@@ -1,12 +1,18 @@
-a.fancybox-thumb(rel='26-6', href='/images/italia/26-6/IMG_0072.jpg', title='The shoes! Thoughts?')
-	img.tile(src='/images/italia/26-6/IMG_0072.jpg')
+a.fancybox-thumb(rel='27-6', href='/images/italia/27-6/IMG_0076.JPG', title='One of the many sweet buildings on our tour')
+	img.tile(src='/images/italia/27-6/IMG_0076.JPG')
 
-a.fancybox-thumb.hide(rel='26-6', href='/images/italia/26-6/IMG_0069.JPG', title='The gecko that crawled into John's room!')
-	img.tile(src='/images/italia/26-6/IMG_0069.JPG')
+a.fancybox-thumb.hide(rel='27-6', href='/images/italia/27-6/IMG_0077.jpg', title='The wolf that raised Romulus and Remus, the father of Senius, the founder of Siena')
+	img.tile(src='/images/italia/27-6/IMG_0077.jpg')
 
-a.fancybox-thumb.hide(rel='26-6', href='/images/italia/26-6/IMG_0070.JPG', title='Our teacher really likes wild boars...and we found some pasta sauce made with their meat -____-')
-	img.tile(src='/images/italia/26-6/IMG_0070.JPG')
+a.fancybox-thumb.hide(rel='27-6', href='/images/italia/27-6/IMG_0078.jpg', title='Michele, nella strada! Mi sembra un poco stanco...')
+	img.tile(src='/images/italia/27-6/IMG_0078.jpg')
 
-a.fancybox-thumb.hide(rel='26-6', href='/images/italia/26-6/IMG_0071.jpg', title='A wall of profanity near the mall')
-	img.tile(src='/images/italia/26-6/IMG_0071.jpg')
+a.fancybox-thumb.hide(rel='27-6', href='/images/italia/27-6/IMG_0079.jpg', title='A cute street')
+	img.tile(src='/images/italia/27-6/IMG_0079.jpg')
+
+a.fancybox-thumb.hide(rel='27-6', href='/images/italia/27-6/IMG_0080.JPG', title='San Francesco church')
+	img.tile(src='/images/italia/27-6/IMG_0080.JPG')
+
+a.fancybox-thumb.hide(rel='27-6', href='/images/italia/27-6/IMG_0081.JPG', title='The Whiffenpoofs singing Call Your Girlfriend!')
+	img.tile(src='/images/italia/27-6/IMG_0081.JPG')
 
