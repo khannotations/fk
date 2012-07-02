@@ -7,9 +7,13 @@
 
   #blog_c.contain 
     .top
-      h1(style="width: 50%; display: inline-block;")
+      h1.italiano(style="width: 50%; display: inline-block;")
         span.i-green Un'est
-        span.i-white ate in 
+        span.i-white ate a 
+        span.i-red Siena
+      h1.english(style="width: 50%; display: inline-block;")
+        span.i-green A summ
+        span.i-white er in 
         span.i-red Siena
       #translate
         span.btn#to-italiano Italiano
@@ -17,6 +21,9 @@
         span.btn#to-english ENGLISH 
       .notice I apologize -- my English is poor because my Italian is poor :-/
 
+    include entries/2-7.jade
+    include entries/30-6.jade
+    include entries/28-6.jade
     include entries/27-6.jade
     include entries/26-6.jade
     include entries/25-6.jade

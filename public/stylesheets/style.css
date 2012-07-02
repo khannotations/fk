@@ -307,6 +307,12 @@ li {
   margin-bottom: 5px;
   text-align: justify;
 }
+.entry a {
+  color: #1aa4d6;
+}
+.entry a:hover {
+  color: #1481a9;
+}
 .tall {
   margin-left: 95px;
 }
