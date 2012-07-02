@@ -81,7 +81,8 @@ $(document).ready(function() {
       thumbs  : {
         width : 50,
         height  : 50
-      }
+      },
+      media: {}
     }
   });
 
