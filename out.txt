@@ -1,6 +1,21 @@
-a.fancybox-thumb.tall(rel='2-7', href='/images/italia/2-7/IMG_0108.jpg', title='The horses comin' round the bend!')
-	img.tile(src='/images/italia/2-7/IMG_0108.jpg')
+a.fancybox-thumb(rel='4-7', href='/images/italia/4-7/IMG_0117.JPG', title='The view from the tower in the Piazze di Campo')
+	img.tile(src='/images/italia/4-7/IMG_0117.JPG')
 
-a.fancybox-thumb.hide(rel='2-7', href='/images/italia/2-7/IMG_0109.JPG', title='All the people at the Palio -- far more than any other day')
-	img.tile(src='/images/italia/2-7/IMG_0109.JPG')
+a.fancybox-thumb.hide(rel='4-7', href='/images/italia/4-7/IMG_0120.JPG', title='The place where Bob Pence came to speak--a beautiful clearing!')
+	img.tile(src='/images/italia/4-7/IMG_0120.JPG')
+
+a.fancybox-thumb.hide(rel='4-7', href='/images/italia/4-7/IMG_0121.JPG', title='')
+	img.tile(src='/images/italia/4-7/IMG_0121.JPG')
+
+a.fancybox-thumb.hide(rel='4-7', href='/images/italia/4-7/IMG_0125.jpg', title='There was a donkey there')
+	img.tile(src='/images/italia/4-7/IMG_0125.jpg')
+
+a.fancybox-thumb.hide(rel='4-7', href='/images/italia/4-7/IMG_0126.jpg', title='And some goats')
+	img.tile(src='/images/italia/4-7/IMG_0126.jpg')
+
+a.fancybox-thumb.hide(rel='4-7', href='/images/italia/4-7/IMG_0127.JPG', title='A sweet elephant statue I found. Mi piacciono gli elefanti')
+	img.tile(src='/images/italia/4-7/IMG_0127.JPG')
+
+a.fancybox-thumb.hide(rel='4-7', href='/images/italia/4-7/IMG_0118.PNG', title='The sweet car I bought in this racing game I'm currently playing')
+	img.tile(src='/images/italia/4-7/IMG_0118.PNG')
 
