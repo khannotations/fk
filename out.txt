@@ -1,21 +1,27 @@
-a.fancybox-thumb(rel='4-7', href='/images/italia/4-7/IMG_0117.JPG', title='The view from the tower in the Piazze di Campo')
-	img.tile(src='/images/italia/4-7/IMG_0117.JPG')
+a.fancybox-thumb.tall(rel='6-7', href='/images/italia/6-7/IMG_0137.jpg', title='Evan having some fun on the train ride there...')
+	img.tile(src='/images/italia/6-7/IMG_0137.jpg')
 
-a.fancybox-thumb.hide(rel='4-7', href='/images/italia/4-7/IMG_0120.JPG', title='The place where Bob Pence came to speak--a beautiful clearing!')
-	img.tile(src='/images/italia/4-7/IMG_0120.JPG')
+a.fancybox-thumb.hide(rel='6-7', href='/images/italia/6-7/IMG_0141.jpg', title='Me too!')
+	img.tile(src='/images/italia/6-7/IMG_0141.jpg')
 
-a.fancybox-thumb.hide(rel='4-7', href='/images/italia/4-7/IMG_0121.JPG', title='')
-	img.tile(src='/images/italia/4-7/IMG_0121.JPG')
+a.fancybox-thumb.hide(rel='6-7', href='/images/italia/6-7/IMG_0144.JPG', title='Che bello!')
+	img.tile(src='/images/italia/6-7/IMG_0144.JPG')
 
-a.fancybox-thumb.hide(rel='4-7', href='/images/italia/4-7/IMG_0125.jpg', title='There was a donkey there')
-	img.tile(src='/images/italia/4-7/IMG_0125.jpg')
+a.fancybox-thumb.hide(rel='6-7', href='/images/italia/6-7/IMG_0145.jpg', title='')
+	img.tile(src='/images/italia/6-7/IMG_0145.jpg')
 
-a.fancybox-thumb.hide(rel='4-7', href='/images/italia/4-7/IMG_0126.jpg', title='And some goats')
-	img.tile(src='/images/italia/4-7/IMG_0126.jpg')
+a.fancybox-thumb.hide(rel='6-7', href='/images/italia/6-7/IMG_0146.JPG', title='')
+	img.tile(src='/images/italia/6-7/IMG_0146.JPG')
 
-a.fancybox-thumb.hide(rel='4-7', href='/images/italia/4-7/IMG_0127.JPG', title='A sweet elephant statue I found. Mi piacciono gli elefanti')
-	img.tile(src='/images/italia/4-7/IMG_0127.JPG')
+a.fancybox-thumb.hide(rel='6-7', href='/images/italia/6-7/IMG_0147.jpg', title='We really like playing around irresponsibly with the trains')
+	img.tile(src='/images/italia/6-7/IMG_0147.jpg')
 
-a.fancybox-thumb.hide(rel='4-7', href='/images/italia/4-7/IMG_0118.PNG', title='The sweet car I bought in this racing game I'm currently playing')
-	img.tile(src='/images/italia/4-7/IMG_0118.PNG')
+a.fancybox-thumb.hide(rel='6-7', href='/images/italia/6-7/IMG_0148.JPG', title='From the tunnel')
+	img.tile(src='/images/italia/6-7/IMG_0148.JPG')
+
+a.fancybox-thumb.hide(rel='6-7', href='/images/italia/6-7/IMG_0153.JPG', title='A bar called "So What" — quite the good time (with Laura and Evan)')
+	img.tile(src='/images/italia/6-7/IMG_0153.JPG')
+
+a.fancybox-thumb.hide(rel='6-7', href='/images/italia/6-7/IMG_0151.JPG', title='KILLED IT')
+	img.tile(src='/images/italia/6-7/IMG_0151.JPG')
 
