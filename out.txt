@@ -1,27 +1,24 @@
-a.fancybox-thumb.tall(rel='6-7', href='/images/italia/6-7/IMG_0137.jpg', title='Evan having some fun on the train ride there...')
-	img.tile(src='/images/italia/6-7/IMG_0137.jpg')
+a.fancybox-thumb.tall(rel='10-7', href='/images/italia/10-7/IMG_0161.JPG', title='The Duomo from the outside. It\'s huge!')
+	img.tile(src='/images/italia/10-7/IMG_0161.JPG')
 
-a.fancybox-thumb.hide(rel='6-7', href='/images/italia/6-7/IMG_0141.jpg', title='Me too!')
-	img.tile(src='/images/italia/6-7/IMG_0141.jpg')
+a.fancybox-thumb.hide(rel='10-7', href='/images/italia/10-7/IMG_0162.JPG', title='The animals of all the cities painted on the floor')
+	img.tile(src='/images/italia/10-7/IMG_0162.JPG')
 
-a.fancybox-thumb.hide(rel='6-7', href='/images/italia/6-7/IMG_0144.JPG', title='Che bello!')
-	img.tile(src='/images/italia/6-7/IMG_0144.JPG')
+a.fancybox-thumb.hide(rel='10-7', href='/images/italia/10-7/IMG_0163.jpg', title='Michaelangelo carved into the wall')
+	img.tile(src='/images/italia/10-7/IMG_0163.jpg')
 
-a.fancybox-thumb.hide(rel='6-7', href='/images/italia/6-7/IMG_0145.jpg', title='')
-	img.tile(src='/images/italia/6-7/IMG_0145.jpg')
+a.fancybox-thumb.hide(rel='10-7', href='/images/italia/10-7/IMG_0164.jpg', title='Amazing ceiling')
+	img.tile(src='/images/italia/10-7/IMG_0164.jpg')
 
-a.fancybox-thumb.hide(rel='6-7', href='/images/italia/6-7/IMG_0146.JPG', title='')
-	img.tile(src='/images/italia/6-7/IMG_0146.JPG')
+a.fancybox-thumb.hide(rel='10-7', href='/images/italia/10-7/IMG_0165.JPG', title='These paintings are more than 500 years old! They were restored five years ago.')
+	img.tile(src='/images/italia/10-7/IMG_0165.JPG')
 
-a.fancybox-thumb.hide(rel='6-7', href='/images/italia/6-7/IMG_0147.jpg', title='We really like playing around irresponsibly with the trains')
-	img.tile(src='/images/italia/6-7/IMG_0147.jpg')
+a.fancybox-thumb.hide(rel='10-7', href='/images/italia/10-7/IMG_0166.jpg', title='')
+	img.tile(src='/images/italia/10-7/IMG_0166.jpg')
 
-a.fancybox-thumb.hide(rel='6-7', href='/images/italia/6-7/IMG_0148.JPG', title='From the tunnel')
-	img.tile(src='/images/italia/6-7/IMG_0148.JPG')
+a.fancybox-thumb.hide(rel='10-7', href='/images/italia/10-7/IMG_0167.JPG', title='')
+	img.tile(src='/images/italia/10-7/IMG_0167.JPG')
 
-a.fancybox-thumb.hide(rel='6-7', href='/images/italia/6-7/IMG_0153.JPG', title='A bar called "So What" — quite the good time (with Laura and Evan)')
-	img.tile(src='/images/italia/6-7/IMG_0153.JPG')
-
-a.fancybox-thumb.hide(rel='6-7', href='/images/italia/6-7/IMG_0151.JPG', title='KILLED IT')
-	img.tile(src='/images/italia/6-7/IMG_0151.JPG')
+a.fancybox-thumb.hide(rel='10-7', href='/images/italia/10-7/IMG_0168.JPG', title='The view from the top')
+	img.tile(src='/images/italia/10-7/IMG_0168.JPG')
 
