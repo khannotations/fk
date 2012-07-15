@@ -1,8 +1,8 @@
 inp = File.open("in.txt", "r")
 out = File.open("out.txt", "w")
-rel = "10-7" # change this every day!!
+rel = "13-7" # change this every day!!
 
-extra = ".tall" # to add the .hide class later (or .tall)
+extra = "" # to add the .hide class later (or .tall)
 inp.each do |line|
   inps = line.strip.split("|")
   pic = inps[0]

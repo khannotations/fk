@@ -45,6 +45,11 @@ li {
 .blue {
   color: deepskyblue;
 }
+div.line {
+  height: 0;
+  border-bottom: 1pt dashed #aaa;
+  margin: 10px 0;
+}
 #emergency {
   z-index: -20;
   position: fixed;
