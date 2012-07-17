@@ -230,7 +230,7 @@ function moveIn(obj, time, push) {
 
     ret = "christina";
     if(push)
-      window.history.pushState({view: "christina"}, "Faiaz Khan | Un'estate in Italia", "/italia");
+      window.history.pushState({view: "christina"}, "Faiaz Khan | An ode to Christina", "/christina");
   }
   return ret;
 }
