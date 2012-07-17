@@ -58,6 +58,12 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 {
+  font-size: 130%;
+  line-height: 130%;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+
 .hide { display: none; }
 .inline { display: inline-block; }
 .block { display: block; }
@@ -69,6 +75,7 @@ h2 {
 }
 .tiny{ font-size: 50%;}
 .big { font-size: 120%;}
+.center { text-align: center;}
 
 
 

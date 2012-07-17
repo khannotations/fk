@@ -7,17 +7,19 @@ $(document).ready(function() {
   var time = 600;
   var w = $(window).width();
   var h = $(window).height();
-  var windows = ["index", "work", "play", "blog"];
+  var windows = ["index", "work", "play", "blog", "christina"];
   var currWindow;
 
   var path = window.location.pathname;
 
-  if (path === "/") {
-    $("#work").css({top:"0px", left:w+"px"});
-    $("#play").css({top:"0px", left:"-"+w+"px"});
-    $("#blog").css({top:h+"px", left:"0px"});
+  $("#work").css({top:"0px", left:w+"px"});
+  $("#play").css({top:"0px", left:"-"+w+"px"});
+  $("#blog").css({top:h+"px", left:"0px"});
+  $("#christina").css({top:h+"px", left:"-"+w+"px"});
 
-    $("#sidebar").hide();
+  $("#sidebar").hide();
+
+  if (path === "/") {
 
     currWindow = windows[0];
 
@@ -26,8 +28,8 @@ $(document).ready(function() {
   else if (path === "/portfolio") {
     $("#index").hide().css({top: "-"+h+"px"});
     $("#work").css({top: "0px", left: "0px"}).show();
-    $("#play").css({top:"0px", left:"-"+w+"px"});
-    $("#blog").css({top:h+"px", left:"0px"});
+    $("#sidebar").show();
+
 
     currWindow = windows[1];
     window.history.pushState({view: "work"}, "Faiaz Khan | Portfolio", "/portfolio");
@@ -36,10 +38,7 @@ $(document).ready(function() {
   else if (path === "/thelife") {
     $("#index").hide().css({top: "-"+h+"px"});
     $("#play").css({top: "0px", left: "0px"}).show();
-    $("#work").css({top:"0px", left:w+"px"});
-    $("#blog").css({top:h+"px", left:"0px"});
 
-    $("#sidebar").hide();
     currWindow = windows[2];
 
     window.history.pushState({view: "play"}, "Faiaz Khan | The Life", "/thelife");
@@ -47,15 +46,20 @@ $(document).ready(function() {
   }
   else if (path === "/italia") {
     $("#index").hide().css({top: "-"+h+"px"});
-    $("#play").css({top: "0px", left:"-"+w+"px"});
-    $("#work").css({top:"0px", left:w+"px"});
     $("#blog").css({top:"0px", left:"0px"}).show();
 
-    $("#sidebar").hide();
     currWindow = windows[3];
 
     window.history.pushState({view: "blog"}, "Faiaz Khan | Un'estate in Italia", "/italia");
 
+  }
+  else if (path == "/christina") {
+    $("#index").hide().css({top: "-"+h+"px"});
+    $("#christina").css({top:"0px", left:"0px"}).show();
+
+    currWindow = windows[4];
+
+    window.history.pushState({view: "christina"}, "Faiaz Khan | An ode to Christina", "/christina");
   }
 
   $(".icon").mouseenter();          // Load the icon images
@@ -219,6 +223,15 @@ function moveIn(obj, time, push) {
     if(push)
       window.history.pushState({view: "blog"}, "Faiaz Khan | Un'estate in Italia", "/italia");
   }
+  else if($(obj).hasClass('christina')) {
+    $("#christina").animate({"top":"0px", "left":"0px"}, time);
+    $("#footer").hide();
+    $("#christina").show();
+
+    ret = "christina";
+    if(push)
+      window.history.pushState({view: "christina"}, "Faiaz Khan | Un'estate in Italia", "/italia");
+  }
   return ret;
 }
 /* Handles how each view exits */
@@ -257,6 +270,12 @@ function moveOut(wind, time, flag, callback) {
       callback();
     });
     // $("#footer").css({"backgroundColor": "transparent"});
+  }
+  else if(wind == "christina") {
+    $("#christina").animate({"top":h, "left":"-"+w+"px"}, time, function(){
+      $("#christina").hide();
+      callback();
+    });
   }
 }
 

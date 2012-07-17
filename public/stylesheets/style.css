@@ -244,6 +244,42 @@ div.line {
   font-family: "Droid Sans";
   margin-bottom: 30px;
 }
+#christina {
+  background-image: url('https://fbcdn-sphotos-a.akamaihd.net/hphotos-ak-ash3/523506_10151099015209612_1494116417_n.jpg');
+  background-attachment: fixed;
+  display: none;
+  overflow: scroll;
+}
+#christina_c {
+  font-family: "Droid Sans";
+  color: black;
+  top: 70px;
+  left: 80px;
+  border: 1pt solid #ccc;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#christina_c a {
+  color: #1aa4d6;
+}
+#christina_c a:hover {
+  color: #1481a9;
+}
+#christina_c iframe {
+  display: inline-block;
+  width: 400px;
+  height: 300px;
+  margin-right: 3%;
+}
+.column {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  border: 1pt solid #aaa;
+}
+.column img {
+  width: 100%;
+  vertical-align: top;
+}
 .i-green {
   color: #009246;
 }

@@ -13,6 +13,8 @@ Edited February 16, 2012
 @pad: 30px;
 @font: 14px;
 @line: 18px;
+@link: #1aa4d6;
+
 html, body {
   min-height: 100%;
   width: 100%;
@@ -253,6 +255,48 @@ div.line {
   font-family: "Droid Sans";
   margin-bottom: 30px;
 }
+
+#christina {
+  background-image: url('https://fbcdn-sphotos-a.akamaihd.net/hphotos-ak-ash3/523506_10151099015209612_1494116417_n.jpg');
+  background-attachment: fixed;
+  display: none;
+  overflow: scroll;
+}
+
+#christina_c {
+  font-family: "Droid Sans";
+  color: black;
+  top: 70px;
+  left: @left;
+  border: 1pt solid #ccc;
+  background-color: rgba(255,255,255,0.8);
+  a {
+    color: @link;
+    &:hover {
+      color: darken(@link, 10%);
+    }
+  }
+  iframe {
+    display: inline-block;
+    width: 400px;
+    height: 300px;
+    margin-right: 3%;
+  }
+}
+
+.column {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  border: 1pt solid #aaa;
+
+  img {
+    width: 100%;
+    vertical-align: top;
+  }
+  
+}
+
 @i-green: #009246;
 @i-white: #F1F2F1;
 @i-red: #CE2B37;
@@ -327,11 +371,10 @@ div.line {
     margin-bottom: 5px;
     text-align: justify;
   }
-  @entry-link: #1aa4d6;
   a {
-    color: @entry-link;
+    color: @link;
     &:hover {
-      color: darken(@entry-link, 10%);
+      color: darken(@link, 10%);
     }
   }
 }

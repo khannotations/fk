@@ -50,6 +50,7 @@ app.get('/', routes.index);
 app.get('/portfolio', routes.index);
 app.get('/thelife', routes.index);
 app.get('/italia', routes.index);
+app.get('/christina', routes.index);
 
 
 
