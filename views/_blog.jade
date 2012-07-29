@@ -1,9 +1,11 @@
 #blog.square
   ul.nav_bar
-    li.nav_button.index(target='about') ^ Home
-    li.nav_button.work(target='work') > Projects
-    li.nav_button.play(target='fun') < Life
-    li.nav_button.blog.selected(target='blog') Italia
+    li.nav_button.js-nav.index(target='about') ^ Home
+    li.nav_button.js-nav.work(target='work') > Projects
+    li.nav_button.js-nav.play(target='fun') < Life
+    li.nav_button.js-nav.blog.selected(target='blog') Italia
+    li.nav_button.js-nav.christina(target='christina') Christina
+
 
   #blog_c.contain 
     .top
@@ -22,6 +24,11 @@
         span.btn#to-english ENGLISH 
       .notice I apologize -- my English is poor because my Italian is poor :-/
 
+    include entries/26-7.jade
+    include entries/23-7.jade
+    include entries/21-7.jade
+    include entries/20-7.jade
+    include entries/16-7.jade
     include entries/13-7.jade
     include entries/10-7.jade
     include entries/6-7.jade

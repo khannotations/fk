@@ -1,69 +1,12 @@
-a.fancybox-thumb(rel='13-7', href='/images/italia/13-7/IMG_0170.JPG', title='')
-	img.tile(src='/images/italia/13-7/IMG_0170.JPG')
+a.fancybox-thumb(rel='26-7', href='/images/italia/26-7/IMG_0296.jpg', title='The entire class together at the final dinner!')
+	img.tile(src='/images/italia/26-7/IMG_0296.jpg')
 
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0171.JPG', title='')
-	img.tile(src='/images/italia/13-7/IMG_0171.JPG')
+a.fancybox-thumb.hide(rel='26-7', href='/images/italia/26-7/IMG_0290.jpg', title='A statue casually holding a cigarette')
+	img.tile(src='/images/italia/26-7/IMG_0290.jpg')
 
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0172.JPG', title='')
-	img.tile(src='/images/italia/13-7/IMG_0172.JPG')
+a.fancybox-thumb.hide(rel='26-7', href='/images/italia/26-7/IMG_0294.jpg', title='The WORST frozen yogurt plan, perhaps in the world, certainly in Italy. But we had to try it once...')
+	img.tile(src='/images/italia/26-7/IMG_0294.jpg')
 
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0173.JPG', title='')
-	img.tile(src='/images/italia/13-7/IMG_0173.JPG')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0174.JPG', title='')
-	img.tile(src='/images/italia/13-7/IMG_0174.JPG')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0175.jpg', title='')
-	img.tile(src='/images/italia/13-7/IMG_0175.jpg')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0176.jpg', title='')
-	img.tile(src='/images/italia/13-7/IMG_0176.jpg')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0177.JPG', title='')
-	img.tile(src='/images/italia/13-7/IMG_0177.JPG')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0178.JPG', title='')
-	img.tile(src='/images/italia/13-7/IMG_0178.JPG')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0179.JPG', title='')
-	img.tile(src='/images/italia/13-7/IMG_0179.JPG')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0180.JPG', title='')
-	img.tile(src='/images/italia/13-7/IMG_0180.JPG')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0182.jpg', title='')
-	img.tile(src='/images/italia/13-7/IMG_0182.jpg')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0191.JPG', title='')
-	img.tile(src='/images/italia/13-7/IMG_0191.JPG')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0192.JPG', title='')
-	img.tile(src='/images/italia/13-7/IMG_0192.JPG')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0194.jpg', title='')
-	img.tile(src='/images/italia/13-7/IMG_0194.jpg')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0196.jpg', title='')
-	img.tile(src='/images/italia/13-7/IMG_0196.jpg')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0197.jpg', title='')
-	img.tile(src='/images/italia/13-7/IMG_0197.jpg')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0198.jpg', title='')
-	img.tile(src='/images/italia/13-7/IMG_0198.jpg')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0199.jpg', title='')
-	img.tile(src='/images/italia/13-7/IMG_0199.jpg')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0200.JPG', title='')
-	img.tile(src='/images/italia/13-7/IMG_0200.JPG')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0201.JPG', title='')
-	img.tile(src='/images/italia/13-7/IMG_0201.JPG')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0202.JPG', title='')
-	img.tile(src='/images/italia/13-7/IMG_0202.JPG')
-
-a.fancybox-thumb.hide(rel='13-7', href='/images/italia/13-7/IMG_0203.JPG', title='')
-	img.tile(src='/images/italia/13-7/IMG_0203.JPG')
+a.fancybox-thumb.hide(rel='26-7', href='/images/italia/26-7/IMG_0303.jpg', title='Outside Michael\'s bar again, again with cigars ;]')
+	img.tile(src='/images/italia/26-7/IMG_0303.jpg')
 

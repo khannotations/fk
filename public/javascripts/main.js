@@ -126,7 +126,7 @@ $(document).ready(function() {
     });
   });
 
-  $(".nav_button").click(function() {           // For switching views
+  $(".js-nav").click(function() {           // For switching views
     if(!($(this).hasClass(currWindow))) {       // if not clicked curr window
       $(".hidden").slideUp("fast");
       moveOut(currWindow, time, true);
