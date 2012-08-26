@@ -3,6 +3,7 @@ For faiazkhan.com, by Faiaz Khan.
 Edited February 16, 2012
 */
 /*=============================OVER-ARCHING=================================*/
+/* EDIT NUMBER OF PORTFOLIO ITEMS HERE */
 html,
 body {
   min-height: 100%;
@@ -59,7 +60,7 @@ div.line {
 }
 .nav_bar {
   margin-left: 80px;
-  color: silver;
+  color: #eee;
   font-size: 16px;
   line-height: 26px;
   width: 980px;
@@ -216,7 +217,7 @@ div.line {
   /* IE6-9 fallback on horizontal gradient */
 
   display: none;
-  height: 3890px;
+  height: 4330px;
 }
 #work_c {
   top: 65px;

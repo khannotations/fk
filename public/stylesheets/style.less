@@ -14,6 +14,8 @@ Edited February 16, 2012
 @font: 14px;
 @line: 18px;
 @link: #1aa4d6;
+/* EDIT NUMBER OF PORTFOLIO ITEMS HERE */
+@items: 10;
 
 html, body {
   min-height: 100%;
@@ -64,7 +66,7 @@ div.line {
 
 .nav_bar {
   margin-left: @left;
-  color: silver;
+  color: #eee;
   font-size: 16px;
   line-height: 26px;
   width: @min-width + 2* @pad;
@@ -222,7 +224,7 @@ div.line {
   //background-image: url('/images/backgrounds/back2.jpg');
   .rad-gradient(#DDD, lighten(#6c86c5, 0%));
   display: none;
-  height: (@desc_height + 2*@pad) * 9 - 70;
+  height: (@desc_height + 2*@pad) * @items - 70;
 }
 
 
