@@ -4,13 +4,15 @@
   "scripts": {
     "start": "app.js"
   },
-  "version": "3.4.0-7",
+  "version": "3.4.0-8",
   "engines": {
     "node": "0.6.x"
   },
   "domains": [
     "faiazkhan.com",
-    "www.faiazkhan.com"
+    "www.faiazkhan.com",
+    "rafikhan.me",
+    "www.rafikhan.me"
   ],
   "dependencies": {
     "connect-less": "0.3.x",
