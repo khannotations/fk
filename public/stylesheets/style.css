@@ -590,6 +590,8 @@ div.line {
 }
 .section li {
   display: block;
+  color: black;
+  padding: 2px;
 }
 .big_project {
   cursor: pointer;

@@ -109,13 +109,14 @@ $(document).ready(function() {
   });
 
   var orig_color = $(".token").css("color");
+  var new_color = "#1AA4D6";
 
   // Underlines corresponding areas of expertise on project hover
   $(".big_project").mouseenter(function() {
     tok = $(this).attr("tokens").split(" ");
     $(tok).each(function(i, j) {
       $(".token[name='"+j+"']").css({
-        color: "black",
+        color: new_color,
         textDecoration: "underline"
       });
     });
