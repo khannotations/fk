@@ -1,6 +1,6 @@
 /*
-Written for faiazkhan.com, by Faiaz Khan.
-Edited June 26, 2012
+Written for rafikhan.me, by Raf Khan.
+Edited September 4, 2012
 */
 $(document).ready(function() {
 
@@ -156,10 +156,11 @@ $(document).ready(function() {
     $(".english").show();
     $(".notice").slideDown("fast");
   });
-
+  /* This is crap
   $(".rafi")
     .mouseenter(function(){$(this).html("&nbsp;;)");})
     .mouseleave(function(){$(this).html("Rafi");});
+    */
 });
 
 var i_back = "1";
