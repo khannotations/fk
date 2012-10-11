@@ -228,7 +228,9 @@ div.line {
 #work_c {
   top: 65px;
   left: 80px;
-  border: 1pt solid grey;
+  -webkit-box-shadow: 0 0 5px #bbbbbb;
+  -moz-box-shadow: 0 0 5px #bbbbbb;
+  box-shadow: 0 0 5px #bbbbbb;
   background-color: #FAFAFA;
 }
 #work_c h1 {
