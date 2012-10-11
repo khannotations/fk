@@ -34,8 +34,8 @@ li {
 .crimson {
   color: crimson;
 }
-.crimson:hover {
-  color: OrangeRed;
+.purple {
+  color: purple;
 }
 .hidden {
   display: none;
@@ -185,9 +185,10 @@ div.line {
   width: 720px;
 }
 .rafi {
-  min-width: 30px;
+  color: #960fc0;
   font-weight: bold;
-  cursor: pointer;
+  font-size: 22px;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
 }
 #play {
   background-image: url('/images/backgrounds/bhangra3.jpg');
