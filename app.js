@@ -10,7 +10,7 @@ var express = require('express')
 var app = module.exports = express.createServer();
 // Configuration
 
-var PORT = 2999;
+var PORT = process.env.PORT || 2999;
 app.configure(function(){
   //app.use(express.logger());
   app.set('views', __dirname + '/views');
@@ -43,7 +43,6 @@ app.configure('development', function(){
 app.configure('production', function(){
   //app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
   app.use(express.errorHandler());
-  PORT = 45066;
 });
 
 // Routes
