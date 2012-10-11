@@ -103,13 +103,13 @@ $(document).ready(function() {
   
   // Scroll to project description on project tile click
   $(".big_project").click(function() {
-    $("body").animate({
+    $("body,html,document").animate({
       scrollTop: $(".desc[name='"+$(this).attr("target")+"']").offset().top
     }, 500);
   });
 
   var orig_color = $(".token").css("color");
-  var new_color = "#1AA4D6";
+  var new_color = "#0099CC";
 
   // Underlines corresponding areas of expertise on project hover
   $(".big_project").mouseenter(function() {

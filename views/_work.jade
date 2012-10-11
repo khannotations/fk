@@ -2,7 +2,7 @@
   ul.nav_bar
     li.nav_button.js-nav.index(target='about') ^ Home
     li.nav_button.js-nav.play(target='fun') < Life
-    li.nav_button.js-nav.work.selected(target='work') Projects
+    li.nav_button.js-nav.work.selected(target='work') Portfolio
     li.nav_button.js-nav.blog(target='blog') _Italia
     
     li.pull-right
@@ -15,56 +15,59 @@
         h5 Apps
         .big_project(target='ontapp', tokens="node db amp js adobe")
           img(src='/images/portfolio/ontapp.png', alt='onTapp')
-          p onTapp
+          //- p onTapp
         .big_project(target='screw', tokens="rails js css bs")
           img(src='/images/portfolio/screw.png', alt='Screw Me Yale')
-          p Screw Me Yale
+          //- p Screw Me Yale
         .big_project(target='hackyale', tokens="js css")
           img(src='/images/portfolio/hackyale.png', alt='HackYale')
-          p HackYale
+          //- p HackYale
+
+        .section
+          ul
+            li.token(name="node") Node.js [ Express, Jade, Socket IO ]
+            li.token(name="rails") Ruby on Rails / Heroku / Git
+            li.token(name="db") MongoDB / Redis
+            li.token(name="amp") Apache / MySQL / PHP
 
       .proj_section
-        h5 Programs
+        h5 Code
         .big_project(target='processing', tokens="java")
           img(src='/images/portfolio/processing.png', alt='Schedulizer')
-          p Schedulizer 
+          //- p Schedulizer 
         .big_project(target='galaxy', tokens="python")
           img(src='/images/portfolio/galaxy.png', alt='Galaxy')
-          p Galaxy Tools
+          //- p Galaxy Tools
         .big_project(target='colors', tokens="java")
           img(src='/images/portfolio/psych.png', alt='Department of Psychology, University of Chicago')
-          p Seeing Colors 
+          //- p Seeing Colors 
+
+        .section   
+          ul
+           li.token(name="js") Javascript / jQuery
+           li.token(name="c") C [ Message Passing Interface ]
+           li.token(name="python") Python
+           li.token(name="java") Java [ Processing ]
+
 
       .proj_section
         h5 Designs
         .big_project(target='maitri', tokens="rails js css")
-          img(src='/images/portfolio/maitri.png', alt='Maitri Massage'')
-          p Maitri Massage 
+          img(src='/images/portfolio/maitri.png', alt='Maitri Massage')
+          //- p Maitri Massage 
         .big_project(target='jashan', tokens="rails js css adobe")
-          img(src='/images/portfolio/jashan.png', alt='Yale Jashan Bhangra'')
-          p Yale Jashan Bhangra
+          img(src='/images/portfolio/jashan.png', alt='Yale Jashan Bhangra')
+          //- p Yale Jashan Bhangra
         .big_project(target='avishary', tokens="node js css bs")
-          img(src='/images/portfolio/avishary.png', alt='Avishary'')
-          p Avishary 
+          img(src='/images/portfolio/avishary.png', alt='Avishary')
+          //- p Avishary 
 
-    #expertise
-      .section
-        ul
-          li.token(name="node") Node.js [ Express, Jade, Socket IO ]
-          li.token(name="rails") Ruby on Rails / Heroku / Git
-          li.token(name="db") MongoDB / Redis
-          li.token(name="amp") Apache / MySQL / PHP
-      .section   
-        ul
-         li.token(name="js") Javascript / jQuery
-         li.token(name="c") C [ Message Passing Interface ]
-         li.token(name="python") Python
-         li.token(name="java") Java [ Processing ]
-      .section    
-        ul
-          li.token(name="css") Less / Sass
-          li.token(name="bs") Twitter Bootstrap
-          li.token(name="adobe") Photoshop, InDesign, Illustrator
+        .section    
+          ul
+            li.token(name="css") Less / Sass
+            li.token(name="bs") Twitter Bootstrap
+            li.token(name="adobe") Photoshop, InDesign, Illustrator
+            li.token(name="none", style="visibility: hidden;") Placeholder
           
     #descs
       .desc(name="ontapp")
@@ -198,5 +201,5 @@
 
   .footer rafikhan.me runs Node.js with Express, Jade and jQuery. Bhangra photo courtesy of Clyatt Jasper, Columbia University. 
     br
-    | Chicago photo courtesy of Sarah Husain. &#169; Faiaz Khan 2012. 
+    | Chicago photo courtesy of Sarah Husain. &#169; Rafi Khan 2012. 
     a(href='http://github.com/rafi-khan/fk', style='text-decoration: underline', target='_blank') Source

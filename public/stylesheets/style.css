@@ -3,6 +3,7 @@ For faiazkhan.com, by Faiaz Khan.
 Edited February 16, 2012
 */
 /*=============================OVER-ARCHING=================================*/
+/* Direction must be in [top, left, -45deg, 45deg] */
 /* EDIT NUMBER OF PORTFOLIO ITEMS HERE */
 html,
 body {
@@ -60,7 +61,7 @@ div.line {
 }
 .nav_bar {
   margin-left: 80px;
-  color: #eee;
+  color: #fff;
   font-size: 16px;
   line-height: 26px;
   width: 980px;
@@ -75,12 +76,16 @@ div.line {
 }
 .nav_button {
   cursor: pointer;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.25);
 }
 .nav_button:hover {
   color: lightcyan;
 }
 .nav_button:selected {
   color: deepskyblue;
+}
+.nav_button.no-shadow {
+  text-shadow: none;
 }
 .square {
   height: 100%;
@@ -108,14 +113,15 @@ div.line {
   display: block;
   position: absolute;
   left: 80px;
-  bottom: 0px;
+  bottom: 10px;
   color: white;
-  font-size: 10px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 18px;
   height: 20px;
   width: 920px;
   text-align: center;
   padding: 20px 0px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.25);
 }
 /*=================================LEFT BAR=================================*/
 #sidebar {
@@ -192,25 +198,25 @@ div.line {
   left: 80px;
 }
 #work {
-  background: #dddddd;
+  background: #dcf6ff;
   /* Old browsers */
 
-  background: -moz-radial-gradient(center, ellipse cover, #dddddd 0%, #6c86c5 100%);
+  background: -moz-radial-gradient(center, ellipse cover, #dcf6ff 0%, #76ddff 100%);
   /* FF3.6+ */
 
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #dddddd), color-stop(100%, #6c86c5));
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #dcf6ff), color-stop(100%, #76ddff));
   /* Chrome,Safari4+ */
 
-  background: -webkit-radial-gradient(center, ellipse cover, #dddddd 0%, #6c86c5 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #dcf6ff 0%, #76ddff 100%);
   /* Chrome10+,Safari5.1+ */
 
-  background: -o-radial-gradient(center, ellipse cover, #dddddd 0%, #6c86c5 100%);
+  background: -o-radial-gradient(center, ellipse cover, #dcf6ff 0%, #76ddff 100%);
   /* Opera 12+ */
 
-  background: -ms-radial-gradient(center, ellipse cover, #dddddd 0%, #6c86c5 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #dcf6ff 0%, #76ddff 100%);
   /* IE10+ */
 
-  background: radial-gradient(center, ellipse cover, #dddddd 0%, #6c86c5 100%);
+  background: radial-gradient(center, ellipse cover, #dcf6ff 0%, #76ddff 100%);
   /* W3C */
 
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='@start', endColorstr='@stop', GradientType=1);
@@ -575,18 +581,16 @@ div.line {
   line-height: 20px;
   margin-bottom: 10px;
   color: #222;
-  text-indent: -10px;
   text-shadow: 0 1px 1px #000000;
 }
 .section {
   display: inline-block;
   width: 264.6666666666667px;
-  padding: 0px 20px;
   vertical-align: top;
   color: #333;
   font-size: 12px;
   line-height: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .section li {
   display: block;
@@ -594,6 +598,7 @@ div.line {
   padding: 2px;
 }
 .big_project {
+  color: black;
   cursor: pointer;
   margin-bottom: 20px;
 }

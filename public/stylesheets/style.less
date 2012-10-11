@@ -66,7 +66,7 @@ div.line {
 
 .nav_bar {
   margin-left: @left;
-  color: #eee;
+  color: #fff;
   font-size: 16px;
   line-height: 26px;
   width: @min-width + 2* @pad;
@@ -89,6 +89,10 @@ div.line {
   }
   &:selected {
     color: deepskyblue;
+  }
+  text-shadow: 0 1px rgba(0,0,0,0.25);
+  &.no-shadow {
+    text-shadow: none;
   }
 }
 
@@ -119,14 +123,15 @@ div.line {
   display: block;
   position: absolute;
   left: @left;
-  bottom: 0px;
+  bottom: 10px;
   color: white;
-  font-size: 10px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 18px;
   height: 20px;
   width: @min-width;
   text-align: center;
   padding: 20px 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.25);
 }
 
 
@@ -219,10 +224,12 @@ div.line {
   //background-color: #FAFAFA;
   //border: 1pt solid grey;
 }
+@blue_color: #76ddff;
 @desc_height: 380px;
 #work {
   //background-image: url('/images/backgrounds/back2.jpg');
-  .rad-gradient(#DDD, lighten(#6c86c5, 0%));
+  //.rad-gradient(#DDD, lighten(#6c86c5, 0%));
+  .rad-gradient(lighten(@blue_color, 20%), @blue_color);
   display: none;
   height: (@desc_height + 2*@pad) * @items - 70;
 }
@@ -455,7 +462,7 @@ div.line {
     line-height: 20px;
     margin-bottom: 10px;
     color: #222;
-    text-indent: -10px;
+    // text-indent: -10px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 1);
     //font-weight: bold;
   }
@@ -465,12 +472,11 @@ div.line {
 .section {
   display: inline-block;
   width: @proj_width; 
-  padding: 0px 20px;
   vertical-align: top;
   color:#333;
   font-size: 12px;
   line-height: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   li {
     display: block;
     color: black;
@@ -479,6 +485,7 @@ div.line {
 }
 
 .big_project{
+  color: black;
   cursor: pointer;
   margin-bottom: 20px;
   &:hover > img {
