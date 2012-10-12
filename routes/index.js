@@ -6,6 +6,10 @@ exports.index = function(req, res){
   res.render('index', { title: "Rafi Khan" });
 };
 
+exports.get_blog = function(req, res) {
+  res.render('_blog_entries', { layout: false });
+};
+
 
 exports.notes = function(req, res) {
   res.render('notes', { title: 'Gimme an Ear', layout: 'notes_layout' });

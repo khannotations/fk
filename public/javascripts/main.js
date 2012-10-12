@@ -23,16 +23,15 @@ $(document).ready(function() {
 
     currWindow = windows[0];
 
-    window.history.pushState({view: "index"}, "Faiaz Khan", "/");
+    window.history.pushState({view: "index"}, "Rafi Khan", "/");
   }
   else if (path === "/portfolio") {
     $("#index").hide().css({top: "-"+h+"px"});
     $("#work").css({top: "0px", left: "0px"}).show();
     $("#sidebar").show();
 
-
     currWindow = windows[1];
-    window.history.pushState({view: "work"}, "Faiaz Khan | Portfolio", "/portfolio");
+    window.history.pushState({view: "work"}, "Rafi Khan | Portfolio", "/portfolio");
 
   }
   else if (path === "/thelife") {
@@ -41,16 +40,18 @@ $(document).ready(function() {
 
     currWindow = windows[2];
 
-    window.history.pushState({view: "play"}, "Faiaz Khan | The Life", "/thelife");
+    window.history.pushState({view: "play"}, "Rafi Khan | The Life", "/thelife");
 
   }
   else if (path === "/italia") {
+    load_blog_entries();
+
     $("#index").hide().css({top: "-"+h+"px"});
     $("#blog").css({top:"0px", left:"0px"}).show();
 
     currWindow = windows[3];
 
-    window.history.pushState({view: "blog"}, "Faiaz Khan | Un'estate in Italia", "/italia");
+    window.history.pushState({view: "blog"}, "Rafi Khan | Un'estate in Italia", "/italia");
 
   }
   else if (path == "/christina") {
@@ -59,36 +60,11 @@ $(document).ready(function() {
 
     currWindow = windows[4];
 
-    window.history.pushState({view: "christina"}, "Faiaz Khan | An ode to Christina", "/christina");
+    window.history.pushState({view: "christina"}, "Rafi Khan | An ode to Christina", "/christina");
   }
 
   $(".icon").mouseenter();          // Load the icon images
   $(".english").hide();             // Hide english translations in blog
-  $(".fancybox-thumb").fancybox({   // Fancybox
-    //prevEffect  : 'none',
-    //nextEffect  : 'none',
-    changeFade: 1000,
-    titlePosition: 'over',
-    padding: 0,
-    overlayOpacity: 0.8,
-    overlayColor: '#000',
-    helpers : {
-      title : {
-        type: 'outside'
-      },
-      overlay : {
-        opacity : 0.8,
-        css : {
-          'background-color' : '#000'
-        }
-      },
-      thumbs  : {
-        width : 50,
-        height  : 50
-      },
-      media: {}
-    }
-  });
 
   /* NIVO SLIDER */
   /*
@@ -129,6 +105,9 @@ $(document).ready(function() {
 
   $(".js-nav").click(function() {           // For switching views
     if(!($(this).hasClass(currWindow))) {       // if not clicked curr window
+      if($(this).hasClass("blog")) {
+        load_blog_entries();
+      }
       $(".hidden").slideUp("fast");
       moveOut(currWindow, time, true);
       currWindow = moveIn($(this), time, true);
@@ -174,7 +153,7 @@ function moveIn(obj, time, push) {
     $("#index").animate({"top":"0px"}, time);     // Move down
     $("#index").show();
     if (push)
-      window.history.pushState({view: "index"}, "Faiaz Khan", "/");
+      window.history.pushState({view: "index"}, "Rafi Khan", "/");
 
     ret = "index";
 
@@ -189,7 +168,7 @@ function moveIn(obj, time, push) {
     setTimeout(function(){$("#sidebar").slideDown("normal");}, 100);
     ret = "work";
     if(push)
-      window.history.pushState({view: "work"}, "Faiaz Khan", "/portfolio");
+      window.history.pushState({view: "work"}, "Rafi Khan", "/portfolio");
     
     /* OLD CODE
     $("#site_bottom").fadeOut(function() {
@@ -213,7 +192,7 @@ function moveIn(obj, time, push) {
     */
     ret = "play";
     if(push)
-      window.history.pushState({view: "play"}, "Faiaz Khan", "/thelife");
+      window.history.pushState({view: "play"}, "Rafi Khan", "/thelife");
   }
   else if($(obj).hasClass('blog')) {
     $("#blog").animate({"top":"0px"}, time);
@@ -223,7 +202,7 @@ function moveIn(obj, time, push) {
 
     ret = "blog";
     if(push)
-      window.history.pushState({view: "blog"}, "Faiaz Khan | Un'estate in Italia", "/italia");
+      window.history.pushState({view: "blog"}, "Rafi Khan | Un'estate in Italia", "/italia");
   }
   else if($(obj).hasClass('christina')) {
     $("#christina").animate({"top":"0px", "left":"0px"}, time);
@@ -232,7 +211,7 @@ function moveIn(obj, time, push) {
 
     ret = "christina";
     if(push)
-      window.history.pushState({view: "christina"}, "Faiaz Khan | An ode to Christina", "/christina");
+      window.history.pushState({view: "christina"}, "Rafi Khan | An ode to Christina", "/christina");
   }
   return ret;
 }
@@ -279,6 +258,37 @@ function moveOut(wind, time, flag, callback) {
       callback();
     });
   }
+}
+
+function load_blog_entries () {
+  $.get("/get_blog", function(data) {
+    $("#blog_entries").html(data);
+    $(".fancybox-thumb").fancybox({   // Fancybox
+      //prevEffect  : 'none',
+      //nextEffect  : 'none',
+      changeFade: 1000,
+      titlePosition: 'over',
+      padding: 0,
+      overlayOpacity: 0.8,
+      overlayColor: '#000',
+      helpers : {
+        title : {
+          type: 'outside'
+        },
+        overlay : {
+          opacity : 0.8,
+          css : {
+            'background-color' : '#000'
+          }
+        },
+        thumbs  : {
+          width : 50,
+          height  : 50
+        },
+        media: {}
+      }
+    });
+  });
 }
 
   /* Handles 'work' view, slide down on project click */
