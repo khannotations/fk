@@ -64,7 +64,6 @@ $(document).ready(function() {
   }
 
   $(".icon").mouseenter();          // Load the icon images
-  $(".english").hide();             // Hide english translations in blog
 
   /* NIVO SLIDER */
   /*
@@ -262,7 +261,9 @@ function moveOut(wind, time, flag, callback) {
 
 function load_blog_entries () {
   $.get("/get_blog", function(data) {
-    $("#blog_entries").html(data);
+    $("#blog-entries").html(data);
+    $(".english").hide();             // Hide english translations in blog
+
     $(".fancybox-thumb").fancybox({   // Fancybox
       //prevEffect  : 'none',
       //nextEffect  : 'none',
