@@ -185,7 +185,7 @@ div.line {
   width: 720px;
 }
 .rafi {
-  color: #e24aff;
+  color: #FF1919;
   font-weight: bold;
   font-size: 22px;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
@@ -202,26 +202,26 @@ div.line {
   background: #76ddff;
   /* Old browsers */
 
-  background: -moz-linear-gradient(top, #76ddff 0%, #00a5dc 100%);
+  background: -moz-radial-gradient(center, ellipse cover, #76ddff 0%, #10c4ff 100%);
   /* FF3.6+ */
 
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #76ddff), color-stop(100%, #00a5dc));
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #76ddff), color-stop(100%, #10c4ff));
   /* Chrome,Safari4+ */
 
-  background: -webkit-linear-gradient(top, #76ddff 0%, #00a5dc 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #76ddff 0%, #10c4ff 100%);
   /* Chrome10+,Safari5.1+ */
 
-  background: -o-linear-gradient(top, #76ddff 0%, #00a5dc 100%);
-  /* Opera 11.10+ */
+  background: -o-radial-gradient(center, ellipse cover, #76ddff 0%, #10c4ff 100%);
+  /* Opera 12+ */
 
-  background: -ms-linear-gradient(top, #76ddff 0%, #00a5dc 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #76ddff 0%, #10c4ff 100%);
   /* IE10+ */
 
-  background: linear-gradient(top, #76ddff 0%, #00a5dc 100%);
+  background: radial-gradient(center, ellipse cover, #76ddff 0%, #10c4ff 100%);
   /* W3C */
 
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#cfecfc', endColorstr='#319ff9', GradientType=0);
-  /* IE6-9 */
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='@start', endColorstr='@stop', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
 
   display: none;
   height: 4330px;
@@ -229,9 +229,9 @@ div.line {
 #work_c {
   top: 65px;
   left: 80px;
-  -webkit-box-shadow: 0 0 5px #bbbbbb;
-  -moz-box-shadow: 0 0 5px #bbbbbb;
-  box-shadow: 0 0 5px #bbbbbb;
+  -webkit-box-shadow: 0 0 10px #777777;
+  -moz-box-shadow: 0 0 10px #777777;
+  box-shadow: 0 0 10px #777777;
   background-color: #FAFAFA;
 }
 #work_c h1 {

@@ -13,15 +13,15 @@
     #projects
       .proj_section
         h5 Apps
-        .big_project(target='ontapp', tokens="node db amp js adobe")
-          img(src='/images/portfolio/ontapp.png', alt='onTapp')
-          //- p onTapp
+        .big_project(target='hackyale', tokens="js css")
+          img(src='/images/portfolio/hackyale.png', alt='HackYale', style="border: 1pt solid #ddd;")
+          //- p HackYale
         .big_project(target='screw', tokens="rails js css bs")
           img(src='/images/portfolio/screw.png', alt='Screw Me Yale')
           //- p Screw Me Yale
-        .big_project(target='hackyale', tokens="js css")
-          img(src='/images/portfolio/hackyale.png', alt='HackYale')
-          //- p HackYale
+        .big_project(target='ontapp', tokens="node db amp js adobe")
+          img(src='/images/portfolio/ontapp.png', alt='onTapp')
+          //- p onTapp
 
         .section
           ul
@@ -70,45 +70,12 @@
             li.token(name="none", style="visibility: hidden;") Placeholder
           
     #descs
-      .desc(name="ontapp")
-        .left
-          .desc_title onTapp
-          .desc_role Co-founder | 
-            span(style="font-size: 15px;") September 2011 - present
-          p onTapp is a web application designed to facilitate ordering from restaurants online. Leveraging customized deals, networks and a scoring system, onTapp makes food-ordering more social and, well, more fun! The site’s back-end was originally written in Apache, PHP and MySQL, but switched early on to Node.js with Express, Jade and MongoDB. Server-side code is written in jQuery.
-          p
-            a(href='http://www.yaleontapp.com', target='_blank') yaleontapp.com
-            | —-slated to debut Spring 2012.
-          p
-            <div class="fb-like" data-href="http://www.yaleontapp.com" data-send="true" data-width="400" data-show-faces="false" data-colorscheme="light" style='margin-top: 20px;'></div>
-        .right
-          a(href='http://www.yaleontapp.com', target='_blank')
-            img(src='/images/portfolio/ontapp_ss.png')
-      .desc(name="screw")
-        .left
-          .desc_title Screw Me Yale
-          .desc_role 3rd place, Yale College Council App Challenge
-            br/ 
-            span(style="font-size: 15px;") April 2012
-          p This isn't entirely what it sounds like--'Screws' at Yale are dances where your roommate gets to choose your date. While some rejoice in the opportunity to play cupid, others find it a hassle. For them, there's 
-            a(href="//screwmeyale.com", target='_blank') Screw Me Yale
-            | , a playful matchmaker and my first full-scale app in Rails. 
-          p It won't be used in practice until Fall 2012, but it's all geared to go, complete with a listing of every single student (scraped off the Yale Facebook).
-          p The 
-            a(href="//ycc.yale.edu", target='_blank') YCC
-            |  was kind enough to give it 
-            a(href="http://www.yaledailynews.com/news/2012/apr/19/cross-campus-41912/", target='_blank') 3rd place
-            |  in the App Challenge--hopefully it lives up to its prize! 
-          p Built on a very traditional stack of Rails, Heroku, Git and some sweet gems. 
-        .right
-          a(href="//screwmeyale.com", target='_blank')
-            img(src='/images/portfolio/screw_ss.png')
       .desc(name="hackyale")
         .left
           .desc_title HackYale
-          .desc_role Summer Session Teacher
+          .desc_role Front-end Development and Design Instructor
             br/ 
-            span(style="font-size: 15px;") June 2012
+            span(style="font-size: 15px;") June 2012 - present
           p 
             a(href="//hackyale.com", target='_blank') HackYale
             |  is a student collaborative designed to meet an increasing demand for Computer Science knowledge at Yale. Founded in Fall 2011, HackYale saw more than 600 applications—about 10% of the student body—throughout the year. 
@@ -117,6 +84,35 @@
         .right
           a(href="//hackyale.com", target='_blank')
             img(src='/images/portfolio/hackyale_ss.png')
+      .desc(name="screw")
+        .left
+          .desc_title Screw Me Yale
+          .desc_role 3rd place, Yale College Council App Challenge
+            br/ 
+            span(style="font-size: 15px;") April 2012
+          p This isn't entirely what it sounds like—'Screws' at Yale are dances where your roommate gets to choose your date. While some rejoice in the opportunity to play cupid, others find it a hassle. For them, there's 
+            a(href="//screwmeyale.com", target='_blank') Screw Me Yale
+            | , a playful matchmaker and my first full-scale app in Rails. 
+          p The app launched to the Yale undergraduate population in October 2012, drawing more than 1000 page views in its first 24 hours live. In the first semester alone, more than 10% of students logged on to screw over 500 of their friends, and the app continues to grow!
+          p The 
+            a(href="//ycc.yale.edu", target='_blank') Yale College Council
+            |  was kind enough to give it 
+            a(href="http://www.yaledailynews.com/news/2012/apr/19/cross-campus-41912/", target='_blank') 3rd place
+            |  in Yale's 2012 App Challenge. SMY is built on a very traditional stack of Rails, Heroku and Git. 
+        .right
+          a(href="//screwmeyale.com", target='_blank')
+            img(src='/images/portfolio/screw_ss.png')
+      .desc(name="ontapp")
+        .left
+          .desc_title onTapp, LLC
+          .desc_role Co-founder | 
+            span(style="font-size: 15px;") September 2011 - March 2012
+          p onTapp is a web application designed to facilitate ordering from restaurants online. Leveraging customized deals, networks and a scoring system, onTapp makes food-ordering more social and, well, more fun! The site’s back-end was originally written in Apache, PHP and MySQL, but switched early on to Node.js with Express, Jade and MongoDB. Server-side code is written in jQuery.
+          p Though a fantastic learning experience developing my own company and product, the project was eventually scrapped. 
+        .right
+          //- a(href='http://www.yaleontapp.com', target='_blank')
+          img(src='/images/portfolio/ontapp_ss.png')
+      
       .desc(name="processing")
         .left
           .desc_title The 'Schedulizer'
@@ -165,7 +161,7 @@
             a(href="//maitrimassagelmt.com", target='_blank') Maitri Massage Lmt
             |, a small massage therapy studio run by 
             a(href="//hannahproch.com", target='_blank') Hannah Proch. 
-          p My first time extensively using Less.css--made quite a difference. Visit the site to see it in action! 
+          p My first time extensively using Less.css—made quite a difference. Visit the site to see it in action! 
           p Death to Internet Explorer!
         .right
           a(href="//maitrimassagelmt.com", target='_blank')
