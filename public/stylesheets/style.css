@@ -4,14 +4,6 @@ Edited February 16, 2012
 */
 /*=============================OVER-ARCHING=================================*/
 /* Direction must be in [top, left, -45deg, 45deg] */
-@font-face {
-  font-family: 'Gotham';
-  src: url(/fonts/Gotham-Light.otf) format("opentype");
-}
-@font-face {
-  font-family: 'Gotham Bold';
-  src: url(/fonts/Gotham-Medium.otf) format("opentype");
-}
 /* EDIT NUMBER OF PORTFOLIO ITEMS HERE */
 html,
 body {
@@ -143,6 +135,7 @@ div.line {
 }
 .rafi {
   color: #FF1919;
+  font-family: "Droid Sans";
   font-weight: bold;
   font-size: 22px;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
