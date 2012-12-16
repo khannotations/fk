@@ -771,18 +771,75 @@ div.line {
 #academy_c {
   top: 70px;
   left: 80px;
-  width: 918px;
+  width: 898px;
+  padding: 40px;
   border: 1pt solid #ccc;
   background-color: rgba(255, 255, 255, 0.8);
   margin-bottom: 30px;
   color: black;
 }
 #academy_c p {
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 18px;
+  line-height: 24px;
   margin-bottom: 10px;
+  text-align: justify;
 }
-h1.intro {
+#academy_c p.centered {
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 20px;
   text-align: center;
-  font-size: 250%;
+  font-weight: 500;
+}
+#academy_c h1.intro {
+  text-align: center;
+  font-size: 300%;
+}
+#academy_c span.js-nav {
+  color: crimson;
+  cursor: pointer;
+}
+#academy_c span.js-nav:hover {
+  text-decoration: underline;
+}
+#academy_c a,
+#academy_c a:hover {
+  color: crimson;
+}
+.acad_section {
+  font-size: 0;
+}
+.acad_section > div {
+  display: inline-block;
+  vertical-align: top;
+}
+.acad_section > div:first-child {
+  margin-right: 10%;
+}
+.acad_section > .img {
+  width: 30%;
+}
+.acad_section > .img img {
+  width: 100%;
+}
+.acad_section > .text {
+  width: 60%;
+}
+.acad_showcase {
+  font-size: 0;
+}
+.acad_showcase > .third {
+  display: inline-block;
+  vertical-align: top;
+  width: 29%;
+  margin: 0 2%;
+}
+.acad_showcase > .third img {
+  width: 100%;
+}
+.acad_caption {
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  margin-bottom: 5px;
 }
