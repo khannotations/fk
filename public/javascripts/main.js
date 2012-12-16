@@ -1,6 +1,6 @@
 /*
-Written for rafikhan.me, by Raf Khan.
-Edited September 4, 2012
+Written for rafikhan.me, by Rafi Khan.
+Edited December 15, 2012
 */
 $(document).ready(function() {
 
@@ -64,15 +64,6 @@ $(document).ready(function() {
   }
 
   $(".icon").mouseenter();          // Load the icon images
-
-  /* NIVO SLIDER */
-  /*
-  $('.nivoSlider').nivoSlider({
-    effect: "fold,fade,sliceDown,slideInRight",
-    //directionNavHide: false,
-    pauseTime: 5000
-  });
-  */
 
   /* ========================== EVENT HANDLERS ============================= */
   
@@ -139,7 +130,7 @@ $(document).ready(function() {
 });
 
 var i_back = "1";
-var p_back = "bhangra3";
+var p_back = "bhangra";
 /* Handles how each view moves in */
 function moveIn(obj, time, push) {
   var ret = "hack";
@@ -165,12 +156,6 @@ function moveIn(obj, time, push) {
     ret = "work";
     if(push)
       window.history.pushState({view: "work"}, "Rafi Khan", "/portfolio");
-    
-    /* OLD CODE
-    $("#site_bottom").fadeOut(function() {
-      $(this).html(site['work']).fadeIn();
-    });
-    */
 
   }
   else if($(obj).hasClass('play')) {

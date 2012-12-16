@@ -10,7 +10,7 @@ Edited February 16, 2012
 }
 @font-face {
   font-family: 'Gotham Bold';
-  src: url(/fonts/Gotham-Bold.otf) format("opentype");
+  src: url(/fonts/Gotham-Medium.otf) format("opentype");
 }
 /* EDIT NUMBER OF PORTFOLIO ITEMS HERE */
 html,
@@ -83,13 +83,14 @@ div.line {
 }
 .nav_button {
   cursor: pointer;
+  -o-transition: all 0.2s ease 0;
+  -moz-transition: all 0.2s ease 0;
+  -webkit-transition: all 0.2s ease 0;
+  transition: all 0.2s ease 0;
   text-shadow: 0 1px rgba(0, 0, 0, 0.25);
 }
 .nav_button:hover {
   color: lightcyan;
-}
-.nav_button:selected {
-  color: deepskyblue;
 }
 .nav_button.no-shadow {
   text-shadow: none;
@@ -206,39 +207,29 @@ div.line {
   left: 80px;
 }
 #work {
-  background: #76ddff;
-  /* Old browsers */
-
-  background: -moz-radial-gradient(center, ellipse cover, #76ddff 0%, #10c4ff 100%);
-  /* FF3.6+ */
-
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #76ddff), color-stop(100%, #10c4ff));
-  /* Chrome,Safari4+ */
-
-  background: -webkit-radial-gradient(center, ellipse cover, #76ddff 0%, #10c4ff 100%);
-  /* Chrome10+,Safari5.1+ */
-
-  background: -o-radial-gradient(center, ellipse cover, #76ddff 0%, #10c4ff 100%);
-  /* Opera 12+ */
-
-  background: -ms-radial-gradient(center, ellipse cover, #76ddff 0%, #10c4ff 100%);
-  /* IE10+ */
-
-  background: radial-gradient(center, ellipse cover, #76ddff 0%, #10c4ff 100%);
-  /* W3C */
-
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='@start', endColorstr='@stop', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
-
+  background-color: #ffffff;
+  background-image: url(/images/backgrounds/diag.jpg);
+  background-repeat: repeat;
+  background-size: 58px 58px;
   display: none;
   height: 4330px;
+}
+#work .nav_bar,
+#work .footer,
+#work .footer a,
+#work #sidebar li {
+  color: black;
+}
+#work .nav_button:hover {
+  color: #333;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
 }
 #work_c {
   top: 65px;
   left: 80px;
-  -webkit-box-shadow: 0 0 10px #777777;
-  -moz-box-shadow: 0 0 10px #777777;
-  box-shadow: 0 0 10px #777777;
+  -webkit-box-shadow: 0 0 5px #777777;
+  -moz-box-shadow: 0 0 5px #777777;
+  box-shadow: 0 0 5px #777777;
   background-color: #FAFAFA;
 }
 #work_c h1 {
@@ -258,6 +249,9 @@ div.line {
   border: 1pt solid #ccc;
   background-color: rgba(255, 255, 255, 0.8);
   margin-bottom: 30px;
+}
+#blog_c h1 {
+  font-family: "Gotham Bold";
 }
 #christina {
   background-image: url('https://fbcdn-sphotos-a.akamaihd.net/hphotos-ak-ash3/523506_10151099015209612_1494116417_n.jpg');
@@ -617,6 +611,10 @@ div.line {
 .big_project img {
   width: 264.6666666666667px;
   height: 66.16666666666667px;
+  -o-transition: all 0.2s ease 0;
+  -moz-transition: all 0.2s ease 0;
+  -webkit-transition: all 0.2s ease 0;
+  transition: all 0.2s ease 0;
 }
 .big_project p {
   color: black;
@@ -654,6 +652,10 @@ div.line {
 .desc img {
   width: 100%;
   max-height: 350px;
+  -o-transition: all 0.2s ease 0;
+  -moz-transition: all 0.2s ease 0;
+  -webkit-transition: all 0.2s ease 0;
+  transition: all 0.2s ease 0;
 }
 .desc p {
   font-size: 14px;
@@ -670,92 +672,13 @@ div.line {
   line-height: 60px;
   font-weight: bold;
   color: deepskyblue;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 .desc_role {
   font-size: 16px;
   font-family: "Gotham Bold";
+  padding-left: 10px;
   font-weight: 200;
   line-height: 24px;
   margin-bottom: 10px;
 }
-/*=========================OLD STUFF ====================*/
-/*
-/* Hidden div that slides down on project click 
-.project_display {
-  height: 330px;
-  width: 100%;
-  color: rgba(0,0,0,0.8);
-  display: none;
-  border-top: 3pt double rgba(0,0,0,0.6);
-  margin-top: 20px;
-  padding-top: 5px;
-}
-
-.hide_disp {
-  position: absolute;
-  right: 25px;
-  top: 458px;
-  font-size: 10px;
-  cursor:pointer;
-}
-
-.desc_desc{
-  font: 12.5px "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
-  text-align: justify;
-  line-height: 20px;
-  margin-top: 5px;
-}
-
-
-
-#site {
-  position: absolute;
-  //font: 14pt 'Iceland', 'Helvetica Neue Light', sans-serif;
-  top: 0px;
-  left: 0px;
-  padding-left: 10px;
-  height: 100%;
-  width: 180px;
-  color: white;
-  z-index: 3;
-  background-color: rgba(0,0,0,0.5);
-  box-shadow: 1px 0px 1px 0px black;  
-  //border-right: 1pt solid rgba(230, 230, 230, 0.2);
-}
-
-#nameplate {
-  -webkit-transform: rotate(-30deg); 
-  -moz-transform: rotate(-30deg);
-  -o-transform: rotate(-30deg);
-  font-size: 52px;
-  margin: 15px 0px 15px 10px;
-  display: block;
-}
-
-#info {
-  width: 150px;
-  height: 45px;
-  line-height: 22px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  color: white;
-}
-
-#about {
-  position: absolute;
-  top: 12px;
-  left: @left;
-  padding-top: 5px;
-  width: 350px;
-  height: 100px;
-  background-color: #FAFAFA;
-  color: black;
-  font-size: 13px;
-  font-family: "Lucida Grande", "Helvetica Neue", Verdana, sans-serif;
-  line-height: 19px;
-}
-
-*/

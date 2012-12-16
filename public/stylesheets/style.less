@@ -13,7 +13,7 @@ Edited February 16, 2012
 }
 @font-face {
   font-family: 'Gotham Bold';
-  src: url(/fonts/Gotham-Bold.otf) format("opentype");
+  src: url(/fonts/Gotham-Medium.otf) format("opentype");
 }
 @min-width: 920px;
 @min-height: 600px;
@@ -25,6 +25,7 @@ Edited February 16, 2012
 @link: #1aa4d6;
 /* EDIT NUMBER OF PORTFOLIO ITEMS HERE */
 @items: 10;
+@red: #FF1919;
 
 html, body {
   min-height: 100%;
@@ -93,11 +94,9 @@ div.line {
 
 .nav_button {
   cursor: pointer;
+  .transition(all, 0.2s);
   &:hover {
     color: lightcyan;
-  }
-  &:selected {
-    color: deepskyblue;
   }
   text-shadow: 0 1px rgba(0,0,0,0.25);
   &.no-shadow {
@@ -234,21 +233,32 @@ div.line {
   //background-color: #FAFAFA;
   //border: 1pt solid grey;
 }
-@blue_color: #76ddff;
+@blue_color: #fff;
 @desc_height: 380px;
+
 #work {
-  //background-image: url('/images/backgrounds/back2.jpg');
-  //.rad-gradient(#DDD, lighten(#6c86c5, 0%));
-  .rad-gradient(@blue_color, darken(@blue_color, 20%));
+  // .rad-gradient(@blue_color, darken(@blue_color, 20%));
+  background-color: @blue_color;
+  background-image: url(/images/backgrounds/diag.jpg);
+  background-repeat: repeat;
+  background-size: 58px 58px;
+  // background-size: 397px 322px;
   display: none;
   height: (@desc_height + 2*@pad) * @items - 70;
+  .nav_bar, .footer, .footer a, #sidebar li {
+    color: black;
+  }
+  .nav_button:hover {
+    color: #333;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+  }
 }
 
 
 #work_c {
   top: 65px;
   left: @left;
-  .box-shadow(0 0 10px #777);
+  .box-shadow(0 0 5px #777);
   background-color: #FAFAFA;
 
   h1 {
@@ -272,6 +282,10 @@ div.line {
   border: 1pt solid #ccc;
   background-color: rgba(255,255,255,0.8);
   margin-bottom: 30px;
+
+  h1 {
+    font-family: "Gotham Bold";
+  }
 }
 
 #christina {
@@ -490,7 +504,6 @@ div.line {
     padding: 2px;
   }
 }
-
 .big_project{
   color: black;
   cursor: pointer;
@@ -501,7 +514,7 @@ div.line {
   img {
     width: @proj_width;
     height: @proj_width/4;
-    
+    .transition(all, 0.2s);
   }
   p {
     color: black;
@@ -511,6 +524,7 @@ div.line {
   .small {
     font-size: 80%;
   }
+
 }
 .desc {
   color: black;
@@ -518,8 +532,6 @@ div.line {
   padding-top: 30px;
   border-top: 1pt solid #777;
   .left {
-    // font-family: "Helvetica Neue";
-
     float: left;
     display: inline-block;
     width: 44%;
@@ -541,6 +553,7 @@ div.line {
   img {
     width: 100%;
     max-height: 350px;
+    .transition(all, 0.2s);
   }
 
   p { 
@@ -561,12 +574,12 @@ div.line {
   line-height: 60px;
   font-weight: bold;
   color: deepskyblue;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 .desc_role {
   font-size: 16px;
   font-family: "Gotham Bold";
-  padding-left: 
-  // font: 16px "Helvetica Neue", Arial, sans-serif;
+  padding-left: 10px;
   font-weight: 200;
   line-height: 24px;
   margin-bottom: 10px;
