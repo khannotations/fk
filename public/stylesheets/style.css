@@ -7,8 +7,14 @@ Edited February 16, 2012
 @font-face {
   font-family: 'Myriad Pro';
   font-style: normal;
+  font-weight: 400;
+  src: local("Myriad Pro"), local("Myriad"), url(/fonts/myriad/MyriadPro-LightSemiExt.otf) format("opentype");
+}
+@font-face {
+  font-family: 'Myriad Pro';
+  font-style: normal;
   font-weight: 500;
-  src: local("Myriad Pro"), local("Myriad"), url(/fonts/myriad/MyriadPro-Semibold.otf) format("opentype");
+  src: local("Myriad Pro"), local("Myriad"), url(/fonts/myriad/MyriadPro-Regular.otf) format("opentype");
 }
 /* EDIT NUMBER OF PORTFOLIO ITEMS HERE */
 html,
