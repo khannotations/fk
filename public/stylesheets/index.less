@@ -1,0 +1,22 @@
+#index {
+  background-image: url('/images/backgrounds/chicago.jpg');
+  //background-image: url('/images/backgrounds/beach.jpg');
+  z-index: 1;
+  top: 0px;
+  //display: none;
+}
+
+@ind_offset: 200;
+
+#index_c {
+  top: 50px;
+  left: @left + @ind_offset;
+  width: @min-width - @ind_offset;
+}
+
+.rafi {
+  color: #FF1919;
+  font-weight: bold;
+  font-size: @big_font + 2;
+  text-shadow: 0 0 1px rgba(255,255,255,0.6);
+}

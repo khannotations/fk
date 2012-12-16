@@ -6,8 +6,47 @@
     li.nav_button.js-nav.blog(target='blog') _Italia
 
   #play_c.contain 
-    p.crimson I'm still sorting my life out...check back later!
+    .play_deck
+      ul
+        li.play_item(target='bhangra') Bhangra
+        li.play_item(target='tedx') TedxYale
+        li.play_item(target='booty') Pirates' Booty
+        li.play_item(target='soccer') Soccer
+        li.play_item(target='other') Other fun!
 
+    .play_content
+      .play_close &times;
+      .play_frame.bhangra
+        h1 Bhangra!
+        p Bhangra is upbeat, festive dance from the Punjab region of India:
+        img.half(src="/images/life/punjab.png")
+        p I started dancing my freshman year, travelling with the team to performances in Rochester, NY, Cornell University, Columbia University and Ann Arbor, Michigan.
+        p Check us out at 
+          a(href="http://yale.edu/bhangra", target="_blank") yale.edu/bhangra
+          |  or watch the videos below!
+        iframe.youtube(width="560",height="315",src="http://www.youtube.com/embed/TMHTJ8Y3i3g?start=59",frameborder="0",allowfullscreen)
+
+      .play_frame.tedx
+        h1 TedxYale
+        p Tedx are independently organized TED events. At TedxYale, we host several salons (one-speaker events) and conferences each year, capstoned by our main event in February.
+        p In 2013, our theme is 
+          b TedxYale: Solve for Y
+        p For more info, visit 
+          a(href="http://tedxyale.com", target="_blank") tedxyale.com
+          | !
+        br/
+        p As a teaser, here's a potential talk, beautifully given by my roommate, DJ Stanfill, on Storytelling through music.
+        iframe.youtube(width="560",height="315",src="http://www.youtube.com/embed/YgS48wEbSgc?rel=0&showinfo=0",frameborder="0",allowfullscreen)
+
+      .play_frame.booty
+        h1 The Pirates' Booty
+        p The Pirates' Booty is the punny name given to the student restaurant, commonly known as a buttery, in Pierson College (my residential college at Yale—our maskot is a PIRATE).
+        p As manager in 2012-2013, I revamped the menu and added some much-needed spice (and health).
+      .play_frame.soccer
+      .play_frame.other
+
+
+//-
   .footer rafikhan.me runs Node.js with Express, Jade and jQuery. Bhangra photo courtesy of Clyatt Jasper, Columbia University. 
     br 
     | Chicago photo courtesy of Sarah Husain. &#169; Rafi Khan 2012. 
