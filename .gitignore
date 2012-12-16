@@ -5,3 +5,4 @@ javascripts/old_code.js
 *.DS_Store
 TIMESTAMP
 *.rb
+*/fonts/*
