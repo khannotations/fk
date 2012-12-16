@@ -122,8 +122,8 @@ $(document).ready(function() {
   $(".play_item").click(function() {
     target = $(this).attr("target");
     $(".play_content").css({opacity: 1});
-    $(".play_frame").hide();
-    $(".play_frame[class~='"+target+"']").show();
+    $(".play_frame[target!='"+target+"']").hide();
+    $(".play_frame[target='"+target+"']").show();
   });
 
   $(".play_close").click(function() {

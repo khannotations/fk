@@ -4,15 +4,24 @@ Edited February 16, 2012
 */
 /*=============================OVER-ARCHING=================================*/
 /* Direction must be in [top, left, -45deg, 45deg] */
-/*
 @font-face {
-  font-family: 'Myriad Pro';
+  font-family: 'Myriad SemiExt';
   font-style: normal;
-  font-weight: 200;
-  src: local("Myriad Pro"), local("Myriad"), 
-    url(/fonts/myriad/MyriadPro-LightSemiExt.otf) format("opentype");
+  font-weight: 400;
+  src: local("Myriad SemiExt"), url(/fonts/myriad/MyriadPro-LightSemiExt.otf) format("opentype");
 }
-*/
+@font-face {
+  font-family: 'Myriad SemiExt';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Myriad SemiExt"), url(/fonts/myriad/MyriadPro-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: 'Myriad SemiExt';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Myriad SemiExt"), url(/fonts/myriad/MyriadPro-Semibold.otf) format("opentype");
+}
 /* EDIT NUMBER OF PORTFOLIO ITEMS HERE */
 html,
 body {
@@ -20,8 +29,7 @@ body {
   width: 100%;
 }
 body {
-  font-family: "Myriad Pro";
-  font-weight: 200;
+  font-family: "Myriad SemiExt";
   font-size: 14px;
   line-height: 18px;
   background-color: black;
@@ -183,15 +191,6 @@ div.line {
   color: deepSkyBlue;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
-#work_intro {
-  font: 14px "Droid Sans", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
-  padding: 0px 20px;
-  color: rgba(0, 0, 0, 0.8);
-  line-height: 24px;
-  text-indent: 10px;
-  text-align: justify;
-  margin-bottom: 20px;
-}
 #projects {
   margin-bottom: 10px;
 }
@@ -262,6 +261,7 @@ div.line {
   height: 380px;
   padding-top: 30px;
   border-top: 1pt solid #777;
+  font-weight: 500;
 }
 .desc .left {
   float: left;
@@ -292,6 +292,7 @@ div.line {
 }
 .desc p {
   font-size: 14px;
+  font-weight: 500;
   line-height: 20px;
   text-indent: 10px;
 }
@@ -302,6 +303,7 @@ div.line {
   text-align: left;
   margin-top: -12px;
   font-size: 42px;
+  font-weight: normal;
   line-height: 60px;
   color: deepskyblue;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
@@ -413,8 +415,9 @@ div.line {
   transition: opacity 0.3s ease 0;
   padding: 20px;
 }
-.play_content img {
-  margin-top: 10px;
+.play_content img,
+.play_content iframe {
+  margin: 15px 0;
   width: 100%;
 }
 .play_content .half {
@@ -424,6 +427,7 @@ div.line {
 .play_content p {
   font-size: 15px;
   line-height: 20px;
+  font-weight: 500;
   text-align: justify;
 }
 .play_content a,
@@ -431,7 +435,7 @@ div.line {
   color: crimson;
 }
 .play_content iframe.youtube {
-  margin-top: 10px;
+  width: 560px;
   margin-left: 45px;
 }
 .play_close {

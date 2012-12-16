@@ -7,15 +7,28 @@ Edited February 16, 2012
 
 @import "base.less";
 
-/*
 @font-face {
-  font-family: 'Myriad Pro';
+  font-family: 'Myriad SemiExt';
   font-style: normal;
-  font-weight: 200;
-  src: local("Myriad Pro"), local("Myriad"), 
+  font-weight: 400;
+  src: local("Myriad SemiExt"), 
     url(/fonts/myriad/MyriadPro-LightSemiExt.otf) format("opentype");
 }
-*/
+
+@font-face {
+  font-family: 'Myriad SemiExt';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Myriad SemiExt"), 
+    url(/fonts/myriad/MyriadPro-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: 'Myriad SemiExt';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Myriad SemiExt"), 
+    url(/fonts/myriad/MyriadPro-Semibold.otf) format("opentype");
+}
 
 @min-width: 920px;
 @min-height: 600px;
@@ -34,8 +47,7 @@ html, body {
   width: 100%;
 }
 body {
-  font-family: "Myriad Pro";//, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 200;
+  font-family: "Myriad SemiExt"; //, "Myriad Pro";//, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: @font;  
   line-height: @line;
   background-color: black;
