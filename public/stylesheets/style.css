@@ -4,18 +4,15 @@ Edited February 16, 2012
 */
 /*=============================OVER-ARCHING=================================*/
 /* Direction must be in [top, left, -45deg, 45deg] */
+/*
 @font-face {
   font-family: 'Myriad Pro';
   font-style: normal;
-  font-weight: 400;
-  src: local("Myriad Pro"), local("Myriad"), url(/fonts/myriad/MyriadPro-LightSemiExt.otf) format("opentype");
+  font-weight: 200;
+  src: local("Myriad Pro"), local("Myriad"), 
+    url(/fonts/myriad/MyriadPro-LightSemiExt.otf) format("opentype");
 }
-@font-face {
-  font-family: 'Myriad Pro';
-  font-style: normal;
-  font-weight: 500;
-  src: local("Myriad Pro"), local("Myriad"), url(/fonts/myriad/MyriadPro-Regular.otf) format("opentype");
-}
+*/
 /* EDIT NUMBER OF PORTFOLIO ITEMS HERE */
 html,
 body {
@@ -23,7 +20,8 @@ body {
   width: 100%;
 }
 body {
-  font-family: "Myriad Pro", "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Myriad Pro";
+  font-weight: 200;
   font-size: 14px;
   line-height: 18px;
   background-color: black;
