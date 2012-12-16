@@ -777,6 +777,11 @@ div.line {
   margin-bottom: 30px;
   color: black;
 }
+#academy_c p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
 h1.intro {
   text-align: center;
   font-size: 250%;
