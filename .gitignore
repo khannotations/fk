@@ -1,2 +1,7 @@
-.*
+/.*
 javascripts/old_code.js
+
+*.txt
+*.DS_Store
+TIMESTAMP
+*.rb
