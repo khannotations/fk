@@ -7,3 +7,5 @@ TIMESTAMP
 *.rb
 *.out
 *.log
+
+*/fonts/gotham/*

@@ -8,23 +8,14 @@ Edited February 16, 2012
 @import "base.less";
 
 @font-face {
-  font-family: 'Gotham';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Gotham'), url(/fonts/Gotham-Light.otf) format("opentype");
-}
-@font-face {
-  font-family: 'Gotham';
+  font-family: 'Myriad Pro';
   font-style: normal;
   font-weight: 500;
-  src: url(/fonts/Gotham-Book.otf) format("opentype");
+  src: local("Myriad Pro"), local("Myriad"), 
+    url(/fonts/myriad/MyriadPro-Semibold.otf) format("opentype");
 }
-@font-face {
-  font-family: 'Gotham';
-  font-style: normal;
-  font-weight: 700;
-  src: url(/fonts/Gotham-Book.otf) format("opentype");
-}
+
+
 @min-width: 920px;
 @min-height: 600px;
 @left: 80px;
@@ -42,7 +33,7 @@ html, body {
   width: 100%;
 }
 body {
-  font-family: "Gotham", "Open Sans", "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-family: "Myriad Pro", "Open Sans", "Helvetica Neue", sans-serif;
   font-size: @font;  
   line-height: @line;
   background-color: black;
@@ -62,6 +53,10 @@ a {
 
 li {
   display: inline-block;
+}
+
+b {
+  font-weight: 500;
 }
 
 .crimson { color: crimson; }
