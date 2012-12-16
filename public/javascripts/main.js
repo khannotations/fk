@@ -7,7 +7,7 @@ $(document).ready(function() {
   var time = 600;
   var w = $(window).width();
   var h = $(window).height();
-  var windows = ["index", "work", "play", "blog", "academy", "christina"];
+  var windows = ["index", "work", "play", "blog", "academy"];
   var currWindow;
 
   var path = window.location.pathname;
@@ -16,7 +16,7 @@ $(document).ready(function() {
   $("#play").css({top:"0px", left:"-"+w+"px"});
   $("#blog").css({top:h+"px", left:"0px"});
   $("#academy").css({top:h+"px", left:"0px"});
-  $("#christina").css({top:h+"px", left:"-"+w+"px"});
+  // $("#christina").css({top:h+"px", left:"-"+w+"px"});
 
   $("#sidebar").hide();
 
@@ -65,6 +65,7 @@ $(document).ready(function() {
     window.history.pushState({view: "academy"}, "Rafi Khan | For Khan Academy", "/academy");
 
   }
+  /*
   else if (path == "/christina") {
     $("#index").hide().css({top: "-"+h+"px"});
     $("#christina").css({top:"0px", left:"0px"}).show();
@@ -73,7 +74,7 @@ $(document).ready(function() {
 
     window.history.pushState({view: "christina"}, "Rafi Khan | An ode to Christina", "/christina");
   }
-
+  */
 
   $(".icon").mouseenter();          // Load the icon images
 
@@ -219,6 +220,7 @@ function moveIn(obj, time, push) {
     if(push)
       window.history.pushState({view: "academy"}, "Rafi Khan | For Khan Academy", "/academy");
   }
+  /*
   else if($(obj).hasClass('christina')) {
     $("#christina").animate({"top":"0px", "left":"0px"}, time);
     $("#footer").hide();
@@ -228,6 +230,7 @@ function moveIn(obj, time, push) {
     if(push)
       window.history.pushState({view: "christina"}, "Rafi Khan | An ode to Christina", "/christina");
   }
+  */
   return ret;
 }
 /* Handles how each view exits */
@@ -274,12 +277,14 @@ function moveOut(wind, time, flag, callback) {
     });
     // $("#footer").css({"backgroundColor": "transparent"});
   }
+  /*
   else if(wind == "christina") {
     $("#christina").animate({"top":h, "left":"-"+w+"px"}, time, function(){
       $("#christina").hide();
       callback();
     });
   }
+  */
 }
 
 function load_blog_entries () {

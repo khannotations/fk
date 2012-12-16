@@ -51,7 +51,6 @@ app.get('/portfolio', routes.index);
 app.get('/thelife', routes.index);
 app.get('/italia', routes.index);
 app.get('/academy', routes.index);
-app.get('/christina', routes.index);
 
 app.get('/get_blog', routes.get_blog);
 

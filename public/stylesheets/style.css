@@ -4,6 +4,24 @@ Edited February 16, 2012
 */
 /*=============================OVER-ARCHING=================================*/
 /* Direction must be in [top, left, -45deg, 45deg] */
+@font-face {
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gotham'), url(/fonts/Gotham-Light.otf) format("opentype");
+}
+@font-face {
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: 500;
+  src: url(/fonts/Gotham-Book.otf) format("opentype");
+}
+@font-face {
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/Gotham-Book.otf) format("opentype");
+}
 /* EDIT NUMBER OF PORTFOLIO ITEMS HERE */
 html,
 body {
@@ -135,10 +153,9 @@ div.line {
 }
 .rafi {
   color: #FF1919;
-  font-family: "Droid Sans";
+  font-family: "Gotham", "Droid Sans";
   font-weight: bold;
   font-size: 22px;
-  text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
 }
 /*==================================WORK====================================*/
 #work {
@@ -298,7 +315,7 @@ div.line {
 }
 .desc_role {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 500;
   padding-left: 10px;
   font-weight: 200;
   line-height: 24px;
