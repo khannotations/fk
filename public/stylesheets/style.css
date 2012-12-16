@@ -5,7 +5,7 @@ Edited February 16, 2012
 /*=============================OVER-ARCHING=================================*/
 /* Direction must be in [top, left, -45deg, 45deg] */
 @font-face {
-  font-family: 'Gotham', "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-family: 'Gotham';
   src: url(/fonts/Gotham-Light.otf) format("opentype");
 }
 @font-face {
@@ -19,7 +19,7 @@ body {
   width: 100%;
 }
 body {
-  font-family: Gotham;
+  font-family: "Gotham", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-size: 14px;
   line-height: 18px;
   background-color: black;
@@ -36,7 +36,7 @@ a:hover {
   text-decoration: underline;
 }
 b {
-  font-family: "Gotham Bold";
+  font-family: "Gotham Bold", "Helvetica Neue", "Lucida Grande", sans-serif;
 }
 li {
   display: inline-block;
