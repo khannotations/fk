@@ -35,9 +35,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
-b {
-  font-family: "Gotham Bold";
-}
 li {
   display: inline-block;
 }
@@ -308,7 +305,7 @@ div.line {
 }
 .desc_role {
   font-size: 16px;
-  font-family: "Gotham Bold";
+  font-weight: bold;
   padding-left: 10px;
   font-weight: 200;
   line-height: 24px;
@@ -458,9 +455,6 @@ div.line {
   border: 1pt solid #ccc;
   background-color: rgba(255, 255, 255, 0.8);
   margin-bottom: 30px;
-}
-#blog_c h1 {
-  font-family: "Gotham Bold";
 }
 #christina {
   background-image: url('https://fbcdn-sphotos-a.akamaihd.net/hphotos-ak-ash3/523506_10151099015209612_1494116417_n.jpg');
@@ -770,7 +764,4 @@ div.line {
   border: 1pt solid #ccc;
   background-color: rgba(255, 255, 255, 0.8);
   margin-bottom: 30px;
-}
-#academy_c h1 {
-  font-family: "Gotham Bold";
 }
