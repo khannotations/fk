@@ -7,6 +7,14 @@ Edited February 16, 2012
 
 @import "base.less";
 
+@font-face {
+  font-family: 'Gotham';
+  src: url(/fonts/Gotham-Light.otf) format("opentype");
+}
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url(/fonts/Gotham-Bold.otf) format("opentype");
+}
 @min-width: 920px;
 @min-height: 600px;
 @left: 80px;
@@ -23,8 +31,7 @@ html, body {
   width: 100%;
 }
 body {
-  font-family: Glegoo;
-  font-family: Nixie One;
+  font-family: Gotham;
   font-size: @font;  
   line-height: @line;
   background-color: black;
@@ -217,7 +224,7 @@ div.line {
 }
 
 #play {
-  background-image: url('/images/backgrounds/bhangra3.jpg');
+  background-image: url('/images/backgrounds/bhangra.jpg');
   //background-image: url('/images/backgrounds/beach.jpg');
   display: none;
 }
@@ -245,7 +252,6 @@ div.line {
   background-color: #FAFAFA;
 
   h1 {
-    font-family: Droid Sans;
     color: deepSkyBlue;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 
@@ -265,7 +271,6 @@ div.line {
   width: @min-width + 40;
   border: 1pt solid #ccc;
   background-color: rgba(255,255,255,0.8);
-  font-family: "Droid Sans";
   margin-bottom: 30px;
 }
 
@@ -277,7 +282,6 @@ div.line {
 }
 
 #christina_c {
-  font-family: "Droid Sans";
   color: black;
   top: 70px;
   left: @left;
@@ -514,7 +518,7 @@ div.line {
   padding-top: 30px;
   border-top: 1pt solid #777;
   .left {
-    font-family: Droid Sans;
+    // font-family: "Helvetica Neue";
 
     float: left;
     display: inline-block;
@@ -551,7 +555,6 @@ div.line {
 }
 
 .desc_title {
-  font-family: Nixie One;
   text-align: left;
   margin-top: -12px;
   font-size: 42px;
@@ -560,89 +563,11 @@ div.line {
   color: deepskyblue;
 }
 .desc_role {
-  font: 16px "Droid Sans", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-family: "Gotham Bold";
+  padding-left: 
+  // font: 16px "Helvetica Neue", Arial, sans-serif;
   font-weight: 200;
   line-height: 24px;
   margin-bottom: 10px;
 }
-/*=========================OLD STUFF ====================*/
-/*
-/* Hidden div that slides down on project click 
-.project_display {
-  height: 330px;
-  width: 100%;
-  color: rgba(0,0,0,0.8);
-  display: none;
-  border-top: 3pt double rgba(0,0,0,0.6);
-  margin-top: 20px;
-  padding-top: 5px;
-}
-
-.hide_disp {
-  position: absolute;
-  right: 25px;
-  top: 458px;
-  font-size: 10px;
-  cursor:pointer;
-}
-
-.desc_desc{
-  font: 12.5px "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
-  text-align: justify;
-  line-height: 20px;
-  margin-top: 5px;
-}
-
-
-
-#site {
-  position: absolute;
-  //font: 14pt 'Iceland', 'Helvetica Neue Light', sans-serif;
-  top: 0px;
-  left: 0px;
-  padding-left: 10px;
-  height: 100%;
-  width: 180px;
-  color: white;
-  z-index: 3;
-  background-color: rgba(0,0,0,0.5);
-  box-shadow: 1px 0px 1px 0px black;  
-  //border-right: 1pt solid rgba(230, 230, 230, 0.2);
-}
-
-#nameplate {
-  -webkit-transform: rotate(-30deg); 
-  -moz-transform: rotate(-30deg);
-  -o-transform: rotate(-30deg);
-  font-size: 52px;
-  margin: 15px 0px 15px 10px;
-  display: block;
-}
-
-#info {
-  width: 150px;
-  height: 45px;
-  line-height: 22px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  color: white;
-}
-
-#about {
-  position: absolute;
-  top: 12px;
-  left: @left;
-  padding-top: 5px;
-  width: 350px;
-  height: 100px;
-  background-color: #FAFAFA;
-  color: black;
-  font-size: 13px;
-  font-family: "Lucida Grande", "Helvetica Neue", Verdana, sans-serif;
-  line-height: 19px;
-}
-
-*/

@@ -4,6 +4,14 @@ Edited February 16, 2012
 */
 /*=============================OVER-ARCHING=================================*/
 /* Direction must be in [top, left, -45deg, 45deg] */
+@font-face {
+  font-family: 'Gotham';
+  src: url(/fonts/Gotham-Light.otf) format("opentype");
+}
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url(/fonts/Gotham-Bold.otf) format("opentype");
+}
 /* EDIT NUMBER OF PORTFOLIO ITEMS HERE */
 html,
 body {
@@ -11,8 +19,7 @@ body {
   width: 100%;
 }
 body {
-  font-family: Glegoo;
-  font-family: Nixie One;
+  font-family: Gotham;
   font-size: 14px;
   line-height: 18px;
   background-color: black;
@@ -191,7 +198,7 @@ div.line {
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
 }
 #play {
-  background-image: url('/images/backgrounds/bhangra3.jpg');
+  background-image: url('/images/backgrounds/bhangra.jpg');
   display: none;
 }
 #play_c {
@@ -235,7 +242,6 @@ div.line {
   background-color: #FAFAFA;
 }
 #work_c h1 {
-  font-family: Droid Sans;
   color: deepSkyBlue;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
@@ -251,7 +257,6 @@ div.line {
   width: 960px;
   border: 1pt solid #ccc;
   background-color: rgba(255, 255, 255, 0.8);
-  font-family: "Droid Sans";
   margin-bottom: 30px;
 }
 #christina {
@@ -261,7 +266,6 @@ div.line {
   overflow: scroll;
 }
 #christina_c {
-  font-family: "Droid Sans";
   color: black;
   top: 70px;
   left: 80px;
@@ -629,7 +633,6 @@ div.line {
   border-top: 1pt solid #777;
 }
 .desc .left {
-  font-family: Droid Sans;
   float: left;
   display: inline-block;
   width: 44%;
@@ -661,7 +664,6 @@ div.line {
   height: 340px;
 }
 .desc_title {
-  font-family: Nixie One;
   text-align: left;
   margin-top: -12px;
   font-size: 42px;
@@ -670,7 +672,8 @@ div.line {
   color: deepskyblue;
 }
 .desc_role {
-  font: 16px "Droid Sans", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-family: "Gotham Bold";
   font-weight: 200;
   line-height: 24px;
   margin-bottom: 10px;
