@@ -200,11 +200,10 @@ div.line {
 #projects {
   margin-bottom: 10px;
 }
-/* for -2 for borders */
 .proj_section {
   border-left: 1pt solid #ddd;
   display: inline-block;
-  width: 264.6666666666667px;
+  width: 264px;
   padding: 0px 20px;
   vertical-align: top;
   line-height: 24px;
@@ -225,7 +224,7 @@ div.line {
 }
 .section {
   display: inline-block;
-  width: 264.6666666666667px;
+  width: 264px;
   vertical-align: top;
   color: #333;
   font-size: 12px;
@@ -248,8 +247,8 @@ div.line {
   box-shadow: 0px 0px 2px 1px #555555;
 }
 .big_project img {
-  width: 264.6666666666667px;
-  height: 66.16666666666667px;
+  width: 264px;
+  height: 66px;
   -o-transition: all 0.2s ease 0;
   -moz-transition: all 0.2s ease 0;
   -webkit-transition: all 0.2s ease 0;
