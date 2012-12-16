@@ -415,6 +415,9 @@ div.line {
 }
 .play_content img {
   margin-top: 10px;
+  width: 100%;
+}
+.play_content .half {
   width: 50%;
   margin-left: 25%;
 }
@@ -753,4 +756,21 @@ div.line {
   background-color: #DFF0D8;
   border: 1pt solid #D6E9C6;
   color: #468847;
+}
+#academy {
+  background-image: url('/images/backgrounds/beach.jpg');
+  background-attachment: fixed;
+  display: none;
+  overflow: scroll;
+}
+#academy_c {
+  top: 70px;
+  left: 80px;
+  width: 960px;
+  border: 1pt solid #ccc;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+}
+#academy_c h1 {
+  font-family: "Gotham Bold";
 }

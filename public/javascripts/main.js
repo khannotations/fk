@@ -7,7 +7,7 @@ $(document).ready(function() {
   var time = 600;
   var w = $(window).width();
   var h = $(window).height();
-  var windows = ["index", "work", "play", "blog", "christina"];
+  var windows = ["index", "work", "play", "blog", "academy", "christina"];
   var currWindow;
 
   var path = window.location.pathname;
@@ -15,6 +15,7 @@ $(document).ready(function() {
   $("#work").css({top:"0px", left:w+"px"});
   $("#play").css({top:"0px", left:"-"+w+"px"});
   $("#blog").css({top:h+"px", left:"0px"});
+  $("#academy").css({top:h+"px", left:"0px"});
   $("#christina").css({top:h+"px", left:"-"+w+"px"});
 
   $("#sidebar").hide();
@@ -54,14 +55,25 @@ $(document).ready(function() {
     window.history.pushState({view: "blog"}, "Rafi Khan | Un'estate in Italia", "/italia");
 
   }
+  else if (path === "/academy") {
+
+    $("#index").hide().css({top: "-"+h+"px"});
+    $("#academy").css({top:"0px", left:"0px"}).show();
+
+    currWindow = windows[4];
+
+    window.history.pushState({view: "academy"}, "Rafi Khan | For Khan Academy", "/academy");
+
+  }
   else if (path == "/christina") {
     $("#index").hide().css({top: "-"+h+"px"});
     $("#christina").css({top:"0px", left:"0px"}).show();
 
-    currWindow = windows[4];
+    currWindow = windows[5];
 
     window.history.pushState({view: "christina"}, "Rafi Khan | An ode to Christina", "/christina");
   }
+
 
   $(".icon").mouseenter();          // Load the icon images
 
@@ -197,6 +209,16 @@ function moveIn(obj, time, push) {
     if(push)
       window.history.pushState({view: "blog"}, "Rafi Khan | Un'estate in Italia", "/italia");
   }
+  else if($(obj).hasClass('academy')) {
+    $("#academy").animate({"top":"0px"}, time);
+    $("#footer").css({bottom: 0});
+    $("#academy").show();
+    // $("footer").css({"backgroundColor": "rgba(0,0,0,0.8)", bottom: 0});
+
+    ret = "academy";
+    if(push)
+      window.history.pushState({view: "academy"}, "Rafi Khan | For Khan Academy", "/academy");
+  }
   else if($(obj).hasClass('christina')) {
     $("#christina").animate({"top":"0px", "left":"0px"}, time);
     $("#footer").hide();
@@ -241,6 +263,13 @@ function moveOut(wind, time, flag, callback) {
   else if(wind == "blog") {
     $("#blog").animate({"top":h}, time, function(){
       $("#blog").hide();
+      callback();
+    });
+    // $("#footer").css({"backgroundColor": "transparent"});
+  }
+  else if(wind == "academy") {
+    $("#academy").animate({"top":h}, time, function(){
+      $("#academy").hide();
       callback();
     });
     // $("#footer").css({"backgroundColor": "transparent"});
