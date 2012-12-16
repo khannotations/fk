@@ -19,7 +19,7 @@ body {
   width: 100%;
 }
 body {
-  font-family: "Gotham", "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-family: "Gotham", "Open Sans", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-size: 14px;
   line-height: 18px;
   background-color: black;
@@ -36,7 +36,7 @@ a:hover {
   text-decoration: underline;
 }
 b {
-  font-family: "Gotham Bold", "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-family: "Gotham Bold";
 }
 li {
   display: inline-block;
