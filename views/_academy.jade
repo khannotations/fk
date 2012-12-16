@@ -1,12 +1,7 @@
 #academy.square
-  ul.nav_bar
-    li.nav_button.js-nav.index(target='about') ^ Home
-    li.nav_button.js-nav.play(target='fun') < Life
-    li.nav_button.js-nav.work.selected(target='work') > Portfolio
-    li.nav_button.js-nav.academy(target='academy') Khan Academy
-    
+  include _header
     li.pull-right
       include _sidebar
 
   #academy_c.contain
-    h1 Rafi Khan for Khan Academy
+    h1.intro Rafi Khan for Khan Academy
