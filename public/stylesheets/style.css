@@ -5,22 +5,22 @@ Edited February 16, 2012
 /*=============================OVER-ARCHING=================================*/
 /* Direction must be in [top, left, -45deg, 45deg] */
 @font-face {
-  font-family: 'Myriad SemiExt';
+  font-family: 'MyMyriad';
   font-style: normal;
-  font-weight: 400;
-  src: local("Myriad SemiExt"), url(/fonts/myriad/MyriadPro-LightSemiExt.otf) format("opentype");
+  font-weight: 200;
+  src: local("MyMyriad"), url(/fonts/myriad/MyriadPro-LightSemiExt.otf) format("opentype");
 }
 @font-face {
-  font-family: 'Myriad SemiExt';
+  font-family: 'MyMyriad';
   font-style: normal;
-  font-weight: 500;
-  src: local("Myriad SemiExt"), url(/fonts/myriad/MyriadPro-Regular.otf) format("opentype");
+  font-weight: normal;
+  src: local("MyMyriad"), url(/fonts/myriad/MyriadPro-Regular.otf) format("opentype");
 }
 @font-face {
-  font-family: 'Myriad SemiExt';
+  font-family: 'MyMyriad';
   font-style: normal;
-  font-weight: 700;
-  src: local("Myriad SemiExt"), url(/fonts/myriad/MyriadPro-Semibold.otf) format("opentype");
+  font-weight: bold;
+  src: local("MyMyriad"), url(/fonts/myriad/MyriadPro-Semibold.otf) format("opentype");
 }
 /* EDIT NUMBER OF PORTFOLIO ITEMS HERE */
 html,
@@ -29,7 +29,8 @@ body {
   width: 100%;
 }
 body {
-  font-family: "Myriad SemiExt";
+  font-family: "MyMyriad", "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 200;
   font-size: 14px;
   line-height: 18px;
   background-color: black;
@@ -49,7 +50,7 @@ li {
   display: inline-block;
 }
 b {
-  font-weight: 500;
+  font-weight: normal;
 }
 .crimson {
   color: crimson;
@@ -90,11 +91,15 @@ div.line {
   line-height: 26px;
   width: 980px;
 }
+.nav_bar > a,
 .nav_bar > li {
+  display: inline-block;
+  color: black;
   padding-right: 35px;
   padding-top: 16px;
   margin: 0px;
 }
+.nav_bar > a:last-child,
 .nav_bar > li:last-child {
   padding-right: 0px;
 }
@@ -157,6 +162,10 @@ div.line {
   top: 50px;
   left: 280px;
   width: 720px;
+  font-weight: 500;
+}
+#index_c a:hover {
+  text-decoration: none;
 }
 .rafi {
   color: #FF1919;
@@ -170,7 +179,6 @@ div.line {
   background-image: url(/images/backgrounds/diag.jpg);
   background-repeat: repeat;
   background-size: 58px 58px;
-  display: none;
   height: 4330px;
 }
 #work .nav_bar,
@@ -265,7 +273,7 @@ div.line {
   height: 380px;
   padding-top: 30px;
   border-top: 1pt solid #777;
-  font-weight: 500;
+  font-weight: normal;
 }
 .desc .left {
   float: left;
@@ -296,7 +304,7 @@ div.line {
 }
 .desc p {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: normal;
   line-height: 20px;
   text-indent: 10px;
 }
@@ -314,7 +322,7 @@ div.line {
 }
 .desc_role {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: normal;
   padding-left: 10px;
   font-weight: 200;
   line-height: 24px;
@@ -372,7 +380,10 @@ div.line {
 }
 #play {
   background-image: url('/images/backgrounds/bhangra.jpg');
-  display: none;
+}
+#play .nav_bar > a,
+#play .nav_bar > li {
+  color: white;
 }
 #play_c {
   top: 70px;
@@ -431,7 +442,7 @@ div.line {
 .play_content p {
   font-size: 15px;
   line-height: 20px;
-  font-weight: 500;
+  font-weight: normal;
   text-align: justify;
 }
 .play_content a,
@@ -456,7 +467,6 @@ div.line {
 #blog {
   background-image: url('/images/italia/back.jpg');
   background-attachment: fixed;
-  display: none;
   overflow: scroll;
 }
 #blog_c {
@@ -765,8 +775,11 @@ div.line {
 #academy {
   background-image: url('/images/backgrounds/beach.jpg');
   background-attachment: fixed;
-  display: none;
   overflow: scroll;
+}
+#academy .nav_bar > a,
+#academy .nav_bar > li {
+  color: white;
 }
 #academy_c {
   top: 70px;

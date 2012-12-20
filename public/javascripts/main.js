@@ -12,14 +12,17 @@ $(document).ready(function() {
 
   var path = window.location.pathname;
 
-  $("#work").css({top:"0px", left:w+"px"});
-  $("#play").css({top:"0px", left:"-"+w+"px"});
-  $("#blog").css({top:h+"px", left:"0px"});
-  $("#academy").css({top:h+"px", left:"0px"});
+  if (path === "/italia")
+    load_blog_entries();
+  /*
+  // $("#work").css({top:"0px", left:w+"px"});
+  // $("#play").css({top:"0px", left:"-"+w+"px"});
+  // $("#blog").css({top:h+"px", left:"0px"});
+  // $("#academy").css({top:h+"px", left:"0px"});
   // $("#christina").css({top:h+"px", left:"-"+w+"px"});
 
-  $("#sidebar").hide();
-
+  // $("#sidebar").hide();
+  var path = window.location.pathname;
   if (path === "/") {
 
     currWindow = windows[0];
@@ -65,6 +68,7 @@ $(document).ready(function() {
     window.history.pushState({view: "academy"}, "Rafi Khan | For Khan Academy", "/academy");
 
   }
+  */
   /*
   else if (path == "/christina") {
     $("#index").hide().css({top: "-"+h+"px"});
@@ -105,7 +109,7 @@ $(document).ready(function() {
       textDecoration: "none"
     });
   });
-
+  /*
   // Navigation buttons
   $(".js-nav").click(function() {           // For switching views
     if(!($(this).hasClass(currWindow))) {       // if not clicked curr window
@@ -117,7 +121,7 @@ $(document).ready(function() {
       currWindow = moveIn($(this), time, true);
     }
   });
-
+  */
   // Play navigation
   $(".play_item").click(function() {
     target = $(this).attr("target");

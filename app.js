@@ -47,10 +47,10 @@ app.configure('production', function(){
 
 // Routes
 app.get('/', routes.index);
-app.get('/portfolio', routes.index);
-app.get('/thelife', routes.index);
-app.get('/italia', routes.index);
-app.get('/academy', routes.index);
+app.get('/portfolio', routes.work);
+app.get('/life', routes.play);
+app.get('/italia', routes.blog);
+app.get('/academy', routes.academy);
 
 app.get('/get_blog', routes.get_blog);
 

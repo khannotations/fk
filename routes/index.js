@@ -5,6 +5,18 @@
 exports.index = function(req, res){
   res.render('index', { title: "Rafi Khan" });
 };
+exports.work = function(req, res){
+  res.render('_work', { title: "Rafi Khan | Porfolio" });
+};
+exports.play = function(req, res){
+  res.render('_play', { title: "Rafi Khan | Life!" });
+};
+exports.blog = function(req, res){
+  res.render('_blog', { title: "Rafi Khan | Italia" });
+};
+exports.academy = function(req, res){
+  res.render('_academy', { title: "Rafi Khan | Academy" });
+};
 
 exports.get_blog = function(req, res) {
   res.render('_blog_entries', { layout: false });

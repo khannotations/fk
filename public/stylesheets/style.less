@@ -8,25 +8,25 @@ Edited February 16, 2012
 @import "base.less";
 
 @font-face {
-  font-family: 'Myriad SemiExt';
+  font-family: 'MyMyriad';
   font-style: normal;
-  font-weight: 400;
-  src: local("Myriad SemiExt"), 
+  font-weight: 200;
+  src: local("MyMyriad"), 
     url(/fonts/myriad/MyriadPro-LightSemiExt.otf) format("opentype");
 }
 
 @font-face {
-  font-family: 'Myriad SemiExt';
+  font-family: 'MyMyriad';
   font-style: normal;
-  font-weight: 500;
-  src: local("Myriad SemiExt"), 
+  font-weight: normal;
+  src: local("MyMyriad"), 
     url(/fonts/myriad/MyriadPro-Regular.otf) format("opentype");
 }
 @font-face {
-  font-family: 'Myriad SemiExt';
+  font-family: 'MyMyriad';
   font-style: normal;
-  font-weight: 700;
-  src: local("Myriad SemiExt"), 
+  font-weight: bold;
+  src: local("MyMyriad"), 
     url(/fonts/myriad/MyriadPro-Semibold.otf) format("opentype");
 }
 
@@ -47,7 +47,8 @@ html, body {
   width: 100%;
 }
 body {
-  font-family: "Myriad SemiExt"; //, "Myriad Pro";//, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "MyMyriad", "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 200;
   font-size: @font;  
   line-height: @line;
   background-color: black;
@@ -70,7 +71,7 @@ li {
 }
 
 b {
-  font-weight: 500;
+  font-weight: normal;
 }
 
 .crimson { color: crimson; }
@@ -104,7 +105,10 @@ div.line {
   font-size: 16px;
   line-height: 26px;
   width: @min-width + 2* @pad;
-  > li {
+
+  > a, > li {
+    display: inline-block;
+    color: black;
     padding-right: 35px;
     padding-top: 16px;
     margin: 0px;
