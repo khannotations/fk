@@ -1,17 +1,12 @@
 /*==================================WORK====================================*/
 
-@blue_color: #fff;
-@desc_height: 380px;
+@desc_height: 400px;
 
 #work {
-  // .rad-gradient(@blue_color, darken(@blue_color, 20%));
-  background-color: @blue_color;
   background-image: url(/images/backgrounds/diag.jpg);
   background-repeat: repeat;
   background-size: 58px 58px;
-  // background-size: 397px 322px;
-  // display: none;
-  height: (@desc_height + 2*@pad) * @items - 70;
+  height: (@desc_height + 2*@pad) * @items - 100;
   .nav_bar, .footer, .footer a, #sidebar li {
     color: black;
   }
@@ -24,6 +19,11 @@
 #work_c {
   top: 65px;
   left: @left;
+  width: @min-width + 2*@pad;
+  padding: 0;
+}
+
+#work_container {
   .box-shadow(0 0 5px #777);
   background-color: #FAFAFA;
 
@@ -32,6 +32,7 @@
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 
   }
+  padding: @pad;
 }
 
 #projects {
@@ -140,7 +141,7 @@
   }
 
   &.short {
-    height: @desc_height - 40;
+    height: @desc_height - 80;
   }
 }
 
