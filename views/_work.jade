@@ -52,14 +52,15 @@
 
         .proj_section
           h5 Designs
+          .big_project(target="gakko", tokens="rails js css adobe")
+            img(src='/images/portfolio/gakko.png', alt='Gakko')
           .big_project(target='maitri', tokens="rails js css")
             img(src='/images/portfolio/maitri.png', alt='Maitri Massage')
             //- p Maitri Massage 
           .big_project(target='jashan', tokens="rails js css adobe")
             img(src='/images/portfolio/jashan.png', alt='Yale Jashan Bhangra')
             //- p Yale Jashan Bhangra
-          .big_project(target="gakko", tokens="rails js css adobe")
-            img(src='/images/portfolio/gakko.png', alt='Gakko')
+          
           //-
             .big_project(target='avishary', tokens="node js css bs")
               img(src='/images/portfolio/avishary.png', alt='Avishary')
@@ -74,6 +75,21 @@
               //- li.token(name="none", style="visibility: hidden;") Placeholder
             
       #descs
+        .desc(name="gakko")
+          .left
+            .desc_title Gakko
+            .desc_role Web Director
+            p At 
+              a(href="//gakkoproject.com", target="_blank") Gakko 
+              | , we’re striving to craft a global education network that unites the most creative minds in technology, art and education. We envision a world where learning is a process of creation and discovery—not of memorization and test-taking, and that with a population of 7 billion people, there are 7 billion students and 7 billion teachers. 
+            p On the ground, GAKKO organizes summer camps in any country where people want to learn, with the eventual goal of designing and building schools all over the world. As a starting point, will GAKKO make weeklong summer retreats in Naoshima, Japan, to build a “school” in a completely different form: no buildings, tuitions or transcripts, but instead relaxed, collaborative discovering environment. 
+            p You can read much more at 
+              a(href="//gakkoproject.com", target="_blank") gakkoproject.com
+              |  or find us on 
+              a(href="gakkoproject.comhttps://www.facebook.com/GAKKOPROJECT ", target="_blank") Facebook
+              | .
+          .right
+            img(src="/images/portfolio/gakko_ss.png", style="margin-top: 40px;")
         .desc(name="hackyale")
           .left
             .desc_title HackYale
@@ -127,7 +143,7 @@
               a(href="//processing.org", target="_blank") Processing
               |  running the actual visualization. The image data is compressed and sent to the phone—24 times per second!—via a UDP connection. Touch events on the phone are sent to the server as well, asynchronously.
             p Unfortunately, web browsers can't handle UDP connections well and HTTP is much too slow. All I can offer as a trial is this 
-              a(href="#") video
+              a.soundulous-video(href="http://www.youtube.com/watch?v=tJFCxC0x_oE", title="Soundulous demo") video
               |  (sadly of poor quality). The actual crispness of the visualization is reflected in adjacent image.
           .right
             img(src='/images/portfolio/soundulous_ss.png')
@@ -195,15 +211,7 @@
           .right
             a(href="//yale.edu/bhangra", target='_blank')
               img(src='/images/portfolio/jashan_ss.png')
-        .desc.short(name="gakko")
-          .left
-            .desc_title Gakko
-            .desc_role Web Director
-            p 
-              a(href="//gakkoproject.com", target="_blank") Gakko 
-              |  is an organization that organizes free, weeklong schools around the world! I was recently appointed as web director and the new website is currently under development—look for it soon!
-          .right
-            img(src="/images/portfolio/gakko_ss.png")
+        
         //-
           .desc.short(name="avishary")
             .left

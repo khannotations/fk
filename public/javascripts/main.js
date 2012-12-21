@@ -14,6 +14,8 @@ $(document).ready(function() {
 
   if (path === "/italia")
     load_blog_entries();
+
+  make_soundulous_video();
   /*
   // $("#work").css({top:"0px", left:w+"px"});
   // $("#play").css({top:"0px", left:"-"+w+"px"});
@@ -321,5 +323,28 @@ function load_blog_entries () {
         media: {}
       }
     });
+  });
+}
+
+function make_soundulous_video () {
+  $(".soundulous-video").click(function() {
+    url = this.href.replace(new RegExp("watch\\?v=", "i"), 'v/');
+    url+="?autoplay=1";
+    $.fancybox({
+      'padding'       : 0,
+      'autoScale'     : false,
+      'transitionIn'  : 'none',
+      'transitionOut' : 'none',
+      // 'title'         : this.title,
+      'width'         : 640,
+      'height'        : 385,
+      'href'          : url,
+      'type'          : 'swf',
+      'swf'           : {
+        'wmode'             : 'transparent',
+        'allowfullscreen'   : 'true'
+      }
+    });
+    return false;
   });
 }

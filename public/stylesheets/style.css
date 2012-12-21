@@ -286,6 +286,7 @@ div.line {
   text-align: justify;
 }
 .desc .right {
+  vertical-align: middle;
   float: right;
   display: inline-block;
   width: 50%;
