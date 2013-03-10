@@ -1,5 +1,5 @@
 /*
-For faiazkhan.com, by Faiaz Khan. 
+For faiazkhan.com, by Faiaz Khan.
 Edited February 16, 2012
 */
 /*=============================OVER-ARCHING=================================*/
@@ -62,8 +62,8 @@ b {
   display: none;
 }
 .big {
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 28px;
+  line-height: 1.5;
 }
 .blue {
   color: deepskyblue;
@@ -162,16 +162,14 @@ div.line {
   top: 50px;
   left: 280px;
   width: 720px;
-  font-weight: 500;
 }
 #index_c a:hover {
   text-decoration: none;
 }
 .rafi {
   color: #FF1919;
-  font-family: "Gotham", "Droid Sans";
-  font-weight: bold;
-  font-size: 22px;
+  font-family: MyMyriad;
+  font-weight: 500;
 }
 /*==================================WORK====================================*/
 #work {
@@ -822,6 +820,13 @@ div.line {
 #academy_c a,
 #academy_c a:hover {
   color: crimson;
+}
+.khan-notice {
+  color: #468847;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-align: justify;
+  margin: 0 20px;
+  width: 100%;
 }
 .acad_section {
   font-size: 0;

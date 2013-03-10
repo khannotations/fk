@@ -1,28 +1,27 @@
 h1#emergency Please refresh the page
 #index.square
   #index_c.contain
-    noscript 
-      h1 Please 
+    noscript
+      h1 Please
         a(href='http://support.google.com/bin/answer.py?hl=en&answer=23852', style='color: navajowhite;') enable JavaScript!
-    .big(style="margin-bottom: 50px;") Hi. I'm 
-      strong.rafi(style="font-weight: bold;") Rafi
-      | .
+    .big(style="margin-bottom: 50px; font-size: 40px;") Hi. I'm
+      span.rafi  Rafi
     a(href="/portfolio")
-      .nav_button.no-shadow.big.blue > Portfolio
+      .nav_button.big.blue > Portfolio
     a(href="/life")
-      .nav_button.no-shadow.big.blue > The Life
+      .nav_button.big.blue > Life
     a(href="/italia")
-      .nav_button.no-shadow.big.blue > Un'estate in Italia
+      .nav_button.big.blue > Un'estate in Italia
     a(href="/academy")
-      .nav_button.no-shadow.big.blue > Khan Academy
+      .nav_button.big.blue > Khan Academy
     //-
-      .nav_button.no-shadow.js-nav.big.blue.work(target='work') > Portfolio
-      .nav_button.no-shadow.js-nav.big.blue.play(target='fun') > The Life
-      .nav_button.no-shadow.js-nav.big.blue.blog(target='blog') > Un'estate in Italia
-      .nav_button.no-shadow.js-nav.big.blue.academy(target='academy') > Khan Academy
+      .nav_button.js-nav.big.blue.work(target='work') > Portfolio
+      .nav_button.js-nav.big.blue.play(target='fun') > The Life
+      .nav_button.js-nav.big.blue.blog(target='blog') > Un'estate in Italia
+      .nav_button.js-nav.big.blue.academy(target='academy') > Khan Academy
 
-    
-include _work
-include _play
-include _blog
-include _academy
+
+//- include _work
+//- include _play
+//- include _blog
+//- include _academy
