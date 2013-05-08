@@ -1,0 +1,18 @@
+.desc(name="soundulous")
+  .left
+    .desc_title Soundulous
+    .desc_role Final project for Mobile Computing | Fall 2012
+    p Soundulous is an interactive, collaborative mobile music visualizer. Designed as an Android App, Soundulous allows users to create a session with a song of their choice and interact with a visualization with taps and swipes. The coolest part is the ability to invite your friends to your session; then you can all interact with the same visualization in real time!
+    p The visualization is hosted on a Java server, launching threads with instances of 
+      a(href="//processing.org", target="_blank") Processing
+      |  running the actual visualization. The image data is 
+      | compressed and sent to the phone—24 times per second!
+      | —via a UDP connection. Touch events on the phone are 
+      | sent to the server as well, asynchronously.
+    p Unfortunately, web browsers can't handle UDP connections 
+      | well and HTTP is much too slow. All I can offer as a trial is this 
+      a.soundulous-video(href="http://www.youtube.com/watch?v=tJFCxC0x_oE", title="Soundulous demo") video
+      |  (sadly of poor quality). The actual crispness of the 
+      | visualization is reflected in adjacent image.
+  .right
+    img(src='/images/portfolio/soundulous_ss.png')

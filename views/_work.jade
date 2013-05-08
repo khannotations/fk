@@ -10,14 +10,16 @@
         .proj_section
           h5 Apps
           .big_project(target='hackyale', tokens="js css")
-            img(src='/images/portfolio/hackyale.png', alt='HackYale', style="border: 1pt solid #ddd;")
-            //- p HackYale
+            img(src='/images/portfolio/hackyale.png', alt='HackYale', 
+              style="border: 1pt solid #ddd;")
+          .big_project(target='go', tokens="rails js css backbone")
+            img(src='/images/portfolio/go.png', alt='Yale Go', 
+              style="border: 1pt solid #ddd;")
           .big_project(target='screw', tokens="rails js css bs")
             img(src='/images/portfolio/screw.png', alt='Screw Me Yale')
-            //- p Screw Me Yale
-          .big_project(target='ontapp', tokens="node db amp js adobe")
-            img(src='/images/portfolio/ontapp.png', alt='onTapp')
-            //- p onTapp
+          //- Old work
+            .big_project(target='ontapp', tokens="node db amp js adobe")
+              img(src='/images/portfolio/ontapp.png', alt='onTapp')
 
           .section
             ul
@@ -29,18 +31,19 @@
 
         .proj_section
           h5 Code
+          .big_project(target='hadoodle', tokens="java python")
+            img(src="/images/portfolio/hadoodle.png", alt="Hadoodle", 
+              style="border: 1pt solid #ddd;")
           .big_project(target='soundulous', tokens="java android")
             img(src="/images/portfolio/soundulous.jpg", alt="Soundulous, a music visualizer")
           .big_project(target='processing', tokens="java")
             img(src='/images/portfolio/processing.png', alt='Schedulizer')
-            //- p Schedulizer 
-          .big_project(target='galaxy', tokens="python")
-            img(src='/images/portfolio/galaxy.png', alt='Galaxy')
-            //- p Galaxy Tools
-          //-
+          //- Old work
+            .big_project(target='galaxy', tokens="python")
+              img(src='/images/portfolio/galaxy.png', alt='Galaxy')
             .big_project(target='colors', tokens="java")
-              img(src='/images/portfolio/psych.png', alt='Department of Psychology, University of Chicago')
-              //- p Seeing Colors 
+              img(src='/images/portfolio/psych.png', 
+                alt='Department of Psychology, University of Chicago')
 
           .section   
             ul
@@ -54,12 +57,13 @@
           h5 Designs
           .big_project(target="gakko", tokens="rails js css adobe")
             img(src='/images/portfolio/gakko.png', alt='GAKKO')
+          .big_project(target="sweets", tokens="adobe")
+            img(src='/images/portfolio/sweets.png', alt='Sweets Surrendered')
           .big_project(target='maitri', tokens="rails js css")
             img(src='/images/portfolio/maitri.png', alt='Maitri Massage')
-            //- p Maitri Massage 
-          .big_project(target='jashan', tokens="rails js css adobe")
-            img(src='/images/portfolio/jashan.png', alt='Yale Jashan Bhangra')
-            //- p Yale Jashan Bhangra
+          //- Old work
+            .big_project(target='jashan', tokens="rails js css adobe")
+              img(src='/images/portfolio/jashan.png', alt='Yale Jashan Bhangra')
           
           //-
             .big_project(target='avishary', tokens="node js css bs")
@@ -72,165 +76,25 @@
               li.token(name="css") Less / Sass
               li.token(name="bs") Twitter Bootstrap
               li.token(name="adobe") Photoshop, InDesign, Illustrator
-              //- li.token(name="none", style="visibility: hidden;") Placeholder
+              //- li.token(name="none", style="visibility: hidden;") Placehold
             
       #descs
-        .desc(name="gakko")
-          .left
-            .desc_title GAKKO
-            .desc_role Web Director
-            p At 
-              a(href="//gakko2013.com", target="_blank") GAKKO 
-              | , we’re striving to craft a global education network that unites the most creative minds in technology, art and education. We envision a world where learning is a process of creation and discovery—not of memorization and test-taking, and that with a population of 7 billion people, there are 7 billion students and 7 billion teachers. 
-            p On the ground, GAKKO organizes summer camps in any country where people want to learn, with the eventual goal of designing and building schools all over the world. As a starting point, will GAKKO make weeklong summer retreats in Naoshima, Japan, to build a “school” in a completely different form: no buildings, tuitions or transcripts, but instead relaxed, collaborative discovering environment. 
-            p You can read much more at 
-              a(href="//gakko2013.com", target="_blank") gakko2013.com
-              |  or find us on 
-              a(href="https://www.facebook.com/GAKKOPROJECT ", target="_blank") Facebook
-              | .
-          .right
-            img(src="/images/portfolio/gakko_ss.png", style="margin-top: 40px;")
-        .desc(name="hackyale")
-          .left
-            .desc_title HackYale
-            .desc_role Front-end Development and Design Instructor
-              br/ 
-              span(style="font-size: 15px;") June 2012 - present
-            p 
-              a(href="//hackyale.com", target='_blank') HackYale
-              |  is a student collaborative designed to meet an increasing demand for Computer Science knowledge at Yale. Founded in Fall 2011, HackYale saw more than 600 applications—about 10% of the student body—throughout the year. 
+        include works/gakko
+        include works/hackyale
+        include works/go
+        include works/hadoodle
+        include works/soundulous
+        include works/sweets
+        include works/ontapp
+        include works/processing
 
-            p I taught the first ever summer-session, which was the Spring semester HTML/CSS/jQuery course presented in 10 intense days of coding and creating. Though it was an intro class, students came up with some pretty cool stuff, some of which are the official pages of some campus organizations!
-          .right
-            a(href="//hackyale.com", target='_blank')
-              img(src='/images/portfolio/hackyale_ss.png')
-        .desc(name="screw")
-          .left
-            .desc_title Screw Me Yale
-            .desc_role 3rd place, Yale College Council App Challenge 2012
-            p This isn't entirely what it sounds like—'Screws' at Yale are dances where your roommate gets to choose your date. While some rejoice in the opportunity to play cupid, others find it a hassle. For them, there's 
-              a(href="//screwmeyale.com", target='_blank') Screw Me Yale
-              | , a playful matchmaker and my first full-scale app in Rails. 
-            p The app launched to the Yale undergraduate population in October 2012, drawing more than 1000 page views in its first 24 hours live. In the first semester alone, more than 10% of students logged on to screw over 500 of their friends!
-            p The 
-              a(href="//ycc.yale.edu", target='_blank') Yale College Council
-              |  was kind enough to give it 
-              a(href="http://www.yaledailynews.com/news/2012/apr/19/cross-campus-41912/", target='_blank') 3rd place
-              |  in Yale's 2012 App Challenge. SMY is built on a very traditional stack of Rails, Heroku and Git. 
-            p If you're not Yale affiliated, there's still hope. I've put up a demo site, 
-              a(href="//demo.screwmeyale.com", target='_blank') Screw Me Politics
-              | , so you can join in on the screwing pleasure!
-          .right
-            a(href="//screwmeyale.com", target='_blank')
-              img(src='/images/portfolio/screw_ss.png')
-        .desc(name="ontapp")
-          .left
-            .desc_title onTapp, LLC
-            .desc_role Co-founder 
-              br/ 
-              span(style="font-size: 15px;") September 2011 - March 2012
-            p onTapp was a web application designed to facilitate ordering from restaurants online. Leveraging customized deals, networks and a scoring system, onTapp makes food-ordering more social and, well, more fun! The site’s back-end was originally written in Apache, PHP and MySQL, but switched early on to Node.js with Express, Jade and MongoDB. Server-side code was written in jQuery.
-            p Though a fantastic learning experience developing my own company and product, the project turned out not to be something we wanted to pursue as a serious business. 
-          .right
-            //- a(href='http://www.yaleontapp.com', target='_blank')
-            img(src='/images/portfolio/ontapp_ss.png')
-        .desc(name="soundulous")
-          .left
-            .desc_title Soundulous
-            .desc_role Final project for Mobile Computing | Fall 2012
-            p Soundulous is an interactive, collaborative mobile music visualizer. Designed as an Android App, Soundulous allows users to create a session with a song of their choice and interact with a visualization with taps and swipes. The coolest part is the ability to invite your friends to your session; then you can all interact with the same visualization in real time!
-            p The visualization is hosted on a Java server, launching threads with instances of 
-              a(href="//processing.org", target="_blank") Processing
-              |  running the actual visualization. The image data is compressed and sent to the phone—24 times per second!—via a UDP connection. Touch events on the phone are sent to the server as well, asynchronously.
-            p Unfortunately, web browsers can't handle UDP connections well and HTTP is much too slow. All I can offer as a trial is this 
-              a.soundulous-video(href="http://www.youtube.com/watch?v=tJFCxC0x_oE", title="Soundulous demo") video
-              |  (sadly of poor quality). The actual crispness of the visualization is reflected in adjacent image.
-          .right
-            img(src='/images/portfolio/soundulous_ss.png')
-        .desc(name="processing")
-          .left
-            .desc_title The 'Schedulizer'
-            .desc_role For May Project 2011, University High School
-            p Designed to investigate how to satisfy the most high school course requests for the 2011-2012 school year, taking into account the constraints on the number of class periods, classrooms and teachers, by creating a visualization of the problem. The app also runs a graph-traversal algorithm to try to minimize the number of class periods needed to satisfy all the requests. It turns out that if everyone got every class they wanted, about 130 periods would be needed!
-            p &nbsp;&nbsp;Also just a fun app to play with—unfortunately not online yet. Made on the visualization engine 
-              a(href='http://www.processing.org', target='_blank') Processing
-              |, written completely in Java.
-          .right
-            img(src='/images/portfolio/process_ss.png')
-        .desc(name="galaxy")
-          .left
-            .desc_title Galaxy Tools
-            .desc_role Computational Institute, University of Chicago
-              br/ 
-              span(style="font-size: 15px;") May - August 2011
-            p Designed and implemented tools for Galaxy (an open, web-based platform for data intensive biomedical research) and GEDI (a gene database). Written in Python and R, the tools identified statistically significant differences in massive sets of microarray data to pinpoint which genes may contain mutations. The next step would be to cross check those genes against related ones in GEDI, identifying precisely which pathways a particular mutation influenced.
-            p Group Leader: 
-              a(href='http://www.mcs.anl.gov/~madduri/', target='_blank') Ravi Madduri 
-              |. Also check out 
-              a(href='http://main.g2.bx.psu.edu/') Galaxy 
-              | and 
-              a(href='http://www.childrenshospital.org/research/ingber/GEDI/gedihome.htm', target='_blank') GEDI
-              |.
-          .right
-            img(src='/images/portfolio/galaxy_ss.png')
-        //-
-          .desc(name="colors")
-            .left
-              .desc_title Seeing Colors
-              .desc_role Department of Psychology, University of Chicago
-                br/ 
-                span(style="font-size: 15px;") June - August 2010
-              p Explored whether humans have inherent cognitive biases in color-naming despite differences in native language. Hypothesizing that they do tend to name colors similarly, I envisioned and programmed an interactive computer animation, recruited test subjects 3 and 4 years of age and conducted the self-designed experiment. The results showed a difference in the ability to distinguish colors within certain groups, which supported the hypothesis.
-              p Group Leader: 
-                a(href='http://psychology.uchicago.edu/people/faculty/slevine.shtml', target='_blank') Dr. Susan Levine
-                |. With the 
-                a(href='http://www.ucls.uchicago.edu/schools/high-school/summerlink/index.aspx', target='_blank') SummerLink 
-                | program at the University of Chicago Laboratory High School (U-High!)
-            .right
-              img(src='/images/portfolio/psych_ss.jpg')
-        .desc(name="maitri")
-          .left
-            .desc_title Maitri Massage
-            .desc_role April 2012
-            p My first foray into web development for clients, this is the main website for 
-              a(href="//maitrimassagelmt.com", target='_blank') Maitri Massage Lmt
-              |, a small massage therapy studio run by 
-              a(href="//hannahproch.com", target='_blank') Hannah Proch. 
-            p My first time extensively using Less.css—made quite a difference. Visit the site to see it in action! 
-            p Death to Internet Explorer!
-          .right
-            a(href="//maitrimassagelmt.com", target='_blank')
-              img(src='/images/portfolio/maitri_ss.png')
-        .desc.short(name="jashan")
-          .left
-            .desc_title Yale Jashan Bhangra
-            .desc_role Spring 2012
-            p Nothing brings me greater pleasure than designing the website of my own team, 
-              a(href="//yale.edu/bhangra", target='_blank') Yale Jashan Bhangra
-              |. Unlike Maitri, this site is loaded with pictures, video and music. Check us out, and if you're a Yalie, try out!
-          .right
-            a(href="//yale.edu/bhangra", target='_blank')
-              img(src='/images/portfolio/jashan_ss.png')
-        
-        //-
-          .desc.short(name="avishary")
-            .left
-              .desc_title Avishary
-              .desc_role Hackathon at NYU (HackNY)
-                br/
-                span(style="font-size: 15px;") March 25, 2011
-              p During a 24-hour coding spree, my buddy 
-                a(href="//twitter.com/#!/akshay_nathan", target='_blank') Akshay
-                |  and I came up with a fun way to share edited pictures, right as you browse the web. 
-                a(href="//avishary.nodejitsu.com", target='_blank') Avishary
-                |  is a bookmarklet that allows you edit any image on the web with 
-                a(href="//aviary.com", target='_blank') Aviary
-                |, then share it to Facebook, Tumblr or Twitter immediately, or download it for your saving pleasure. 
-            .right
-              a(href="//avishary.nodejitsu.com", target='_blank')
-                img(src='/images/portfolio/avishary_ss.png')
-
-
+        h4 Below the headlines
+        br
+        include works/screw
+        include works/galaxy
+        include works/colors
+        include works/maitri
+        include works/jashan
 
   .footer rafikhan.me runs Node.js with Express, Jade and jQuery. Bhangra photo courtesy of Clyatt Jasper, Columbia University. 
     br
