@@ -1,6 +1,7 @@
 express = require('express')
 routes = require('./routes')
 sass = require('node-sass')
+compass = require('node-compass')
 
 pub = __dirname + '/public'
 
@@ -35,7 +36,7 @@ app.configure ->
     debug: true
     outputStyle: sassOutput
   )
-  
+  app.use(compass())
   app.use express.static(pub)
   app.use app.router
 
