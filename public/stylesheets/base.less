@@ -70,12 +70,13 @@
   -khtml-opacity: @opacity;
   -webkit-opacity: @opacity;
   opacity: @opacity;
+  filter: alpha(opacity=@opacity); /* For IE8 and earlier */
 }
-.transition(@item: all, @dur: 1s, @ease: ease, @delay: 0) {
-  -o-transition: @item @dur @ease @delay;
-  -moz-transition: @item @dur @ease @delay;
-  -webkit-transition: @item @dur @ease @delay;
-  transition: @item @dur @ease @delay;
+.transition(@item: all, @dur: 0.2s, @ease: ease, @delay: 0) {
+  -o-transition: @arguments;
+  -moz-transition: @arguments;
+  -webkit-transition: @arguments;
+  transition: @arguments;
 }
 .rotation(@deg:5deg){
   -webkit-transform: rotate(@deg);
