@@ -9,3 +9,4 @@ TIMESTAMP
 *.log
 
 */fonts/gotham/*
+node_modules/
