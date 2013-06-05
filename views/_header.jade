@@ -1,21 +1,23 @@
-ul.nav_bar
+.nav_bar
   a(href="/")
-    li.nav_button.js-nav.index(target='about')
+    .nav-item.nav_button.js-nav.index(target='about')
       img.icon(src="/images/academy/home.png")
       | Home
   a(href="/portfolio")
-    li.nav_button.js-nav.work(target='work')
+    .nav-item.nav_button.js-nav.work(target='work')
       img.icon(src="/images/academy/life.png")
       | Portfolio
   a(href="/life")
-    li.nav_button.js-nav.play(target='fun')
+    .nav-item.nav_button.js-nav.play(target='fun')
       img.icon(src="/images/academy/pikachu.png")
       | Life
   a(href="/italia")
-    li.nav_button.js-nav.blog(target='blog')
+    .nav-item.nav_button.js-nav.blog(target='blog')
       img.icon(src="/images/academy/flag.png")
       | Italia
   a(href="/academy")
-    li.nav_button.js-nav.academy(target='academy')
+    .nav-item.nav_button.js-nav.academy(target='academy')
       img.icon(src="/images/academy/icon.ico", style="margin-right: 10px;")
       | Khan Academy
+  if sidebar
+    include _sidebar

@@ -1,0 +1,24 @@
+#index {
+  background-image: url('/images/backgrounds/chicago.jpg');
+  z-index: 1;
+  @include mobile {
+    background-position-x: 50%;
+  }
+}
+
+#index_c {
+  @include desktop {
+    padding-top: 100px;
+    padding-left: 50px;
+    width: $tablet-width;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.rafi {
+  color: #FF1919;
+  font-family: $sans;
+  font-weight: 500;
+}
