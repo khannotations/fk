@@ -10,40 +10,57 @@ $desc-height: 400px;
   .nav_bar, .footer, .footer a, #sidebar li {
     color: black;
   }
-  .nav_button:hover {
-    color: #333;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+  @include desktop {
+    .nav_button:hover {
+      color: #333;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+    }
   }
 }
 
 #work_c {
-  top: 65px;
-  width: $large-min-width + 2*$pad;
+  @include desktop {
+    width: $large-min-width + 2*$pad;
+  }
+  @include mobile {
+    width: 95%;
+    margin-top: 10px;
+  }
   padding: 0;
 }
 
 #work_container {
   @include box-shadow(0 0 5px #777);
   background-color: #FAFAFA;
-
   h1 {
     color: deepSkyBlue;
     @include text-shadow(0 1px 1px rgba(black, 0.25));
+    @include phone {
+      font-size: 170%;
+      font-weight: 500;
+      text-align: center;
+    }
   }
   padding: $pad;
+  @include mobile {
+    padding: 10px 20px;
+  }
 }
 
 #projects {
   margin-bottom: 10px;
 }
 
-// @proj_width: (@min-width - 4*@pad)/3 - 2; // for -2 for borders
-$proj-width: 264px;
 .proj_section {
-  border-left: 1pt solid #ddd;
   display: inline-block;
-  width: $proj-width; 
-  padding: 0px 20px;
+  width: 33%;
+  padding: 20px;
+  border-left: 1pt solid #ddd;
+  @include phone {
+    width: 100%;
+    padding: 20px;
+    border-left: none;
+  }
   vertical-align: top;
   line-height: 24px;
   &:first-child {
@@ -60,12 +77,22 @@ $proj-width: 264px;
     margin-bottom: 10px;
     color: #222;
     @include text-shadow(0 1px 1px #555);
+    @include phone {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }
 
 .section {
+  @include phone {
+    display: none;
+  }
   display: inline-block;
-  width: $proj-width; 
+  width: 100%;
+  @include desktop {
+    padding: 0 20px;
+  }
   vertical-align: top;
   color:#333;
   font-size: 12px;
@@ -77,17 +104,23 @@ $proj-width: 264px;
     padding: 2px;
   }
 }
+
 .big_project{
   color: black;
   cursor: pointer;
   margin-bottom: 20px;
-  &:hover > img {
-    @include box-shadow(0px 0px 2px 1px #555);
+  @include desktop {
+    &:hover > img {
+      @include box-shadow(0px 0px 2px 1px #555);
+    }
   }
   img {
-    width: $proj-width;
-    height: $proj-width/4;
+    width: 100%;
+    height: 20%;
     @include transition(all 0.2s);
+    &.bordered {
+      border: 1px solid #ddd;
+    }
   }
   p {
     color: black;
@@ -97,31 +130,45 @@ $proj-width: 264px;
   .small {
     font-size: 80%;
   }
+  @include mobile {
+    &:nth-child(4) {
+      margin-bottom: 0;
+    }
+  }
 
 }
 .desc {
   color: black;
-  height: $desc-height;
-  padding-top: 30px;
-  border-top: 1pt solid #777;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  border-top: 1pt solid #999;
   font-weight: normal;
+  font-size: 0;
   .left {
-    float: left;
     display: inline-block;
     width: 44%;
+    margin-right: 6%;
     text-align: justify;
+    @include phone {
+      width: 100%; 
+      margin: 0;
+    }
   }
   .right {
-    vertical-align: middle;
-    float: right;
+    vertical-align: top;
     display: inline-block;
     width: 50%;
+     @include phone {
+      width: 100%; 
+    }
   }
 
   a {
     color: crimson;
-    img:hover {
-      @include box-shadow(0px 0px 2px 1px #555);
+    @include desktop {
+      img:hover {
+        @include box-shadow(0px 0px 2px 1px #555);
+      }
     }
   }
 
@@ -136,10 +183,6 @@ $proj-width: 264px;
     font-weight: normal;
     line-height: 20px;
     text-indent: 10px;
-  }
-
-  &.short {
-    height: $desc-height - 80;
   }
 }
 

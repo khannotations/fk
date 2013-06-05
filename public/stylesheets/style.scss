@@ -24,6 +24,10 @@
     url(/fonts/myriad/MyriadPro-Semibold.otf) format("opentype");
 }
 
+* {
+  @include box-sizing(border-box);
+}
+
 html, body {
   min-height: 100%;
   width: 100%;
@@ -62,6 +66,15 @@ b {
 .hidden { display: none; }
 .big { font-size: $big-font; line-height: 1.5;}
 .blue { color: deepskyblue; }
+.full-width {
+  @include desktop {
+    width: $large-min-width + 2*$pad;
+  }
+  @include mobile {
+    width: 95%;
+    margin-top: 10px;
+  }
+}
 
 div.line {
   height: 0;
@@ -71,6 +84,9 @@ div.line {
 
 
 .nav_bar {
+  @include mobile {
+    display: none;
+  }
   width: $large-min-width + 2* $pad;
   margin: 25px auto 30px;
   color: #fff;
@@ -123,13 +139,12 @@ $square-width: $large-min-width + 2*$pad + 2*$left;
 .fb-like, .fb-like iframe { height: 35px; }
 
 .footer {
+  @extend .full-width;
   display: block;
-  // width: $large-min-width + 2* $pad;
   color: white;
   font-size: 14px;
   line-height: 20px;
   margin: 20px auto;
-  width: $large-min-width;
   text-align: center;
   padding: 20px 0px;
   @include text-shadow(0 1px rgba(black,0.25));

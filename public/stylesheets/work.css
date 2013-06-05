@@ -1,14 +1,12 @@
 /*
-Syntax error: Undefined variable: "$large-min-width".
-        on line 21 of /Users/rafi/Desktop/Programming/node/fk/public/stylesheets/work.scss
+Syntax error: Undefined mixin 'desktop'.
+        on line 13 of /Users/rafi/Desktop/Programming/node/fk/public/stylesheets/work.scss, in `desktop'
+        from line 13 of /Users/rafi/Desktop/Programming/node/fk/public/stylesheets/work.scss
 
 Backtrace:
-/Users/rafi/Desktop/Programming/node/fk/public/stylesheets/work.scss:21
-/Users/rafi/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.9/lib/sass/script/variable.rb:49:in `_perform'
-/Users/rafi/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.9/lib/sass/script/node.rb:40:in `perform'
-/Users/rafi/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.9/lib/sass/script/operation.rb:74:in `_perform'
-/Users/rafi/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.9/lib/sass/script/node.rb:40:in `perform'
-/Users/rafi/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
+/Users/rafi/Desktop/Programming/node/fk/public/stylesheets/work.scss:13:in `desktop'
+/Users/rafi/Desktop/Programming/node/fk/public/stylesheets/work.scss:13
+/Users/rafi/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:253:in `visit_mixin'
 /Users/rafi/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:37:in `visit'
 /Users/rafi/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:100:in `visit'
 /Users/rafi/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
@@ -62,4 +60,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$large-min-width\".\A         on line 21 of /Users/rafi/Desktop/Programming/node/fk/public/stylesheets/work.scss"; }
+  content: "Syntax error: Undefined mixin 'desktop'.\A         on line 13 of /Users/rafi/Desktop/Programming/node/fk/public/stylesheets/work.scss, in `desktop'\A         from line 13 of /Users/rafi/Desktop/Programming/node/fk/public/stylesheets/work.scss"; }

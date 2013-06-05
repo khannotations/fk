@@ -29,12 +29,11 @@ app.configure ->
       expires: myDate
   )
   # app.use require('connect-less')(src: pub)
-  sassOutput = if app.get('env') is 'production' then 'compressed' else null
   sass.middleware(
     src: pub + '/stylesheets'
     dest: pub + '/css'
     debug: true
-    outputStyle: sassOutput
+    outputStyle: 'compressed'
   )
   app.use(compass())
   app.use express.static(pub)
