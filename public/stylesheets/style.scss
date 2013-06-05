@@ -1,0 +1,159 @@
+@import "variables";
+
+@font-face {
+  font-family: "MyMyriad";
+  font-style: normal;
+  font-weight: 200;
+  src: local("MyMyriad"),
+    url(/fonts/myriad/MyriadPro-LightSemiExt.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "MyMyriad";
+  font-style: normal;
+  font-weight: normal;
+  src: local("MyMyriad"),
+    url(/fonts/myriad/MyriadPro-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: "MyMyriad";
+  font-style: normal;
+  font-weight: bold;
+  src: local("MyMyriad"),
+    url(/fonts/myriad/MyriadPro-Semibold.otf) format("opentype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+  width: 100%;
+}
+body {
+  font-family: $sans;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: $line;
+  background-color: black;
+  color: white;
+  width: 100%;
+  min-width: $large-min-width;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  &:hover {
+    text-decoration:underline;
+  }
+}
+
+li {
+  display: inline-block;
+}
+
+b {
+  font-weight: normal;
+}
+
+.crimson { color: crimson; }
+//.crimson:hover{ color: OrangeRed; }
+.purple { color: purple; }
+.hidden { display: none; }
+.big { font-size: $big-font; line-height: 1.5;}
+.blue { color: deepskyblue; }
+.full-width {
+  @include desktop {
+    width: $large-min-width + 2*$pad;
+  }
+  @include mobile {
+    width: 95%;
+    margin-top: 10px;
+  }
+}
+
+div.line {
+  height: 0;
+  border-bottom: 1pt dashed #aaa;
+  margin: 10px 0;
+}
+
+
+.nav_bar {
+  @include mobile {
+    display: none;
+  }
+  width: $large-min-width + 2* $pad;
+  margin: 25px auto 30px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  .nav-item {
+    display: inline-block;
+    height: 100%;
+    color: black;
+    padding-right: 25px;
+    margin: 0px;
+  }
+}
+
+.nav_button {
+  cursor: pointer;
+  @include transition(all 0.2s);
+  &:hover {
+    color: lightcyan;
+  }
+  text-shadow: 0 1px rgba(black ,0.25);
+  &.no-shadow {
+    text-shadow: none;
+  }
+}
+
+.icon {
+  width: 13px;
+  margin-right: 10px;
+}
+
+$square-width: $large-min-width + 2*$pad + 2*$left;
+.square {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  position: absolute;
+}
+
+.contain {
+  padding: $pad;
+  margin: 0 auto;
+  color: white;
+  font-size: 13pt;
+  line-height: 28pt;
+}
+
+.fb-like, .fb-like iframe { height: 35px; }
+
+.footer {
+  @extend .full-width;
+  display: block;
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 20px auto;
+  text-align: center;
+  padding: 20px 0px;
+  text-shadow: 0 1px rgba(black,0.25);
+}
+
+@import "index";
+@import "work";
+/*
+@import "play";
+@import "blog";
+@import "academy";
+
+*/

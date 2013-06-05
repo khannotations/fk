@@ -1,5 +1,6 @@
 express = require('express')
 routes = require('./routes')
+sass = require('node-sass')
 
 pub = __dirname + '/public'
 
@@ -26,6 +27,11 @@ app.configure ->
     cookie:
       expires: myDate
   )
+  app.use(sass.middleware(
+    src: pub + '/stylesheets'
+    dest: pub
+    debug: true
+  ))
   app.use express.static(pub)
   app.use app.router
 
