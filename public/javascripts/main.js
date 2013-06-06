@@ -80,6 +80,7 @@ $(document).ready(function() {
   });
   $(".play_close").click(function() {
     $(".play_content").addClass("hidden");
+    $(".play_frame").addClass('hide');
   });
 
   // Blog

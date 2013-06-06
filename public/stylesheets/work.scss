@@ -128,7 +128,7 @@ $desc-height: 400px;
       height: 50px;
     }
     @include phone {
-      height: 85px;
+      height: 65px;
     }
     @include transition(all, 0.2s);
     &.bordered {

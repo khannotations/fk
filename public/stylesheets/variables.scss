@@ -84,11 +84,11 @@ $small-desktop-width: 1200px;
   zoom: 1; // IE hasLayout hack (http://www.satzansatz.de/cssd/onhavinglayout.html)
 }
 .no-phone {
-  @include phone { display: none; }
+  @include phone { display: none !important; }
 }
 .no-tablet {
-  @include tablet { display: none; }
+  @include tablet { display: none !important; }
 }
 .no-desktop {
-  @include desktop { display: none; }
+  @include desktop { display: none !important; }
 }

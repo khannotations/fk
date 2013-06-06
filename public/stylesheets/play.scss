@@ -1,13 +1,23 @@
 #play {
   background-image: url(/images/backgrounds/bhangra.jpg);
   background-position-y: 81px;
+  background-attachment: fixed;
   .nav-item {
     color: white;
   }
-  @include mobile {
-    background-image: url(/images/backgrounds/bhangra.jpg);
-    background-position-x: 50%;
-    background-position-y: 150px;
+  @include phone {
+    // background-image: url(/images/backgrounds/bhangra-mobile.jpg);
+    background-image: url(/images/backgrounds/beach-mobile.jpg);
+    background-position-x: -100px;
+    background-position-y: 0;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    background-color: rgba(black, 0.8);
+    margin-bottom: 0;
+    // padding-bottom: 20px;
   }
 }
 #play_c {
@@ -18,7 +28,7 @@
     width: 95%;
     margin-top: 10px;
   }
-  height: 90%;
+  margin-bottom: 120px;
 }
 
 .play_deck {
@@ -30,22 +40,18 @@
   border-bottom: 1px solid #ccc;
   li {
     display: inline-block;
+    padding: 0 10px;
+    margin-right: 20px;
+    color: black;
+    cursor: pointer;
+    &:hover {
+      color: #333;
+      text-shadow: 0 1px rgba(0,0,0,0.25);
+    }
+    @include transition(all, 0.2s);
     @include phone {
       display: block;
     } 
-    margin-right: 20px;
-  }
-}
-
-.play_item {
-  display: block;
-  padding: 0 10px;
-  color: black;
-  @include transition(all, 0.2s);
-  cursor: pointer;
-  &:hover {
-    color: #333;
-    text-shadow: 0 1px rgba(0,0,0,0.25);
   }
 }
 

@@ -120,9 +120,8 @@ div.line {
   margin-right: 10px;
 }
 
-$square-width: $large-min-width + 2*$pad + 2*$left;
 .square {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -143,11 +142,11 @@ $square-width: $large-min-width + 2*$pad + 2*$left;
   @extend .full-width;
   display: block;
   color: white;
-  font-size: 14px;
-  line-height: 20px;
-  margin: 20px auto;
+  font-size: 10px;
+  line-height: 17px;
+  margin: 0 auto;
+  padding: 10px 0;
   text-align: center;
-  padding: 20px 0px;
   text-shadow: 0 1px rgba(black,0.25);
 }
 
