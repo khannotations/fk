@@ -74,6 +74,10 @@ b {
   }
 }
 
+#fancybox-overlay {
+  position: fixed; // Fancybox fix.
+}
+
 div.line {
   height: 0;
   border-bottom: 1pt dashed #aaa;

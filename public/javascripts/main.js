@@ -9,34 +9,12 @@ load_blog_entries = function() {
   return $.get("/get_blog", function(data) {
     $("#blog-entries").html(data);
     $(".english").hide();
-    return $(".fancybox-thumb").fancybox({
-      changeFade: 1000,
-      titlePosition: "over",
-      padding: 0,
-      overlayOpacity: 0.8,
-      overlayColor: "#000",
-      helpers: {
-        title: {
-          type: "outside"
-        },
-        overlay: {
-          opacity: 0.8,
-          css: {
-            "background-color": "#000"
-          }
-        },
-        thumbs: {
-          width: 50,
-          height: 50
-        },
-        media: {}
-      }
-    });
+    return true;
   });
 };
 
 make_soundulous_video = function() {
-  return $(".soundulous-video").click(function() {
+  $(".soundulous-video").click(function() {
     var url;
     url = this.href.replace(new RegExp("watch\\?v=", "i"), "v/");
     url += "?autoplay=1";
@@ -56,19 +34,27 @@ make_soundulous_video = function() {
     });
     return false;
   });
+  return true;
 };
 
 $(document).ready(function() {
-  var path;
-  path = window.location.path;
+  var path, w;
+  path = window.location.pathname;
+  w = $(window).width();
 
   // Porfolio
-  make_soundulous_video();
+  if(path === '/portfolio' && w > 800) {
+    make_soundulous_video();
+  }
   $(".icon").mouseenter();
   $(".big_project").click(function() {
-    return $("body,html,document").animate({
-      scrollTop: $(".desc[name='" + $(this).attr("target") + "']").offset().top
-    }, 500);
+    var dest = $(".desc[name='" + $(this).attr("target") + "']").offset().top;
+    // We start basically at the top, so we want to scroll for a time proportional
+    // to the distance we're travelling (to keep speed constant).
+    $("body,html,document").animate({
+      scrollTop: dest
+    }, dest / 2);
+    return true;
   });
   $(".big_project").mouseenter(function() {
     var tok;
@@ -96,6 +82,31 @@ $(document).ready(function() {
   // Blog
   if (path === "/italia") {
     load_blog_entries();
+    if (w > 800) {
+      $(".fancybox-thumb").fancybox({
+        changeFade: 1000,
+        titlePosition: "over",
+        padding: 0,
+        overlayOpacity: 0.8,
+        overlayColor: "#000",
+        helpers: {
+          title: {
+            type: "outside"
+          },
+          overlay: {
+            opacity: 0.8,
+            css: {
+              "background-color": "#000"
+            }
+          },
+          thumbs: {
+            width: 50,
+            height: 50
+          },
+          media: {}
+        }
+      });
+    }
   }
   $("#to-italiano").click(function() {
     $(".english").hide();
