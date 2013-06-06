@@ -38,12 +38,12 @@ make_soundulous_video = function() {
 };
 
 $(document).ready(function() {
-  var path, w;
+  var path, w, small_screen = 800;
   path = window.location.pathname;
   w = $(window).width();
 
   // Porfolio
-  if(path === '/portfolio' && w > 800) {
+  if(path === '/portfolio' && w > small_screen) {
     make_soundulous_video();
   }
   $(".icon").mouseenter();
@@ -56,15 +56,18 @@ $(document).ready(function() {
     }, dest / 2);
     return true;
   });
-  $(".big_project").mouseenter(function() {
-    var tok;
-    tok = $(this).attr("tokens").split(" ");
-    return $(tok).each(function(i, j) {
-      return $(".token[name='" + j + "']").addClass('highlight');
+  // No tokens on small screens.
+  if (w > small_screen) {
+    $(".big_project").mouseenter(function() {
+      var tok;
+      tok = $(this).attr("tokens").split(" ");
+      return $(tok).each(function(i, j) {
+        return $(".token[name='" + j + "']").addClass('highlight');
+      });
+    }).mouseleave(function() {
+      return $(".token").removeClass('highlight');
     });
-  }).mouseleave(function() {
-    return $(".token").removeClass('highlight');
-  });
+  }
 
   // Life
   $(".play_item").click(function() {
@@ -82,7 +85,7 @@ $(document).ready(function() {
   // Blog
   if (path === "/italia") {
     load_blog_entries();
-    if (w > 800) {
+    if (w > small_screen) {
       $(".fancybox-thumb").fancybox({
         changeFade: 1000,
         titlePosition: "over",
