@@ -7,7 +7,7 @@ $desc-height: 400px;
   background-repeat: repeat;
   background-size: 58px 58px;
   height: auto;
-  .nav_bar, .footer, .footer a, #sidebar li {
+  .nav_item, .footer, .footer a {
     color: black;
   }
   @include desktop {
@@ -30,11 +30,11 @@ $desc-height: 400px;
 }
 
 #work_container {
-  @include box-shadow(0 0 5px #777);
+  box-shadow: 0 0 5px #777;
   background-color: #FAFAFA;
   h1 {
     color: deepSkyBlue;
-    @include text-shadow(0 1px 1px rgba(black, 0.25));
+    text-shadow: 0 1px 1px rgba(black, 0.25);
     @include phone {
       font-size: 170%;
       font-weight: 500;
@@ -76,7 +76,7 @@ $desc-height: 400px;
     line-height: 20px;
     margin-bottom: 10px;
     color: #222;
-    @include text-shadow(0 1px 1px #555);
+    text-shadow: 0 1px 1px #555;
     @include phone {
       font-size: 20px;
       line-height: 30px;
@@ -98,11 +98,17 @@ $desc-height: 400px;
   font-size: 12px;
   line-height: 15px;
   margin-bottom: 10px;
-  li {
-    display: block;
-    color: black;
-    padding: 2px;
+}
+
+.token {
+  display: block;
+  color: black;
+  padding: 2px;
+  &.highlight {
+    color: "#0099CC";
+    text-decoration: underline;
   }
+  @include transition(color 0.2s);
 }
 
 .big_project{
@@ -111,13 +117,13 @@ $desc-height: 400px;
   margin-bottom: 20px;
   @include desktop {
     &:hover > img {
-      @include box-shadow(0px 0px 2px 1px #555);
+      box-shadow: 0px 0px 2px 1px #555;
     }
   }
   img {
     width: 100%;
     height: 20%;
-    @include transition(all 0.2s);
+    @include transition(all, 0.2s);
     &.bordered {
       border: 1px solid #ddd;
     }
@@ -167,7 +173,7 @@ $desc-height: 400px;
     color: crimson;
     @include desktop {
       img:hover {
-        @include box-shadow(0px 0px 2px 1px #555);
+        box-shadow: 0px 0px 2px 1px #555;
       }
     }
   }
@@ -175,7 +181,7 @@ $desc-height: 400px;
   img {
     width: 100%;
     max-height: 350px;
-    @include transition(all 0.2s);
+    @include transition(all, 0.2s);
   }
 
   p { 
@@ -207,7 +213,7 @@ $desc-height: 400px;
 
 /*=================================LEFT BAR=================================*/
 
-#sidebar{
+#work_links{
   float: right;
   z-index: 5;
   li {
@@ -216,7 +222,7 @@ $desc-height: 400px;
     font-size: 16px;
     line-height: 22px;
     vertical-align: middle;
-    color: white;
+    color: black;
   }
   .sidebar_icon {
     width: 30px;
