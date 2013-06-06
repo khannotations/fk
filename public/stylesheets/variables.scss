@@ -9,7 +9,7 @@ $red: #FF1919;
 $grey: #35383B;
 
 /* Fonts */
-$sans: "MyMyriad", "Open Sans", "Helvetica Neue", sans-serif;
+$sans: "Rafi", "Open Sans", "Helvetica Neue", sans-serif;
 $serif: Quattrocento, times, serif;
 
 /* Layouts */
@@ -32,22 +32,22 @@ $tablet-width: 768px;
 $small-desktop-width: 1200px;
 
 @mixin phone {
-  @media screen and (max-width: $phone-width) { @content; }
+  @media screen and (max-width: 480px) { @content; }
 }
 @mixin tablet {
-  @media screen and (min-width: ($phone-width + 1)) and (max-width: $tablet-width) { @content; }
+  @media screen and (min-width: 481px) and (max-width: 768px) { @content; }
 }
 @mixin mobile {
-  @media screen and (max-width: $tablet-width) { @content; }
+  @media screen and (max-width: 768px) { @content; }
 }
 @mixin desktop {
-  @media screen and (min-width: ($tablet-width + 1)) { @content; }
+  @media screen and (min-width: 769px) { @content; }
 }
 @mixin small-desktop {
-  @media screen and (min-width: ($tablet-width + 1)) and (max-width: $small-desktop-width) { @content; }
+  @media screen and (min-width: 769px) and (max-width: 1200px) { @content; }
 }
 @mixin large-desktop {
-  @media screen and (min-width: ($small-desktop-width + 1)) { @content; }
+  @media screen and (min-width: 1201px) { @content; }
 }
 @mixin screen($min, $max) {
   @media screen and (min-width: $min) and (max-width: $max) { @content; }
@@ -58,10 +58,16 @@ $small-desktop-width: 1200px;
   -moz-opacity: $o;
   -khtml-opacity: $o;
   opacity: $o;
-  filter: alpha(opacity=$o);
 }
 
-.hidden { opacity: 0; }
+@mixin transition($item: all, $dur: 0.2s, $ease: ease, $delay: 0) {
+  -o-transition: $item $dur $ease $delay;
+  -moz-transition: $item $dur $ease $delay;
+  -webkit-transition: $item $dur $ease $delay;
+  transition: $item $dur $ease $delay;
+}
+
+.hidden { @include opacity(0); }
 .hide { display: none; }
 .full-size { height:100%; width:100%; }
 .bold {

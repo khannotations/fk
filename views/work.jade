@@ -1,0 +1,105 @@
+extends layout
+
+prepend styles
+  link(href="/stylesheets/fancybox/jquery.fancybox.css", media="screen", rel="stylesheet", type="text/css")
+  link(href="/stylesheets/fancybox/jquery.fancybox-thumbs.css", media="screen", rel="stylesheet", type="text/css")
+
+prepend scripts
+  script(src="javascripts/fancybox/jquery.fancybox.pack.js", type="text/javascript")
+  script(src="javascripts/fancybox/jquery.fancybox-thumbs.js", type="text/javascript")
+
+block content
+  #work.square
+    work_links = true
+    include _header
+
+    #work_c.contain
+      #work_container
+        h1 Programmer. Designer. Teacher.
+        #projects
+          .proj_section
+            h5 Apps
+            .big_project(target='hackyale', tokens="js css")
+              img.bordered(src='/images/portfolio/hackyale.png', alt='HackYale')
+            .big_project(target='go', tokens="rails js css backbone")
+              img.bordered(src='/images/portfolio/go.png', alt='Yale Go')
+            .big_project(target='screw', tokens="rails js css bs")
+              img(src='/images/portfolio/screw.png', alt='Screw Me Yale')
+            //- Old work
+              .big_project(target='ontapp', tokens="node db amp js adobe")
+                img(src='/images/portfolio/ontapp.png', alt='onTapp')
+
+            .section
+              ul
+                li.token(name="node") Node.js [ Express, Jade, Socket IO ]
+                li.token(name="rails") Ruby on Rails / Heroku / Git
+                li.token(name="android") Android SDK
+                li.token(name="db") MongoDB / Redis
+                li.token(name="amp") Apache / MySQL / PHP
+
+          .proj_section
+            h5 Code
+            .big_project(target='hadoodle', tokens="java python")
+              img.bordered(src="/images/portfolio/hadoodle.png", alt="Hadoodle")
+            .big_project(target='soundulous', tokens="java android")
+              img(src="/images/portfolio/soundulous.jpg", alt="Soundulous, a music visualizer")
+            .big_project(target='processing', tokens="java")
+              img(src='/images/portfolio/processing.png', alt='Schedulizer')
+            //- Old work
+              .big_project(target='galaxy', tokens="python")
+                img(src='/images/portfolio/galaxy.png', alt='Galaxy')
+              .big_project(target='colors', tokens="java")
+                img(src='/images/portfolio/psych.png', 
+                  alt='Department of Psychology, University of Chicago')
+
+            .section   
+              ul
+               li.token(name="js") Javascript / Coffeescript / jQuery
+               li.token(name="c") C [ Message Passing Interface ]
+               li.token(name="python") Python
+               li.token(name="java") Java [ Processing ]
+
+
+          .proj_section
+            h5 Designs
+            .big_project(target="gakko", tokens="rails js css adobe")
+              img(src='/images/portfolio/gakko.png', alt='GAKKO')
+            .big_project(target="sweets", tokens="adobe")
+              img.bordered(src='/images/portfolio/sweets.png', alt='Sweets Surrendered')
+            .big_project(target='maitri', tokens="rails js css")
+              img(src='/images/portfolio/maitri.png', alt='Maitri Massage')
+            //- Old work
+              .big_project(target='jashan', tokens="rails js css adobe")
+                img(src='/images/portfolio/jashan.png', alt='Yale Jashan Bhangra')
+            
+            //-
+              .big_project(target='avishary', tokens="node js css bs")
+                img(src='/images/portfolio/avishary.png', alt='Avishary')
+                //- p Avishary 
+
+            .section    
+              ul
+                li.token(name="backbone") Backbone.js
+                li.token(name="css") Less / Sass
+                li.token(name="bs") Twitter Bootstrap
+                li.token(name="adobe") Photoshop, InDesign, Illustrator
+                //- li.token(name="none", style="visibility: hidden;") Placehold
+              
+        #descs
+          include works/gakko
+          include works/hackyale
+          include works/go
+          include works/hadoodle
+          include works/soundulous
+          include works/sweets
+          include works/ontapp
+          include works/processing
+
+
+          include works/screw
+          include works/galaxy
+          include works/colors
+          include works/maitri
+          include works/jashan
+
+    include _footer

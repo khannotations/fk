@@ -8,6 +8,8 @@ TIMESTAMP
 *.out
 *.log
 
-*/fonts/gotham/*
+*/fonts/gotham/
+*/fonts/myriad/
 node_modules/
 */unused/
+public/tones/

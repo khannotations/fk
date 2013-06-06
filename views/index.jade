@@ -1,22 +1,17 @@
-#index.square
-  #index_c.contain
-    noscript
-      h1 Please
-        a(href='http://support.google.com/bin/answer.py?hl=en&answer=23852', style='color: navajowhite;') enable JavaScript!
-    .big(style="margin-bottom: 50px; font-size: 40px;") Hi. I'm
-      span.rafi  Rafi
-    a(href="/portfolio")
-      .nav_button.big.blue > Portfolio
-    a(href="/life")
-      .nav_button.big.blue > Life
-    //-
-      .nav_button.js-nav.big.blue.work(target='work') > Portfolio
-      .nav_button.js-nav.big.blue.play(target='fun') > The Life
-      .nav_button.js-nav.big.blue.blog(target='blog') > Un'estate in Italia
-      .nav_button.js-nav.big.blue.academy(target='academy') > Khan Academy
+extends layout
 
-
-//- include _work
-//- include _play
-//- include _blog
-//- include _academy
+block content
+  #index.square
+    #index_c.contain
+      noscript
+        h1 Please
+          a(href='http://support.google.com/bin/answer.py?hl=en&answer=23852', style='color: navajowhite;') enable JavaScript!
+      .big(style="margin-bottom: 50px; font-size: 40px;") Hi. I'm
+        span.rafi  Rafi
+      a(href="/portfolio")
+        .nav_button.big.blue > Portfolio
+      a(href="/life")
+        .nav_button.big.blue > Life
+      //-
+        .nav_button.js-nav.big.blue.blog(target='blog') > Un'estate in Italia
+        .nav_button.js-nav.big.blue.academy(target='academy') > Khan Academy

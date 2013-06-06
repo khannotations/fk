@@ -1,34 +1,34 @@
 #
-# * GET home page.
+# GET home page.
 # 
 exports.index = (req, res) ->
   res.render "index",
     title: "Rafi Khan"
 
 exports.work = (req, res) ->
-  res.render "_work",
+  res.render "work",
     title: "Rafi Khan | Porfolio"
 
 exports.play = (req, res) ->
-  res.render "_play",
+  res.render "play",
     title: "Rafi Khan | Life!"
 
 exports.blog = (req, res) ->
-  res.render "_blog",
+  res.render "blog",
     title: "Rafi Khan | Italia"
 
 exports.academy = (req, res) ->
-  res.render "_academy",
+  res.render "academy",
     title: "Rafi Khan | Academy"
 
 exports.get_blog = (req, res) ->
-  res.render "_blog_entries",
+  res.render "blog_entries",
     layout: false
 
 exports.notes = (req, res) ->
   res.render "notes",
     title: "Gimme an Ear"
-    layout: "notes_layout"
+    title: "Rafi Khan | Gimme an Ear"
 
 # Ajax helper for 'Gimme an ear'
 exports.getNotes = (req, res) ->
