@@ -1,31 +1,30 @@
 @import "variables";
-@import "compass/css3";
 
 @font-face {
-  font-family: "MyMyriad";
+  font-family: "Rafi";
   font-style: normal;
   font-weight: 200;
-  src: local("MyMyriad"),
-    url(/fonts/myriad/MyriadPro-LightSemiExt.otf) format("opentype");
+  src: local("Rafi"),
+    url(/fonts/rafi/Rafi-ExtLight.otf) format("opentype");
 }
 
 @font-face {
-  font-family: "MyMyriad";
+  font-family: "Rafi";
   font-style: normal;
   font-weight: normal;
-  src: local("MyMyriad"),
-    url(/fonts/myriad/MyriadPro-Regular.otf) format("opentype");
+  src: local("Rafi"),
+    url(/fonts/rafi/Rafi-Regular.otf) format("opentype");
 }
 @font-face {
-  font-family: "MyMyriad";
+  font-family: "Rafi";
   font-style: normal;
   font-weight: bold;
-  src: local("MyMyriad"),
-    url(/fonts/myriad/MyriadPro-Semibold.otf) format("opentype");
+  src: local("Rafi"),
+    url(/fonts/rafi/Rafi-Bold.otf) format("opentype");
 }
 
 * {
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 }
 
 html, body {
@@ -63,7 +62,6 @@ b {
 .crimson { color: crimson; }
 //.crimson:hover{ color: OrangeRed; }
 .purple { color: purple; }
-.hidden { display: none; }
 .big { font-size: $big-font; line-height: 1.5;}
 .blue { color: deepskyblue; }
 .full-width {
@@ -103,11 +101,11 @@ div.line {
 
 .nav_button {
   cursor: pointer;
-  @include transition(all 0.2s);
+  @include transition(all, 0.2s);
   &:hover {
     color: lightcyan;
   }
-  @include text-shadow(0 1px rgba(black ,0.25));
+  text-shadow: 0 1px rgba(black ,0.25);
   &.no-shadow {
     text-shadow: none;
   }
@@ -129,7 +127,6 @@ $square-width: $large-min-width + 2*$pad + 2*$left;
 }
 
 .contain {
-  padding: $pad;
   margin: 0 auto;
   color: white;
   font-size: 13pt;
@@ -147,14 +144,14 @@ $square-width: $large-min-width + 2*$pad + 2*$left;
   margin: 20px auto;
   text-align: center;
   padding: 20px 0px;
-  @include text-shadow(0 1px rgba(black,0.25));
+  text-shadow: 0 1px rgba(black,0.25);
 }
 
 @import "index";
+
 @import "work";
 /*
 @import "play";
 @import "blog";
 @import "academy";
-
 */
