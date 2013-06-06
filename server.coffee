@@ -13,6 +13,7 @@ app.configure ->
   #app.use(express.logger());
   app.set 'views', __dirname + '/views'
   app.set 'view engine', 'jade'
+  app.set 'view options', {layout: false}
   app.use express.bodyParser()
   
   #app.set('env', 'production');
@@ -27,11 +28,12 @@ app.configure ->
     cookie:
       expires: myDate
   )
-  app.use(sass.middleware(
-    src: pub + '/stylesheets'
-    dest: pub # Don't change this -- it doesn't work for some reason otherwise.
-    debug: true
-  ))
+  if app.settings.env is 'development'
+    app.use(sass.middleware(
+      src: pub + '/stylesheets'
+      dest: pub # Don't change this -- it doesn't work for some reason otherwise.
+      outputStyle: 'compressed'
+    ))
   app.use express.static(pub)
   app.use app.router
 
@@ -52,6 +54,9 @@ app.get '/life', routes.play
 app.get '/italia', routes.blog
 app.get '/academy', routes.academy
 app.get '/get_blog', routes.get_blog
+
+# Assets
+app.get '/javascripts/:script.js', routes.coffee
 
 #app.get('/intro', routes.intro);
 app.get '/notes', routes.notes

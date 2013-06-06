@@ -1,26 +1,26 @@
 @import "variables";
 
 @font-face {
-  font-family: "MyMyriad";
+  font-family: "Rafi";
   font-style: normal;
   font-weight: 200;
-  src: local("MyMyriad"),
-    url(/fonts/myriad/MyriadPro-LightSemiExt.otf) format("opentype");
+  src: local("Rafi"),
+    url(/fonts/rafi/Rafi-ExtLight.otf) format("opentype");
 }
 
 @font-face {
-  font-family: "MyMyriad";
+  font-family: "Rafi";
   font-style: normal;
   font-weight: normal;
-  src: local("MyMyriad"),
-    url(/fonts/myriad/MyriadPro-Regular.otf) format("opentype");
+  src: local("Rafi"),
+    url(/fonts/rafi/Rafi-Regular.otf) format("opentype");
 }
 @font-face {
-  font-family: "MyMyriad";
+  font-family: "Rafi";
   font-style: normal;
   font-weight: bold;
-  src: local("MyMyriad"),
-    url(/fonts/myriad/MyriadPro-Semibold.otf) format("opentype");
+  src: local("Rafi"),
+    url(/fonts/rafi/Rafi-Bold.otf) format("opentype");
 }
 
 * {
@@ -102,7 +102,7 @@ div.line {
 
 .nav_button {
   cursor: pointer;
-  @include transition(all 0.2s);
+  @include transition(all, 0.2s);
   &:hover {
     color: lightcyan;
   }

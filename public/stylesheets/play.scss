@@ -28,7 +28,7 @@
   display: block;
   padding: 0 10px;
   color: black;
-  @include transition(all 0.2s);
+  @include transition(all, 0.2s);
   cursor: pointer;
   &:hover {
     color: #333;
@@ -47,7 +47,7 @@ $play-width: 650px;
   height: 550px;
   @include opacity(0);
   overflow-y: scroll;
-  @include transition(opacity 0.3s);
+  @include transition(opacity, 0.3s);
   padding: 20px;
   img, iframe {
     margin: 15px 0;

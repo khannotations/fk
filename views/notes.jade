@@ -1,5 +1,12 @@
-script(type='text/javascript', src='/javascripts/notes.js')
-link(rel='stylesheet', src='/stylesheets/notes.css')
+extends layout
+
+append styles
+  link(href='http://fonts.googleapis.com/css?family=Iceland|Quantico', rel='stylesheet', type='text/css')
+  link(rel='stylesheet', src='/stylesheets/notes.css')
+append scripts
+  script(type='text/javascript', src='/javascripts/colorPlugin.js')
+  script(type='text/javascript', src='/javascripts/notes.js')
+
 #notes_container.container
   #head(style='display:block; height: 50px;')
     h1(style='display:inline-block; ') Welcome to 'Gimme an Ear'
