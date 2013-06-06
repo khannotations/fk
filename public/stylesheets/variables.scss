@@ -58,7 +58,7 @@ $small-desktop-width: 1200px;
   -moz-opacity: $o;
   -khtml-opacity: $o;
   opacity: $o;
-  // filter: alpha(opacity=$o);
+  // filter: alpha(opacity= $o);
 }
 
 @mixin transition($item: all, $dur: 0.2s, $ease: ease, $delay: 0) {
@@ -68,7 +68,7 @@ $small-desktop-width: 1200px;
   transition: $item $dur $ease $delay;
 }
 
-.hidden { opacity: 0; }
+.hidden { @include opacity(0); }
 .hide { display: none; }
 .full-size { height:100%; width:100%; }
 .bold {

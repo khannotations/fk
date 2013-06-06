@@ -80,20 +80,17 @@ $(document).ready(function() {
     return $(".token").removeClass('highlight');
   });
 
-  // Life 
+  // Life
   $(".play_item").click(function() {
     var target;
     target = $(this).attr("target");
-    $(".play_content").css({
-      opacity: 1
-    });
-    $(".play_frame[target!='" + target + "']").hide();
-    return $(".play_frame[target='" + target + "']").show();
+    $(".play_content").removeClass("hidden");
+    $(".play_frame[target!='" + target + "']").addClass('hide');
+    $(".play_frame[target='" + target + "']").removeClass('hide');
+    return true;
   });
   $(".play_close").click(function() {
-    return $(".play_content").css({
-      opacity: 0
-    });
+    $(".play_content").addClass("hidden");
   });
 
   // Blog

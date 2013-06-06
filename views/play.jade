@@ -12,9 +12,9 @@ block content
           li.play_item(target='booty') Pirates' Booty
           li.play_item(target='pokemon') Pokemon
 
-      .play_content
+      .play_content.hidden
         .play_close &times;
-        .play_frame(target='bhangra')
+        .play_frame(target='bhangra').hide
           h1 Bhangra!
           p Bhangra is upbeat, festive dance from the Punjab region of India:
           img.half(src="/images/life/punjab.png")
@@ -24,7 +24,7 @@ block content
             |  or watch the videos below!
           iframe.youtube(width="560",height="315",src="http://www.youtube.com/embed/TMHTJ8Y3i3g?start=59",frameborder="0",allowfullscreen)
 
-        .play_frame(target='tedx')
+        .play_frame(target='tedx').hide
           h1 TedxYale
           p Tedx are independently organized TED events. At TedxYale, we host several salons (one-speaker events) and conferences each year, capstoned by our main event in February.
           p In 2013, our theme is 
@@ -37,7 +37,7 @@ block content
           p As a teaser, here's a potential talk, beautifully given by my roommate, DJ Stanfill, on Storytelling through music.
           iframe.youtube(width="560",height="315",src="http://www.youtube.com/embed/YgS48wEbSgc?rel=0&showinfo=0",frameborder="0",allowfullscreen)
 
-        .play_frame(target='booty')
+        .play_frame(target='booty').hide
           h1 The Pirates' Booty
           p "The Pirates' Booty" is a punny name given to the student restaurant, otherwise known as the buttery, in Pierson College (my residential college at Yale). The title makes sense because our maskot is a Pirate and we loove to plunder for booty.
           p Kind of.
@@ -48,7 +48,7 @@ block content
           p(style="text-align:center; font-size: 150%;")
             b Yumm!
 
-        .play_frame(target='pokemon')
+        .play_frame(target='pokemon').hide
           h1 Pokemon
           p Pocket Monsters will always hold a special place in my heart; my childhood was literally devoured by them. Well, not literally literally, but I did log thousands of hours on various Pokemon Gameboy games, collected da cards, and learned to draw by tracing those cards out on paper.
           p I wasn't the biggest fan, certainly, but I was obsessed.

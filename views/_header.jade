@@ -11,13 +11,14 @@
     .nav-item.nav_button.js-nav.play(target='fun')
       img.icon(src="/images/academy/pikachu.png")
       | Life
-  a(href="/italia")
-    .nav-item.nav_button.js-nav.blog(target='blog')
-      img.icon(src="/images/academy/flag.png")
-      | Italia
-  a(href="/academy")
-    .nav-item.nav_button.js-nav.academy(target='academy')
-      img.icon(src="/images/academy/icon.ico", style="margin-right: 10px;")
-      | Khan Academy
+  //-
+    a(href="/italia")
+      .nav-item.nav_button.js-nav.blog(target='blog')
+        img.icon(src="/images/academy/flag.png")
+        | Italia
+    a(href="/academy")
+      .nav-item.nav_button.js-nav.academy(target='academy')
+        img.icon(src="/images/academy/icon.ico", style="margin-right: 10px;")
+        | Khan Academy
   if work_links
     include _work_links
