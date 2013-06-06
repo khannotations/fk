@@ -29,7 +29,7 @@ app.configure ->
   )
   app.use(sass.middleware(
     src: pub + '/stylesheets'
-    dest: pub
+    dest: pub # Don't change this -- it doesn't work for some reason otherwise.
     debug: true
   ))
   app.use express.static(pub)

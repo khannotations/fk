@@ -1,8 +1,9 @@
 #index {
-  background-image: url('/images/backgrounds/chicago.jpg');
+  background-image: url(/images/backgrounds/chicago.jpg);
   z-index: 1;
   @include mobile {
-    background-position-x: 50%;
+    background-image: url(/images/backgrounds/chicago-mobile.jpg);
+    background-position-x: 55%;
   }
 }
 
@@ -15,6 +16,7 @@
   a:hover {
     text-decoration: none;
   }
+  padding: $pad;
 }
 
 .rafi {
