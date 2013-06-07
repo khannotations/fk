@@ -10,6 +10,8 @@
     "npm": "1.2.x"
   },
   "domains": [
+    "rafi.me",
+    "www.rafi.me",
     "rafikhan.me",
     "www.rafikhan.me"
   ],
