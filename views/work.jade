@@ -10,9 +10,11 @@ block content
   #work.square
     work_links = true
     include _header
-
+    a(href='#')
+      #arrow.hidden
     #work_c.contain
       #work_container
+        a(name='')
         h1.work_head.no-phone Programmer. Designer. Teacher.
         .work_head.no-desktop.no-tablet
           div Programmer
@@ -21,12 +23,15 @@ block content
         #projects
           .proj_section
             h5 Apps
-            .big_project(target='hackyale', tokens="js css")
-              img.bordered(src='/images/portfolio/hackyale.png', alt='HackYale')
-            .big_project(target='go', tokens="rails js css backbone")
-              img.bordered(src='/images/portfolio/go.png', alt='Yale Go')
-            .big_project(target='screw', tokens="rails js css bs")
-              img(src='/images/portfolio/screw.png', alt='Screw Me Yale')
+            a(href='#hackyale')
+              .big_project(target='hackyale', tokens="js css")
+                img.bordered(src='/images/portfolio/hackyale.png', alt='HackYale')
+            a(href='#go')
+              .big_project(target='go', tokens="rails js css backbone")
+                img.bordered(src='/images/portfolio/go.png', alt='Yale Go')
+            a(href='#screw')
+              .big_project(target='screw', tokens="rails js css bs")
+                img(src='/images/portfolio/screw.png', alt='Screw Me Yale')
             //- Old work
               .big_project(target='ontapp', tokens="node db amp js adobe")
                 img(src='/images/portfolio/ontapp.png', alt='onTapp')
@@ -41,12 +46,15 @@ block content
 
           .proj_section
             h5 Code
-            .big_project(target='hadoodle', tokens="java python")
-              img.bordered(src="/images/portfolio/hadoodle.png", alt="Hadoodle")
-            .big_project(target='soundulous', tokens="java android")
-              img(src="/images/portfolio/soundulous.jpg", alt="Soundulous, a music visualizer")
-            .big_project(target='processing', tokens="java")
-              img(src='/images/portfolio/processing.png', alt='Schedulizer')
+            a(href='#hadoodle')
+              .big_project(target='hadoodle', tokens="java python")
+                img.bordered(src="/images/portfolio/hadoodle.png", alt="Hadoodle")
+            a(href='#soundulous')
+              .big_project(target='soundulous', tokens="java android")
+                img(src="/images/portfolio/soundulous.jpg", alt="Soundulous, a music visualizer")
+            a(href='#processing')
+              .big_project(target='processing', tokens="java")
+                img(src='/images/portfolio/processing.png', alt='Schedulizer')
             //- Old work
               .big_project(target='galaxy', tokens="python")
                 img(src='/images/portfolio/galaxy.png', alt='Galaxy')
@@ -64,17 +72,18 @@ block content
 
           .proj_section
             h5 Designs
-            .big_project(target="gakko", tokens="rails js css adobe")
-              img(src='/images/portfolio/gakko.png', alt='GAKKO')
-            .big_project(target="sweets", tokens="adobe")
-              img.bordered(src='/images/portfolio/sweets.png', alt='Sweets Surrendered')
-            .big_project(target='maitri', tokens="rails js css")
-              img(src='/images/portfolio/maitri.png', alt='Maitri Massage')
+            a(href='#gakko')
+              .big_project(target="gakko", tokens="rails js css adobe")
+                img(src='/images/portfolio/gakko.png', alt='GAKKO')
+            a(href='#sweets')
+              .big_project(target="sweets", tokens="adobe")
+                img.bordered(src='/images/portfolio/sweets.png', alt='Sweets Surrendered')
+            a(href='#maitri')
+              .big_project(target='maitri', tokens="rails js css")
+                img(src='/images/portfolio/maitri.png', alt='Maitri Massage')
             //- Old work
               .big_project(target='jashan', tokens="rails js css adobe")
                 img(src='/images/portfolio/jashan.png', alt='Yale Jashan Bhangra')
-            
-            //-
               .big_project(target='avishary', tokens="node js css bs")
                 img(src='/images/portfolio/avishary.png', alt='Avishary')
                 //- p Avishary 

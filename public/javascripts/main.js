@@ -1,5 +1,5 @@
 /*
- * Written for rafikhan.me, by Rafi Khan.
+ * Written for rafi.me, by Rafi Khan.
  * Edited June 6, 2013
  *
  */
@@ -46,16 +46,24 @@ $(document).ready(function() {
   if(path === '/portfolio' && w > small_screen) {
     make_soundulous_video();
   }
-  $(".icon").mouseenter();
-  $(".big_project").click(function() {
-    var dest = $(".desc[name='" + $(this).attr("target") + "']").offset().top;
-    // We start basically at the top, so we want to scroll for a time proportional
-    // to the distance we're travelling (to keep speed constant).
-    $("body,html,document").animate({
-      scrollTop: dest
-    }, dest / 2);
-    return true;
+  $(".icon").mouseenter(); // Load images
+  var arrow_show = (w < 480) ? -1400 : -600; // Project descriptions start lower on phone.
+  $(window).scroll(function() {
+    ($("body,html,document").offset().top < arrow_show) ?
+      $("#arrow").removeClass('hidden') : $("#arrow").addClass('hidden');
   });
+  if (w > small_screen) {
+    $(".big_project").click(function() {
+      var dest = $(".desc[name='" + $(this).attr("target") + "']").offset().top;
+      // We start basically at the top, so we want to scroll for a time proportional
+      // to the distance we're travelling (to keep speed constant).
+      // On mobile, we just jump to.
+      $("body,html,document").animate({
+        scrollTop: dest
+      }, dest / 3);
+      return false;
+    });
+  }
   // No tokens on small screens.
   if (w > small_screen) {
     $(".big_project").mouseenter(function() {

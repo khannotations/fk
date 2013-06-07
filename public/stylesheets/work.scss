@@ -10,11 +10,9 @@ $desc-height: 400px;
   .nav_item, .footer, .footer a {
     color: black;
   }
-  @include desktop {
-    .nav_button:hover {
-      color: #333;
-      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
-    }
+  .nav_button:hover {
+    color: #333;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
   }
 }
 
@@ -34,7 +32,7 @@ $desc-height: 400px;
   background-color: #FAFAFA;
   padding: $pad;
   @include mobile {
-    padding: 10px 20px;
+    padding: 20px;
   }
 }
 
@@ -46,6 +44,28 @@ $desc-height: 400px;
     font-size: 200%;
     margin-left: 20px;
   }
+}
+
+#arrow {
+  position: fixed;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  right: 20px; top: 20px;
+  @include mobile {
+    width: 30px;
+    height: 30px;
+    right: 10px; top: 10px;
+  }
+  background-color: rgba(black, 0.6);
+  border-radius: 5px;
+  background-image: url(/images/icons/arrow.png);
+  background-size: cover;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(black, 0.8);
+  }
+  @include transition(all, 0.3s);
 }
 
 #projects {
@@ -222,19 +242,31 @@ $desc-height: 400px;
 
 #work_links{
   float: right;
+  @include phone {
+    float: none;
+  }
   z-index: 5;
   li {
     margin-left: 5px;
     padding-left: 7px;
+    &:first-child {
+      margin-left: 0;
+      padding-left: 0;
+    }
     font-size: 16px;
     line-height: 22px;
     vertical-align: middle;
     color: black;
   }
   .sidebar_icon {
-    width: 30px;
-    height: 30px;
+    width: 23px;
+    height: 23px;
     background-size: contain;
+
+    @include mobile {
+      width: 18px;
+      height: 18px;
+    }
   }
 }
 

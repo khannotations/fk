@@ -86,14 +86,20 @@ div.line {
 
 
 .nav_bar {
-  @include mobile {
-    display: none;
-  }
-  width: $large-min-width + 2* $pad;
   margin: 25px auto 30px;
   color: #fff;
   font-size: 16px;
   line-height: 26px;
+  @include desktop {
+    width: $large-min-width + 2*$pad;
+  }
+  @include mobile {
+    width: 95%;
+    margin: 10px auto 20px;
+  }
+  @include phone {
+    text-align: center;
+  }
   .nav-item {
     display: inline-block;
     height: 100%;
@@ -135,8 +141,6 @@ div.line {
   font-size: 13pt;
   line-height: 28pt;
 }
-
-.fb-like, .fb-like iframe { height: 35px; }
 
 .footer {
   @extend .full-width;

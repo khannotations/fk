@@ -11,9 +11,7 @@
   },
   "domains": [
     "rafi.me",
-    "www.rafi.me",
-    "rafikhan.me",
-    "www.rafikhan.me"
+    "www.rafi.me"
   ],
   "dependencies": {
     "express": "2.5.x",
