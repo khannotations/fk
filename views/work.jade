@@ -21,40 +21,38 @@ block content
           div Designer.
           div Teacher.
         #projects
+          h5 Projects
           .proj_section
-            h5 Apps
+            a(href='#gakko')
+              .big_project(target="gakko", tokens="ruby rails js js-library versions css adobe")
+                img(src='/images/portfolio/gakko.png', alt='GAKKO')
+            a(href='#google')
+              .big_project(target='google', tokens="js js-library python apis unix versions")
+                img.bordered(src='/images/portfolio/google.png', alt='Google.org Crisis Map')
             a(href='#hackyale')
               .big_project(target='hackyale', tokens="js css")
                 img.bordered(src='/images/portfolio/hackyale.png', alt='HackYale')
-            a(href='#go')
-              .big_project(target='go', tokens="rails js css backbone")
-                img.bordered(src='/images/portfolio/go.png', alt='Yale Go')
-            a(href='#screw')
+            
+            //- Old work
+              a(href='#screw')
               .big_project(target='screw', tokens="rails js css bs")
                 img(src='/images/portfolio/screw.png', alt='Screw Me Yale')
-            //- Old work
               .big_project(target='ontapp', tokens="node db amp js adobe")
                 img(src='/images/portfolio/ontapp.png', alt='onTapp')
 
-            .section
-              ul
-                li.token(name="node") Node.js [ Express, Jade, Socket IO ]
-                li.token(name="rails") Ruby on Rails / Heroku / Git
-                li.token(name="android") Android SDK
-                li.token(name="db") MongoDB / Redis
-                li.token(name="amp") Apache / MySQL / PHP
+            
 
           .proj_section
-            h5 Code
+            a(href='#go')
+              .big_project(target='go', tokens="rails js js-library css versions adobe ruby")
+                img.bordered(src='/images/portfolio/go.png', alt='Yale Go')
             a(href='#hadoodle')
-              .big_project(target='hadoodle', tokens="java python")
+              .big_project(target='hadoodle', tokens="java python unix")
                 img.bordered(src="/images/portfolio/hadoodle.png", alt="Hadoodle")
             a(href='#soundulous')
-              .big_project(target='soundulous', tokens="java android")
+              .big_project(target='soundulous', tokens="java android unix")
                 img(src="/images/portfolio/soundulous.jpg", alt="Soundulous, a music visualizer")
-            a(href='#processing')
-              .big_project(target='processing', tokens="java")
-                img(src='/images/portfolio/processing.png', alt='Schedulizer')
+            
             //- Old work
               .big_project(target='galaxy', tokens="python")
                 img(src='/images/portfolio/galaxy.png', alt='Galaxy')
@@ -62,24 +60,15 @@ block content
                 img(src='/images/portfolio/psych.png', 
                   alt='Department of Psychology, University of Chicago')
 
-            .section   
-              ul
-               li.token(name="js") Javascript / Coffeescript / jQuery
-               li.token(name="c") C [ Message Passing Interface ]
-               li.token(name="python") Python
-               li.token(name="java") Java [ Processing ]
-
-
           .proj_section
-            h5 Designs
-            a(href='#gakko')
-              .big_project(target="gakko", tokens="rails js css adobe")
-                img(src='/images/portfolio/gakko.png', alt='GAKKO')
             a(href='#sweets')
               .big_project(target="sweets", tokens="adobe")
                 img.bordered(src='/images/portfolio/sweets.png', alt='Sweets Surrendered')
+            a(href='#processing')
+              .big_project(target='processing', tokens="java processing")
+                img(src='/images/portfolio/processing.png', alt='Schedulizer')
             a(href='#maitri')
-              .big_project(target='maitri', tokens="rails js css")
+              .big_project(target='maitri', tokens="ruby rails versions js css")
                 img(src='/images/portfolio/maitri.png', alt='Maitri Massage')
             //- Old work
               .big_project(target='jashan', tokens="rails js css adobe")
@@ -88,29 +77,50 @@ block content
                 img(src='/images/portfolio/avishary.png', alt='Avishary')
                 //- p Avishary 
 
-            .section    
+          #tools
+            h5 Tools
+            .proj_section
               ul
-                li.token(name="backbone") Backbone.js
-                li.token(name="css") Less / Sass
-                li.token(name="bs") Twitter Bootstrap
+                li.token(name="rails") Ruby on Rails / Heroku
+                li.token(name="js-library") Angular.js / Backbone.js / Closure
+                li.token(name="node") Node.js [ Express, Jade, Socket IO ]
+                li.token(name="android") Android SDK
+                li.token(name="apis") Google / Facebook / Twitter APIs
+            .proj_section    
+              ul
+                li.token(name="versions") Git / Perforce
                 li.token(name="adobe") Photoshop, InDesign, Illustrator
+                li.token(name="unix") UNIX shell scripting
+                li.token(name="processing") Processing (
+                  a(href="http://processing.org", target="_blank") processing.org
+                  | )
+                li.token(name="css") Less / Sass.css
+                
                 //- li.token(name="none", style="visibility: hidden;") Placehold
-              
+            .proj_section   
+              ul
+               li.token(name="js") Javascript / Coffeescript
+               li.token(name="ruby") Ruby
+               li.token(name="python") Python
+               li.token(name="java") Java
+               li.token(name="c") C [ Message Passing Interface ]
+
         #descs
           include works/gakko
+          include works/google
           include works/hackyale
           include works/go
           include works/hadoodle
           include works/soundulous
           include works/sweets
-          include works/ontapp
           include works/processing
-
-
+          include works/maitri
+          //-
+            include works/ontapp
           include works/screw
           include works/galaxy
           include works/colors
-          include works/maitri
-          include works/jashan
+          //-
+            include works/jashan
 
     include _footer

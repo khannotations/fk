@@ -12,7 +12,8 @@ block content
           li.play_item(target='bhangra') Bhangra
           li.play_item(target='tedx') TEDxYale
           li.play_item(target='booty') Pirates' Booty
-          li.play_item(target='pokemon') Pokemon
+          //-
+            li.play_item(target='pokemon') Pokemon
 
       .play_content.hidden
         .play_close &times;
@@ -50,11 +51,11 @@ block content
           img(src="/images/life/menu.png")
           p(style="text-align:center; font-size: 150%;")
             b Yumm!
-
-        .play_frame(target='pokemon').hide
-          h1 Pokemon
-          p Pocket Monsters will always hold a special place in my heart; my childhood was literally devoured by them. Well, not literally literally, but I did log thousands of hours on various Pokemon Gameboy games, collected da cards, and learned to draw by tracing those cards out on paper.
-          p I wasn't the biggest fan, certainly, but I was obsessed.
-          p On a more grown-up note, the spirit behind Pokemon—breathing life and imagination into ordinary things—is one I admire and always try to emulate. 
+        //-
+          .play_frame(target='pokemon').hide
+            h1 Pokemon
+            p Pocket Monsters will always hold a special place in my heart; my childhood was literally devoured by them. Well, not literally literally, but I did log thousands of hours on various Pokemon Gameboy games, collected da cards, and learned to draw by tracing those cards out on paper.
+            p I wasn't the biggest fan, certainly, but I was obsessed.
+            p On a more grown-up note, the spirit behind Pokemon—breathing life and imagination into ordinary things—is one I admire and always try to emulate. 
 
     include _footer
