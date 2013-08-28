@@ -43,19 +43,21 @@ block content
             
 
           .proj_section
-            a(href='#go')
-              .big_project(target='go', tokens="rails js js-library css versions adobe ruby")
-                img.bordered(src='/images/portfolio/go.png', alt='Yale Go')
+            //-
+              a(href='#go')
+                .big_project(target='go', tokens="rails js js-library css versions adobe ruby")
+                  img.bordered(src='/images/portfolio/go.png', alt='Yale Go')
             a(href='#hadoodle')
               .big_project(target='hadoodle', tokens="java python unix")
                 img.bordered(src="/images/portfolio/hadoodle.png", alt="Hadoodle")
             a(href='#soundulous')
               .big_project(target='soundulous', tokens="java android unix")
                 img(src="/images/portfolio/soundulous.jpg", alt="Soundulous, a music visualizer")
-            
-            //- Old work
+            a(href='#galaxy')
               .big_project(target='galaxy', tokens="python")
                 img(src='/images/portfolio/galaxy.png', alt='Galaxy')
+            //- Old work
+              
               .big_project(target='colors', tokens="java")
                 img(src='/images/portfolio/psych.png', 
                   alt='Department of Psychology, University of Chicago')
@@ -109,18 +111,17 @@ block content
           include works/gakko
           include works/google
           include works/hackyale
-          include works/go
           include works/hadoodle
           include works/soundulous
+          include works/galaxy
           include works/sweets
           include works/processing
           include works/maitri
-          //-
-            include works/ontapp
-          include works/screw
-          include works/galaxy
           include works/colors
           //-
             include works/jashan
+            include works/go
+            include works/ontapp
+            include works/screw
 
     include _footer
