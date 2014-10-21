@@ -11,7 +11,8 @@ block content
             b Some buckets in my life:
           li.play_item(target='bhangra') Bhangra
           li.play_item(target='tedx') TEDxYale
-          li.play_item(target='booty') Pirates' Booty
+          li.play_item(target='rogue') Gone Rogue
+          //- li.play_item(target='booty') Pirates' Booty
           //-
             li.play_item(target='pokemon') Pokemon
 
@@ -40,17 +41,23 @@ block content
           br/
           p The full link to the live stream is below. The video starts with a beautifully given talk by my roommate, DJ Stanfill, on storytelling through music.
           iframe.youtube(width="560",height="315",src="http://www.youtube.com/embed/DM6xXjsPcgk?start=1505&rel=0&showinfo=0",frameborder="0",allowfullscreen)
-
-        .play_frame(target='booty').hide
-          h1 The Pirates' Booty
-          p "The Pirates' Booty" is a punny name given to the student restaurant, otherwise known as the buttery, in Pierson College (my residential college at Yale). The title makes sense because our maskot is a Pirate and we loove to plunder for booty.
-          p Kind of.
-          p Anyway, as manager in 2012-2013, I revamped the menu and added some much-needed spice—and health. The menu, concocted with the ever-popular cop-out 
-            a(href="http://twitter.github.com/bootstrap/index.html", target="_blank") Twitter Bootstrap
-            | , follows:
-          img(src="/images/life/menu.png")
-          p(style="text-align:center; font-size: 150%;")
-            b Yumm!
+        .play_frame(target='rogue').hide
+          h1 Gone Rogue
+          p My Fall semester junior year, I took time off to go on a backpacking trip across Southeast Asia. The below blog catalogues my experiences. 
+          p You can also view on 
+            a(href="http://blog.rafi.me", target="blank") Tumblr
+            | . 
+          iframe(src="http://blog.rafi.me", height="400", width="100%")
+        //- .play_frame(target='booty').hide
+        //-   h1 The Pirates' Booty
+        //-   p "The Pirates' Booty" is a punny name given to the student restaurant, otherwise known as the buttery, in Pierson College (my residential college at Yale). The title makes sense because our maskot is a Pirate and we loove to plunder for booty.
+        //-   p Kind of.
+        //-   p Anyway, as manager in 2012-2013, I revamped the menu and added some much-needed spice—and health. The menu, concocted with the ever-popular cop-out 
+        //-     a(href="http://twitter.github.com/bootstrap/index.html", target="_blank") Twitter Bootstrap
+        //-     | , follows:
+        //-   img(src="/images/life/menu.png")
+        //-   p(style="text-align:center; font-size: 150%;")
+        //-     b Yumm!
         //-
           .play_frame(target='pokemon').hide
             h1 Pokemon
